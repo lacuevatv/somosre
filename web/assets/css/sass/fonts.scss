@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'bebasregular';
+    src: local('Bebas'),
+         url('../fonts/bebas.ttf') format('truetype'),
+         url('../fonts/bebas___-webfont.woff2') format('woff2'),
+         url('../fonts/bebas___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'brandon_grotesque';
+    src: local('Brandon_Grotesque'), local('brandon-grotesque'), 
+         url('../fonts/brandon-bld.otf') format("opentype"),
+         url('../fonts/brandon-bld.ttf') format('truetype'),
+         url('../fonts/brandon_bld-webfont.woff2') format('woff2'),
+         url('../fonts/brandon_bld-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+
+}
