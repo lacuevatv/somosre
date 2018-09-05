@@ -181,11 +181,11 @@
 .tabla-suscriptores {
 	
 	td {
-		padding: 10px;
-		vertical-align: middle;
+		padding: 5px;
+		vertical-align: top;
 	}
 	thead{
-		font-size: 110%;
+		font-size: 90%;
 		font-weight: bold;
 		tr {
 			border: 1px solid #666;
@@ -193,6 +193,7 @@
 		}
 	}
 	tbody{
+    font-size: 80%;
 		tr {
 			border: 1px solid #666;
     }

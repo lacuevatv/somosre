@@ -27,60 +27,115 @@ load_module( 'contactos' );
 			<table class="tabla-suscriptores" width="100%">
 				<thead>
 					<tr>
-						<td width="5%">
-							Id:
+						<td>
+							Nombre y apellido
 						</td>
-						<td width="20%">
-							email:
+						<td>
+							Teléfono
 						</td>
-						<td width="10%">
-							Nombre:
+						<td>
+							Celular
 						</td>
-						<td width="10%">
-							Teléfono:
+						<td>
+							Email
 						</td>
-						<td width="35%">
-							Mensaje
+						<td>
+							Colegio
 						</td>
-                        <td width="15%">
-							Fecha de envío:
+						<td>
+							Provincia
 						</td>
-						<td width="5%">
-							
+						<td>
+							Ciudad
+						</td>
+						<td>
+							Fecha de nacimiento
+						</td>
+						<td>
+							¿Cómo llegaste?
+						</td>
+						<td>
+							Adulto - Nombre
+						</td>
+						<td>
+							Adulto - email
+						</td>
+						<td>
+							Adulto - Teléfono
+						</td>
+						<td>
+							Adulto - Horarios
+						</td>
+						<td>
+							Enviado el
+						</td>
+						<td>
+							Tipo Formulario
 						</td>
 					</tr>
 				</thead>
 				<tbody>
 					<?php 
+
 					if ( $suscriptores != null ) :
-						for ($i=0; $i < count($suscriptores); $i++) { 
-							?>
-						<tr>
-							<td>
-								<?php echo $suscriptores[$i]['contacto_id']; ?>
-							</td>
-							<td>
-								<?php echo $suscriptores[$i]['contacto_email']; ?>
-							</td>
-							<td>
-								<?php echo utf8_decode($suscriptores[$i]['contacto_nombre']); ?>
-							</td>
-							<td>
-	                            <?php echo $suscriptores[$i]['contacto_telefono']; ?>
-							</td>
-							<td class="font-reduce">
-	                            <?php echo utf8_decode($suscriptores[$i]['contacto_mensaje']); ?>
-							<td>
-								<?php echo date('d.m.y' ,strtotime($suscriptores[$i]['contacto_fecha_formulario']) ); ?>
-							</td>
-							<td>
-								<button title="Borrar suscriptor" class="del-user" data-id="<?php echo $suscriptores[$i]['id']; ?>">
-									<img src="<?php echo URLADMINISTRADOR; ?>/assets/images/delbtn.png" alt="Borrar usuario">
-								</button>
-							</td>
-						</tr>
-							<?php 
-						}
+						foreach ($suscriptores as $suscriptor) { ?>
+
+							<tr>
+								<td>
+									<input type="hidden" name="contacto_id" value="<?php echo $suscriptor['contacto_id']; ?>">
+									<?php echo $suscriptor['contacto_nombre']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_telefono']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_celular']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_email']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_colegio']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_provincia']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_ciudad']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_nacimiento']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_como_llegaste']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_adulto_nombre']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_adulto_email']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_adulto_telefono']; ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['contacto_adulto_horario']; ?>
+								</td>
+								<td>
+									<?php echo date('d.m.y' ,strtotime($suscriptor['fecha_formulario']) ); ?>
+								</td>
+								<td>
+									<?php echo $suscriptor['form_type']; ?>
+								</td>
+								<!--<td>
+									<button title="Borrar suscriptor" class="del-user" data-id="<?php echo $suscriptor['contacto_id']; ?>">
+										<img src="<?php echo URLADMINISTRADOR; ?>/assets/images/delbtn.png" alt="Borrar usuario">
+									</button>
+								</td>-->
+							</tr>
+						
+						<?php }
+						
 					endif;
 					?>
 				</tbody>

@@ -1094,16 +1094,19 @@ ul.dropdown-menu li {
 }
 
 .tabla-suscriptores td {
-  padding: 10px;
-  vertical-align: middle;
+  padding: 5px;
+  vertical-align: top;
 }
 .tabla-suscriptores thead {
-  font-size: 110%;
+  font-size: 90%;
   font-weight: bold;
 }
 .tabla-suscriptores thead tr {
   border: 1px solid #666;
   background-color: #ccc;
+}
+.tabla-suscriptores tbody {
+  font-size: 80%;
 }
 .tabla-suscriptores tbody tr {
   border: 1px solid #666;
