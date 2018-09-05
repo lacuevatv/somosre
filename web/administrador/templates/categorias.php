@@ -33,7 +33,8 @@ if ($userStatus != '0' && $userStatus != '1' ) {
 
                                     <div class="form-group">
                                         <select name="tipo_nueva_categoria">
-                                            <option value="posts">Posts</option>
+                                            <option value="galerias">Galerias</option>
+                                            <option value="celebrities">Celebrities</option>
                                         </select>
                                     </div>
 
@@ -49,22 +50,25 @@ if ($userStatus != '0' && $userStatus != '1' ) {
                 </table>
                 
             </div>
-			<div class="col-40">
+			<div class="col-80">
 
                 <table class="tabla-categorias">
                     <thead>
                         <tr>
                             <td>
-                                Posts
+                                Categorias
+                            </td>
+                            <td>
+                                Tipo
                             </td>
                             <td>
                             </td>
                         </tr>
                     </thead>
-                    <tbody class="categorias-wrapper categorias-posts">
+                    <tbody class="categorias-wrapper categorias">
 
                     <?php 
-                    $categorias = getCategoryList( 'posts' );
+                    $categorias = getCategoryList( );
 
                     if ($categorias != null ) {
                     
@@ -75,6 +79,9 @@ if ($userStatus != '0' && $userStatus != '1' ) {
                                 <input type="hidden" name="categoria_id" value="<?php echo $categoria['categoria_id']; ?>">
                                 <input type="hidden" name="categoria_slug" value="<?php echo $categoria['categoria_slug']; ?>">
                                 <input type="text" name="categoria_name" value="<?php echo $categoria['categoria_nombre']; ?>">
+                            </td>
+                            <td>
+                                <?php echo $categoria['categoria_tipo']; ?>
                             </td>
                             <td>
                                 <button data-id="<?php echo $categoria['categoria_id']; ?>" class="btn btn-primary btn-sm btn-change-category">
@@ -94,11 +101,7 @@ if ($userStatus != '0' && $userStatus != '1' ) {
 
             </div><!-- // col -->
 
-            <div class="col-40">
-
-                
-                    
-            </div><!-- // col -->
+            
 
         </div><!-- // row gral modulo -->
 	</div><!-- // container gral modulo -->

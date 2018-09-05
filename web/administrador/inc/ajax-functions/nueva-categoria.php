@@ -21,7 +21,7 @@ if ( isAjax() ) {
         $nuevoId = mysqli_insert_id($connection);
 
         $html = '';
-        $html .= '<tr><td><input type="hidden" name="categoria_id" value="'.$nuevoId.'"><input type="hidden" name="categoria_slug" value="'.$slug.'"><input type="text" name="categoria_name" value="'.$nombre.'"></td><td><button data-id="'.$nuevoId.'" class="btn btn-primary btn-sm btn-change-category">Guardar</button>&nbsp;<button data-id="'.$nuevoId.'" class="btn btn-danger btn-sm btn-del-category">Borrar</button><span class="error-msj"></span></td></tr>';
+        $html .= '<tr><td><input type="hidden" name="categoria_id" value="'.$nuevoId.'"><input type="hidden" name="categoria_slug" value="'.$slug.'"><input type="text" name="categoria_name" value="'.$nombre.'"></td><td>'.$tipo.'</td><td><button data-id="'.$nuevoId.'" class="btn btn-primary btn-sm btn-change-category">Guardar</button>&nbsp;<button data-id="'.$nuevoId.'" class="btn btn-danger btn-sm btn-del-category">Borrar</button><span class="error-msj"></span></td></tr>';
 
         echo $html;
     } else {

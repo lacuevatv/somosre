@@ -113,10 +113,14 @@ function getUsers() {
 /*
  * TRAE LA LISTA DE CATEGORIAS
 */
-function getCategoryList($categoryType) {
+function getCategoryList($categoryType = '' ) {
 	$connection = connectDB();
 	$tabla = 'categorias';
-	$query  = "SELECT * FROM " . $tabla . " WHERE categoria_tipo ='".$categoryType."'";
+	$query  = "SELECT * FROM " . $tabla;
+
+	if ( $categoryType != '' ) {
+		$query .= " WHERE categoria_tipo ='".$categoryType."'";
+	}
 
 	$result = mysqli_query($connection, $query);
 	if ( $result->num_rows == 0 ) {

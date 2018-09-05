@@ -367,7 +367,8 @@ $(document).ready(function() {
 		
 		
 		var tipoCategoria = $('select[name="tipo_nueva_categoria"]').val();
-		var contenedor = $('.categorias-'+tipoCategoria);
+		//var contenedor = $('.categorias-'+tipoCategoria);
+		var contenedor = $('.categorias');
 		
 		var error = $(this).find('.error-msj');
 
