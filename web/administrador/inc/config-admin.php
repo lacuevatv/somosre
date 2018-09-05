@@ -52,6 +52,10 @@ $archivos = array(
     array(
         'label' => 'Agencias',
         'optionName' => 'agencias',
+	),
+	array(
+        'label' => 'Asistencia',
+        'optionName' => 'asistencia',
     ),
 );
 

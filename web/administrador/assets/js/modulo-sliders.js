@@ -43,6 +43,7 @@ $(document).ready(function (){
 		.load( templatesDir + '/media-browser.php' );
 
 	});//Sube nueva imagen para crear nuevo slider
+	
 
 
 	//esta funcion crea nuevo slider en base de datos si la imagen se cargó con exito, necesita el nombre de la imagen y la ubicación para guardar el slider
