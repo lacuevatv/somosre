@@ -23,7 +23,7 @@ function getPosts( $postType, $limit = '', $categoria = '', $orden = '', $status
     if ( $orden == 'fecha' ) {
         $query  .= " ORDER by post_timestamp DESC";
     }
-    if ( $orden == 'orden' ) {
+    if ( $orden == 'post_orden' ) {
         $query  .= " ORDER by orden ASC";
     }
 

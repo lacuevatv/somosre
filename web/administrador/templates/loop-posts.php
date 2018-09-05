@@ -12,7 +12,7 @@
         <div class="col-70">
             
             <h1 class="titulo-noticia-small">
-                <?php echo $data['post_titulo']; ?><?php if ($data['post_status'] != 'publicado') {echo ' | ' . $data['post_status'];} ?> | <small><?php echo $data['post_timestamp']; ?></small>
+                <?php echo $data['post_titulo']; ?><?php if ($data['post_status'] != 'publicado') {echo ' | ' . $data['post_status'];} ?> | <small><?php echo date('d.m.y' ,strtotime($data['post_timestamp']) ); ?></small>
             </h1>
             <p>
                 <?php if ( $data['post_resumen'] != '' ) {
@@ -21,7 +21,14 @@
             </p>
             <p class="links-edicion-noticias">
                 <?php 
-                $url = 'index.php?admin=editar-posts&id=' . $data['post_ID'];
+                if ( $data['post_type'] == 'galerias' ) {
+                    $url = 'index.php?admin=editar-galerias&id=' . $data['post_ID'];
+                }
+                else if ( $data['post_type'] == 'celebrities' ) {
+                    $url = 'index.php?admin=editar-celebrities&id=' . $data['post_ID'];
+                } else {
+                    $url = 'index.php?admin=editar-posts&id=' . $data['post_ID'];
+                }
                 ?>
                 <a href="<?php echo $url; ?>" title="Editar" class="btn-edit-news">
                     Editar

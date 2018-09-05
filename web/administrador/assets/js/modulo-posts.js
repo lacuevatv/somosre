@@ -18,6 +18,7 @@ $(document).ready(function(){
         var contenedorNews = $('.loop-noticias-backend');
         var contenedorAjax = $('.loading-news-ajax');
         var actualCategoria = $('#post_categoria').val();
+        var postType = $(this).attr('data-post-type');
         if (actualCategoria == 'todas') {
             actualCategoria = '';
         }
@@ -27,6 +28,7 @@ $(document).ready(function(){
             data: {
                 page: currentPage,
                 categoria: actualCategoria,
+                post_type: postType,
             },
             beforeSend: function() {
                 contenedorAjax.html('cargando');
@@ -53,12 +55,14 @@ $(document).ready(function(){
         if (categoria == 'todas') {
             categoria = '';
         }
+        var postType = $(this).attr('data-post-type');
         var contenedorNews = $('.loop-noticias-backend');
         $.ajax( {
             type: 'POST',
             url: ajaxFunctionDir + '/new-query-category.php',
             data: {
                 categoria: categoria,
+                post_type: postType,
             },
             beforeSend: function() {
                 contenedorNews.empty(); 
@@ -522,7 +526,7 @@ $(document).ready(function(){
             	console.log('enviando formulario');
             },
 			success: function ( response ) {
-				console.log(response);
+				//console.log(response);
 				switch(response) {
 
 					case 'error-url':
