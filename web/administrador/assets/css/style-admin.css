@@ -1057,6 +1057,10 @@ ul.dropdown-menu li {
 .otras-opciones li {
   margin: 1em 0;
 }
+.otras-opciones li label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .otras-opciones .type-text label {
   line-height: 150%;
   text-transform: capitalize;

@@ -17,21 +17,22 @@ if ( isAjax() ) {
 	//actualizar slider
 	if ($new != 'true') { 
  		
-		$query      = "UPDATE ".$tabla." SET options_value='".$file."', WHERE options_name='".$optionsName."' LIMIT 1";
+		$query      = "UPDATE ".$tabla." SET options_value='".$file."' WHERE options_name='".$optionsName."' LIMIT 1";
 		$result     = mysqli_query($connection, $query);
    
 		if ($result) {
 			echo 'saved';
 	   	} else {
-	   		echo 'error';
+			   echo 'error';
+			   print_r($connection);
 	   	}
 	   
 	} else {
 		//crear nuevo slider
 
-		$queryCreate  = "INSERT INTO " .$tabla. " (options_name,options_value) VALUES ('".$optionsName."','".$file."')";
+		$queryCreate  = "INSERT INTO " .$tabla. " (options_name,options_value,options_note) VALUES ('".$optionsName."','".$file."','')";
 		$result = mysqli_query($connection, $queryCreate);
-		//var_dump($connection);
+		
 		//echo mysqli_insert_id($connection);
 		$sliderID = mysqli_insert_id($connection);
 	}//else

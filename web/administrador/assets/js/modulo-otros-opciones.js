@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 	$(document).on('click','.btn-del-file-opciones',function(){
 		if (confirm('Seguro quiere borrar el archivo')) {
-            var optionsName = $(this).closest('ul').attr('data-id') + '-' + $(this).attr('data-file');
+            var optionsName = $(this).attr('data-file');
             var contenedor = $(this).closest('li');
             
             $.ajax( {
@@ -15,6 +15,7 @@ $(document).ready(function() {
 	                optionsName: optionsName,
 	            },
 	            success: function ( response ) {
+					console.log(response);
 	            	if (response == 'deleted') {
                         //borra lo que hay
                         $(contenedor).find('input').remove();
@@ -39,7 +40,7 @@ $(document).ready(function() {
 	$(document).on('click','.btn-new-file-opciones',function(){
 		var contenedor = $(this).closest('li');
         //var optionsName = $(this).attr('data-file');
-        var optionsName = $(this).closest('ul').attr('data-id') + '-' + $(this).attr('data-file');
+        var optionsName = $(this).attr('data-file');
         var btn = $(this);
 		$( "#dialog" ).dialog({
 			title: 'Biblioteca de medios',
@@ -87,7 +88,8 @@ $(document).ready(function() {
     //cambia archivos
 	$(document).on('click','.btn-change-file-opciones',function(){
         var contenedor = $(this).closest('li');
-        var optionsName = $(this).closest('ul').attr('data-id') + '-' + $(this).attr('data-file');
+		var optionsName = $(this).attr('data-file');
+		
         //var optionsName = $(this).attr('data-file');
         var btn = $(this);
 		$( "#dialog" ).dialog({
@@ -111,14 +113,15 @@ $(document).ready(function() {
 		    	click: function () {
 		    		newImage = $('.previewAtachment').val();
 					if ( newImage != '') {
-						//crea el html para verlo y tener nuevos botones
-						html = '<a href="'+uploadsDir+newImage+'" target="_blank">'+newImage+'</a><button class="btn-change-file-opciones">Cambiar archivo</button><button class="btn-del-file-opciones">Borrar</button>';
-                        contenedor.append($(html));
+						//cambia el html para mostrar el nuevo archivo
+						$(contenedor).find('a').attr('href', uploadsDir+newImage);
+						(contenedor).find('a').text(newImage);
+						//cambia el input oculto
+						$(contenedor).find('input').val(newImage);
                         //si hay alguna imagen llama a la función de crear el item en bd
                         saveItemBD( newImage, optionsName, 'false');
                         
-                        //borra el boton
-						$(btn).remove();
+                        
 		    		}
 		    		//cierra dialogo de carga
 		    		$( this ).dialog( "close" );
@@ -147,6 +150,7 @@ $(document).ready(function() {
                 optionsName: optionsName,
             },
             success: function ( response ) {
+				
                 $( '.load-ajax' ).fadeOut();
             },
             error: function ( ) {

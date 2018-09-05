@@ -19,7 +19,7 @@ define ('UPLOADSURLIMAGES', UPLOADSURL . '');//carpeta  de imagenes (por si tien
 define ('UPLOADSURLFILES', UPLOADSURL . '');//carpeta de archivos (por si tiene distintas carpetas de contenido)
 
 //DEFINICIONES HEAD Y SCRIPTS
-define ( 'SITENAME', 'titulo' );
+define ( 'SITENAME', 'Somos Re' );
 define ( 'DATEPUBLISHED', '2018');
 define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logosite.png');
 define ( 'SITETITLE', 'Nombre - Panel de control' );
@@ -33,42 +33,56 @@ $usertype = array(
 	array( 'status' => '1', 'nombre' => 'Editor'),
 	array( 'status' => 'a', 'nombre' => 'default'),
 );
-//variables de categorias de noticia
-global $categorias;//define las categorias para cargar noticias
-$categorias = array(
-	array( 'slug' => 'novedad', 'nombre' => 'Novedad'),
-);
-//variables de categorias de galeria de imagenes / si existen
-global $categoriasGalerias;//define las categorias para cargar galerias
-$categoriasGalerias = array(
-	array( 'slug' => 'galeria1', 'nombre' => 'Galeria 1'),
-	array( 'slug' => 'galeria2', 'nombre' => 'Galeria 2'),
+
+//ARCHIVOS: variable indica que archivo descargar, para agregar o quitar, modificar variable
+global $archivos;
+$archivos = array(
+    array(
+        'label' => 'Itinerarios',
+        'optionName' => 'itinerarios',
+    ),
+    array(
+        'label' => 'Salidas y Precios',
+        'optionName' => 'salidas-precios',
+    ),
+    array(
+        'label' => 'Comparar Programas',
+        'optionName' => 'comparar-programas',
+    ),
+    array(
+        'label' => 'Agencias',
+        'optionName' => 'agencias',
+    ),
 );
 
-//variables de categorias de galeria de archivos //normalmente pdf para descargar
-global $categoriasArchivos;//define las categorias para cargar galerias
-$categoriasArchivos = array(
-	array( 'slug' => 'cat1', 'nombre' => 'Categoría 1', 'lista' => array(
-		'archivo1', 'archivo2', 'archivo3'
-	) ),
-	array( 'slug' => 'cat2', 'nombre' => 'Categoría 2', 'lista' => array(
-		'archivo1', 'archivo2', 'archivo3'
-	)),
-);
 
 global $menuModulos;
 $menuModulos = array(
 	array(
-		'titulo' => 'Posts',
-		'texto' => 'Administrar los posts: Borrar, cargar y editar.',
-		'template' => 'posts',
+		'titulo' => 'Galerías',
+		'texto' => 'Administrar: Borrar, cargar y editar.',
+		'template' => 'galerias',
 		'slug' => '',
 		'user' => 'a',
 	),
 	array(
-		'titulo' => 'Galería de Imágenes',
-		'texto' => 'Manipular las distintas galerias de imagenes.',
-		'template' => 'galeria-imagenes',
+		'titulo' => 'Celebrities',
+		'texto' => 'Administrar: Borrar, cargar y editar.',
+		'template' => 'celebrities',
+		'slug' => '',
+		'user' => 'a',
+	),
+	array(
+		'titulo' => 'Bonus Track',
+		'texto' => 'Administrar: Borrar, cargar y editar.',
+		'template' => 'bonus-track',
+		'slug' => '',
+		'user' => 'a',
+	),
+	array(
+		'titulo' => 'Categorias',
+		'texto' => 'Manipular las distintas categorias de las galerias.',
+		'template' => 'categorias',
 		'slug' => '',
 		'user' => 'a',
 	),
@@ -80,13 +94,6 @@ $menuModulos = array(
 		'user' => 'a',
 	),
 	array(
-		'titulo' => 'Slider Inicio',
-		'texto' => 'Modificar los sliders actuales.',
-		'template' => 'editar-slider',
-		'slug' => 'home',
-		'user' => 'a',
-	),
-	array(
 		'titulo' => 'Popups',
 		'texto' => 'Activar o desactivar popups.',
 		'template' => 'editar-slider',
@@ -94,41 +101,37 @@ $menuModulos = array(
 		'user' => 'a',
 	),
 	array(
+		'titulo' => 'Agencias',
+		'texto' => 'Administrar sucursales.',
+		'template' => 'sucursales',
+		'slug' => '',
+		'user' => 'a',
+	),
+	array(
+		'titulo' => 'Slider seguridad',
+		'texto' => 'Modificar seguridad.',
+		'template' => 'editar-slider',
+		'slug' => 'seguridad',
+		'user' => 'a',
+	),
+	array(
+		'titulo' => 'Comentarios',
+		'texto' => 'Modificar los comentarios.',
+		'template' => 'editar-slider',
+		'slug' => 'comentarios',
+		'user' => 'a',
+	),
+	/*array(
 		'titulo' => 'Biblioteca de medios',
 		'texto' => 'Subir, borrar y manipular archivos e imagenes.',
 		'template' => 'biblioteca-medios',
 		'slug' => '',
 		'user' => 'a',
-	),
+	),*/
 );
-	
 
-//variable de info adicional, por ejemplo, redes sociales, teléfonos y emails
-global $infoAdicional;
-$infoAdicional = array(
-	array(
-		'name' => 'Redes Sociales', 'id' => 'redes-sociales', 'data' =>	array(
-			array( 'type' => 'text', 'id' => 'instragram', 'name' => 'Instagram', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'pinterest', 'name' => 'Pinterest', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'linkedin', 'name' => 'Linkedin', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'twitter', 'name' => 'Twitter', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'snapchat', 'name' => 'Snapchat', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'vimeo', 'name' => 'Vimeo', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'youtube', 'name' => 'Youtube', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'spotify', 'name' => 'Spotify', 'data' => '#', 'extra'=> '' ),
-			array( 'type' => 'text', 'id' => 'facebook', 'name' => 'Facebook', 'data' => '#', 'extra'=> '' ),
-		),
-	),
-	array(
-			'name' => 'Teléfonos', 'id' => 'telefonos', 'data' =>	array(
-			'telefono1' => array( 'type' => 'text', 'id' => 'telefono-1', 'name' => 'telefono', 'data' => '#', 'extra'=> '' ),
-			'telefono2' => array( 'type' => 'text', 'id' => 'telefono-2', 'name' => 'telefono auxiliar', 'data' => '#', 'extra'=> '' ),
-		),
-	),
-	array(
-		'name' => 'Email', 'id' => 'emails', 'data' =>	array(
-			'email1' => array( 'type' => 'text', 'text', 'id' => 'email-1', 'name' => 'email', 'data' => '#', 'extra'=> '' ),
-			'email2' => array( 'type' => 'text', 'text', 'id' => 'email-2', 'name' => 'email', 'data' => '#', 'extra'=> '' ),
-		),
-	),	
-);//$infoAdicional
+//variables de categorias de galeria de imagenes / si existen
+global $categoriasGalerias;//define las categorias para cargar galerias
+$categoriasGalerias = array(
+	array( 'slug' => 'galeria1', 'nombre' => 'Galeria 1'),
+);

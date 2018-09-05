@@ -132,6 +132,11 @@
   margin-bottom: 5%;
   li {
     margin: 1em 0;
+
+    label {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
   }
   .type-text {
     label{
