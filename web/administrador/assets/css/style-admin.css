@@ -1155,6 +1155,15 @@ ul.dropdown-menu li {
   display: block;
 }
 
+.wrapper-mapa {
+  width: 100%;
+  overflow: hidden;
+}
+
+.mapa-search-wrapper {
+  margin-top: 20px;
+}
+
 /* ---- 7 seccion noticias ---- */
 .loop-noticias-backend {
   list-style: none;

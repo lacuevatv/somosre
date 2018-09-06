@@ -59,6 +59,7 @@ function get_footer_scripts ($modulo) { ?>
 	<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-contacts.js"></script>
 	<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-otros-opciones.js"></script>
 	<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-promociones.js"></script>
+	<script src="<?php echo URLADMINISTRADOR; ?>/assets/js/modulo-sucursales.js"></script>
 	
 <?php }
 
