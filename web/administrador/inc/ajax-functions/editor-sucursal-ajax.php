@@ -30,6 +30,26 @@ if ( isAjax() ) {
     $longitud            = filter_var($longitud,FILTER_SANITIZE_STRING);
 
 
+    /*
+     * MAPA
+    */
+
+    //Si longitud o latitus no estan registradas el mapa no puede existir
+    if ( $latitud == '' || $longitud == '' ) {
+        $mapa = '';
+    } else {
+        //si hay, se crear la imagen estática y se guarda
+
+        $src = 'https://maps.googleapis.com/maps/api/staticmap?center='.$latitud.','.$longitud.'&zoom=15&size=350x150&maptype=roadmap&markers=color:red%7Clabel:Re%7C'.$latitud.','.$longitud.'&key=' . GOOGLE_API_KEY;
+        $time = time();
+        $imageName = 'google-map_'.$time.'.png';
+        $imagePath = UPLOADSIMAGES . '/' .$imageName;
+        file_put_contents($imagePath,file_get_contents($src));
+
+        $mapa = $imageName;
+    }
+
+
 /*
 * GUARDAR POST
 */

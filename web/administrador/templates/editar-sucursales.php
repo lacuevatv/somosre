@@ -63,9 +63,10 @@ if ( $sucursalId != null ) {
 
 			<div class="row mapa-search-wrapper">
 				<div class="col-30">
+					
 					<div class="form-group">
-						<label for="input_direccion" class="larger-label">Escriba la dirección aquí: </label>
-						<input type="text" id="input_direccion" name="input_direccion" placeholder="Escriba la dirección aquí">
+						<label for="input_direction" class="larger-label">Escriba la dirección aquí: </label>
+						<input type="text" id="input_direction" name="input_direction" placeholder="Escriba la dirección aquí">
 					</div>
 					
 
@@ -82,9 +83,7 @@ if ( $sucursalId != null ) {
 				</div>
 				<div class="col-70">
 					<input type="hidden" name="post_mapa" value='<?php echo ($sucursal) ? $sucursal['sucursal_mapa'] : ''; ?>'>
-					<div id="contenedor-mapa">
-						<?php echo ($sucursal) ? $sucursal['sucursal_mapa'] : ''; ?>
-					</div>
+					<div id="map" style="width:100%;height:450px;"></div>
 			
 				</div>
 			</div>
@@ -109,3 +108,65 @@ if ( $sucursalId != null ) {
     <a type="button" href="index.php?admin=sucursales" class="btn">Volver a lista</a>
 	<a type="button" href="index.php?admin=editar-sucursales" class="btn">Agregar nueva</a>
 </footer>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&callback=initMap" async defer></script>
+
+	<script>
+
+		var coordenadas;
+		var input_direction = document.getElementById('input_direction');
+		input_direction.addEventListener('change', changeMap );
+	
+		
+		function changeMap() {
+			var address = document.getElementById('input_direction').value;
+			codeAddress( address );
+		}
+
+		function codeAddress( address ) {
+			var geocoder, map;
+
+			geocoder = new google.maps.Geocoder();
+			geocoder.geocode({
+				'address': address
+			}, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+					var myOptions = {
+						zoom: 15,
+						center: results[0].geometry.location,
+						mapTypeId: google.maps.MapTypeId.ROADMAP
+					}
+					
+					
+					map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+					var marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location
+					});
+				}
+				coordenadas = results[0].geometry.location.lat() + '+' + results[0].geometry.location.lng();
+
+				document.getElementById('post_lat').value = results[0].geometry.location.lat();
+				document.getElementById('post_longitud').value = results[0].geometry.location.lng();
+			});
+			
+		}
+
+		function initMap() {
+			var myOptions = {
+				zoom: 15,
+				center: {lat: <?php echo ($sucursal['sucursal_lat'] != '') ? $sucursal['sucursal_lat'] : '-32.6890983'; ?>, lng: <?php echo ($sucursal['sucursal_long'] != '') ? $sucursal['sucursal_long'] : '-62.103681300000005'; ?>},
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(document.getElementById("map"), myOptions);
+			
+			var marker = new google.maps.Marker({
+				map: map,
+				position: {lat: <?php echo ($sucursal['sucursal_lat'] != '') ? $sucursal['sucursal_lat'] : '-32.6890983'; ?>, lng: <?php echo ($sucursal['sucursal_long'] != '') ? $sucursal['sucursal_long'] : '-62.103681300000005'; ?>},
+			});
+			
+		}
+	</script>
+
+	

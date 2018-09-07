@@ -8,7 +8,7 @@ define('DB_SERVER', 'localhost');
 define('DB_USER', 'dbuser');
 define('DB_PASS', '123');
 define('DB_NAME', 'somosre_bd');
-
+define('GOOGLE_API_KEY', 'AIzaSyCvMf7H09aAIEg11DTNnBx9vfOAEkN1EKU');
 //DEFINICIONES HEAD Y SCRIPTS
 define ( 'VERSION', '1.0' );
 
