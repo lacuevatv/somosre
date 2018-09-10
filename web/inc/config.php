@@ -30,7 +30,8 @@ define('METAKEYS', '');
 
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');
-define('LINK_INSTAGRAM', 'https://www.instagram.com/');
+define('USUARIO_INSTAGRAM', 'SomosRe');
+define('LINK_INSTAGRAM', 'https://www.instagram.com/'.USUARIO_INSTAGRAM);
 define('LINK_TWITTER', 'https://twitter.com/');
 define('LINK_FLICKR', '#');
 define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');

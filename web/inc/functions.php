@@ -186,6 +186,23 @@ function getStyles( $pageActual, $options = array('default', 'owlcarousel') ) {
 	}
 }
 
+function getScripts( $pageActual = '', $options = array() ) {
+
+	//jquery obligatorio
+	echo '<script src="' . MAINSURL . '/assets/js/jquery-3.2.1.min.js"></script>';
+	
+
+	if ( ! empty($options) ) {
+		if (in_array('owlcarousel', $options)) {
+			
+			echo '<script src="' . MAINSURL . '/assets/js/owl.carousel.min.js"></script>';
+		
+		}
+
+		echo '<script src="' . MAINSURL . '/assets/js/script.js"></script>';
+	}
+}
+
 
 /**
  * Checks if a request is a AJAX request

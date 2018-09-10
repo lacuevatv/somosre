@@ -1,11 +1,15 @@
-<footer>
-			Footer
-		</footer>
-	</div><!-- // INNVER WRAPPER -->
+		
+	</div><!-- // INNER WRAPPER -->
+
+	<footer class="main-footer">
+		<img src="<?php echo MAINSURL; ?>/assets/images/temp/footer.jpg" style="display:block;margin:0 auto;width:100%;">
+	</footer>
+	
+	<?php getTemplate('hit'); ?>
+
 </div><!-- // MAIN WRAPPER -->
-	<script src="<?php echo MAINSURL; ?>/assets/js/jquery-3.2.1.min.js"></script>
-	<script src="<?php echo MAINSURL; ?>/assets/js/script.js"></script>
+	
+	<?php getScripts( PAGEACTUAL, array('owlcarousel') ); ?>
 
 </body>
-
 </html>

@@ -5,6 +5,10 @@
 2.0 Fuentes
 3.0 VARIABLES
 4.0 GENERAL
+5.0 HIT
+6.0 FOOTER
+7.0 NAV SUPERIOR
+8.0 INICIO
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -31,24 +35,65 @@
 
 html, body {
     font-family: $fuente-principal;
-    color: $color-negro;
+    color: #666;
     background-color: $color-blanco;
-    font-size: 4vw;
-    line-height: 3.5vh;
-    @media (min-width: 500px) {
-        font-size: 3vw;
-        line-height: 2.5vh;
-    }
-    @media (min-width: $md) {
-        font-size: 14px;
-        line-height: 18px;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    @media (min-width: $sm) {
+        font-size: 1em;
     }
 }
 
+//contenedor global, inclusive, header y footer
 .main-wrapper {
    position: relative; 
 }
 
+//contenedor paginas, todo salvo header y footer
 .inner-wrapper {
     position: relative;
 }
+
+.section-wrapper {
+    position: relative;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    padding: 0 30px;
+
+    @media (min-width: $sm) {
+        padding: 0 9%;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+5.0 hit
+--------------------------------------------------------------*/
+
+@import 'sass/hit';
+
+/*--------------------------------------------------------------
+6.0 footer
+--------------------------------------------------------------*/
+
+@import 'sass/footer';
+
+/*--------------------------------------------------------------
+7.0 NAV
+--------------------------------------------------------------*/
+
+@import 'sass/nav';
+
+/*--------------------------------------------------------------
+8.0 INICIO
+--------------------------------------------------------------*/
+
+@import 'sass/inicio';

@@ -102,7 +102,7 @@ $menuModulos = array(
 	array(
 		'titulo' => 'Popups',
 		'texto' => 'Activar o desactivar popups.',
-		'template' => 'editar-slider',
+		'template' => 'promociones',
 		'slug' => '',
 		'user' => 'a',
 	),
