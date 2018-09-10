@@ -4,15 +4,8 @@
  * es el html de la pagina de inicio
 */
 
-include 'header.php';
-
-$sliders = getSliders('home'); 
-    if ( $sliders != null ) {
-        getTemplate( 'slider-home', $sliders );
-    }
-?>
-
+getTemplate('header.php'); ?>
 
 <?php echo PAGEACTUAL; ?>
 
-<?php include 'footer.php'; ?>
+<?php getTemplate('footer.php');
