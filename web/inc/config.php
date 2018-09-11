@@ -44,3 +44,31 @@ define ( 'EMAILDEFAULT', '' );
 define ( 'ASUNTODEFAULT', 'Muchas gracias por contestarnos' );
 define('MENSAJEEXITO', 'Su email fue enviado con éxito, muchas gracias.');//este mensaje se imprime en el html
 define('MENSAJEERROR', 'Hubo un pequeño error, intente otra vez.');
+
+global $provincias;
+$provincias = array(
+    array( 'caba' => '', 'nombre' => 'Ciudad de Buenos Aires' ),
+    array( 'buenos-aires' => '', 'nombre' => 'Buenos Aires' ),
+    array( 'catamarca' => '', 'nombre' => 'Catamarca' ),
+    array( 'chaco' => '', 'nombre' => 'Chaco' ),
+    array( 'chubut' => '', 'nombre' => 'Chubut' ),
+    array( 'cordoba' => '', 'nombre' => 'Córdoba' ),
+    array( 'corrientes' => '', 'nombre' => 'Corrientes' ),
+    array( 'entre-rios' => '', 'nombre' => 'Entre Ríos' ),
+    array( 'formosa' => '', 'nombre' => 'Formosa' ),
+    array( 'jujuy' => '', 'nombre' => 'Jujuy' ),
+    array( 'la-pampa' => '', 'nombre' => 'La Pampa' ),
+    array( 'la-rioja' => '', 'nombre' => 'La Rioja' ),
+    array( 'mendoza' => '', 'nombre' => 'Mendoza' ),
+    array( 'misiones' => '', 'nombre' => 'Misiones' ),
+    array( 'neuquen' => '', 'nombre' => 'Neuquén' ),
+    array( 'rio-negro' => '', 'nombre' => 'Río Negro' ),
+    array( 'salta' => '', 'nombre' => 'Salta' ),
+    array( 'san-juan' => '', 'nombre' => 'San Juan' ),
+    array( 'san-luis' => '', 'nombre' => 'San Luis' ),
+    array( 'stanta-cruz' => '', 'nombre' => 'Santa Cruz' ),
+    array( 'santa-fe' => '', 'nombre' => 'Santa Fe' ),
+    array( 'santiago-del-estero' => '', 'nombre' => 'Santiago del Estero' ),
+    array( 'tierra-del-fuego' => '', 'nombre' => 'Tierra del Fuego' ),
+    array( 'tucuman' => '', 'nombre' => 'Tucumán' ),
+);

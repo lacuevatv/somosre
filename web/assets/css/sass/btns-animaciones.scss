@@ -1,0 +1,42 @@
+.btn {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    padding-right: 50px;
+    text-transform: uppercase;
+    border: 1px solid $color-negro;
+    @include border-radius(25px);
+    color: $color-negro;
+    font-size: .8em;
+    line-height: 1em;
+
+    @media (min-width: $md) {
+        font-size: .7em;
+        padding: 15px 30px;
+        padding-right: 50px;
+    }
+
+    &:hover {
+        zoom: 1;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: url(../images/corazon-boton-gris.png) no-repeat center;
+        background-size: 16px 14px;
+        display: block;
+        right: 20px;
+        top: 47%;
+        @include transform(translateY(-50%));
+
+        @media (min-width: $sm) {
+            top: 50%;
+        }
+    }
+}

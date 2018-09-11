@@ -233,11 +233,16 @@ $(document).ready(function(){
     });
 
     //on focus, etiqueta se achica
-    $(document).on('focus', 'input', function(){
+    $(document).on('focus', 'input.input-default', function(){
         zoomOutLabel( this );
         $(this).addClass('input-on');
     });
 
+    $(document).on('change', 'select', function(){
+        var contenedor = $(this).closest('.form-group');
+        var label = $(contenedor).find('label')
+        zoomOutLabel( label );
+    });
 
     /*
      * VALIDACIONES FORMULARIO

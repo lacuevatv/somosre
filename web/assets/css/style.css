@@ -10,6 +10,7 @@
 6.0 FOOTER
 7.0 NAV SUPERIOR
 8.0 INICIO
+9.0 FORMULARIO
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Reset
@@ -169,7 +170,7 @@ justify-content: center;
 --------------------------------------------------------------*/
 html, body {
   font-family: "Montserrat", sans-serif;
-  color: #666;
+  color: #333;
   background-color: #fff;
   font-size: 0.9em;
   line-height: 1.5em;
@@ -204,11 +205,6 @@ html, body {
   }
 }
 
-.btn {
-  cursor: pointer;
-  display: block;
-}
-
 /*--------------------------------------------------------------
 5.0 hit
 --------------------------------------------------------------*/
@@ -223,7 +219,285 @@ html, body {
 7.0 NAV
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-8.0 INICIO
+8.0 BTNS Y ANIMACIONES
+--------------------------------------------------------------*/
+.btn {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  padding-right: 50px;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  border-radius: 25px;
+  color: #333;
+  font-size: 0.8em;
+  line-height: 1em;
+}
+@media (min-width: 992px) {
+  .btn {
+    font-size: 0.7em;
+    padding: 15px 30px;
+    padding-right: 50px;
+  }
+}
+.btn:hover {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.btn:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(../images/corazon-boton-gris.png) no-repeat center;
+  background-size: 16px 14px;
+  display: block;
+  right: 20px;
+  top: 47%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .btn:after {
+    top: 50%;
+  }
+}
+
+/*--------------------------------------------------------------
+9.0 FORMULARIO
+--------------------------------------------------------------*/
+/*
+ * FORMULARIO
+*/
+form {
+  position: relative;
+  padding: 0 0 40px 0;
+  margin-bottom: 20px;
+}
+form legend {
+  font-size: 1.2em;
+}
+form .inner-wrapper-form {
+  width: 100%;
+  margin: 20px 0;
+}
+@media (min-width: 992px) {
+  form .inner-wrapper-form-sm {
+    width: 67%;
+  }
+}
+form .form-row {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  form .margin-left {
+    margin-left: 0.5em;
+  }
+}
+@media (min-width: 992px) {
+  form .margin-right {
+    margin-right: 0.5em;
+  }
+}
+form .loader {
+  display: none;
+  background: rgba(0, 0, 0, 0.2) url(../images/loader-espiral.gif) no-repeat center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: 20%;
+  z-index: 111;
+}
+form .msj-form {
+  position: absolute;
+  bottom: 0;
+  color: red;
+  font-size: 100%;
+}
+@media (min-width: 992px) {
+  form .msj-form {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+.form-group {
+  width: 100%;
+  position: relative;
+  height: 40px;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #333;
+  flex-grow: 1;
+}
+@media (min-width: 576px) {
+  .form-group {
+    width: 48%;
+    margin: 0 1%;
+  }
+}
+@media (min-width: 768px) {
+  .form-group {
+    height: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .form-group {
+    height: 40px;
+    width: 30%;
+    margin: 5px 1%;
+  }
+}
+@media (min-width: 1600px) {
+  .form-group {
+    height: 40px;
+  }
+}
+.form-group label {
+  position: absolute;
+  top: 10px;
+  left: 1px;
+  z-index: 2;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+@media (min-width: 992px) {
+  .form-group label {
+    top: 8px;
+  }
+}
+.form-group label.long-label {
+  font-size: 80%;
+}
+@media (min-width: 992px) {
+  .form-group label.long-label {
+    font-size: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .form-group label.label-col-right {
+    left: 5px;
+  }
+}
+.form-group label.on {
+  font-size: 60%;
+  top: -5px;
+  z-index: 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+.form-group input, .form-group select {
+  z-index: 1;
+  height: 25px;
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+}
+@media (min-width: 576px) {
+  .form-group input, .form-group select {
+    height: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .form-group input, .form-group select {
+    height: 30px;
+    bottom: 2px;
+  }
+}
+@media (min-width: 992px) {
+  .form-group input, .form-group select {
+    height: 30px;
+    bottom: 0px;
+  }
+}
+.form-group input:focus, .form-group select:focus {
+  outline: none;
+}
+.form-group .input-on {
+  color: #333 !important;
+}
+.form-group input[type=number] {
+  -moz-appearance: textfield;
+}
+.form-group input[type=number]::-webkit-inner-spin-button, .form-group input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-group input[type=date] {
+  -moz-appearance: textfield;
+  color: transparent;
+}
+.form-group input[type=date]::-webkit-inner-spin-button, .form-group input[type=date]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-group input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.form-group input[type=date]::-webkit-datetime-edit-month-field {
+  color: inherit;
+}
+.form-group input[type=date]::-webkit-datetime-edit-day-field {
+  color: inherit;
+}
+.form-group input[type=date]::-webkit-datetime-edit-year-field {
+  color: inherit;
+}
+.form-group .msj-error-input {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 60%;
+  color: red;
+  width: 55%;
+  text-transform: lowercase;
+  line-height: 110%;
+  display: none;
+}
+.form-group .msj-error-input-background {
+  top: -13px;
+  padding: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.form-group .msj-error-input-col {
+  right: 45px;
+}
+
+/*--------------------------------------------------------------
+10.0 INICIO
 --------------------------------------------------------------*/
 
 /*# sourceMappingURL=style.css.map */
