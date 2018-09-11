@@ -1,3 +1,38 @@
 .hit-legales {
-    display: none;
+    background: $color-negro;
+
+    .brand-hit {
+        display: block;
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+        max-width: 341px;
+
+        @media (min-width: $xs) {
+            width: 341px;
+        }
+
+        &:hover {
+            .image-logo2 {
+                opacity: 1;
+            }
+        }
+    }
+    .image-logo {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .image-logo2 {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        @include transition(all $transitionSpeed);
+    }
 }

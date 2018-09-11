@@ -228,7 +228,41 @@ strong {
 5.0 hit
 --------------------------------------------------------------*/
 .hit-legales {
-  display: none;
+  background: #333;
+}
+.hit-legales .brand-hit {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  max-width: 341px;
+}
+@media (min-width: 576px) {
+  .hit-legales .brand-hit {
+    width: 341px;
+  }
+}
+.hit-legales .brand-hit:hover .image-logo2 {
+  opacity: 1;
+}
+.hit-legales .image-logo {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.hit-legales .image-logo2 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 /*--------------------------------------------------------------
