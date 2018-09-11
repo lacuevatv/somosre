@@ -1,4 +1,4 @@
-<form method="POST" name="default-form" id="default-form">
+<form method="POST" name="default-form" id="default-form" class="formulario">
     <div class="loader"></div>
 
     <div class="inner-wrapper-form">

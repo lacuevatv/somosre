@@ -4,7 +4,7 @@
 
 
 
-form {
+.formulario {
     position: relative;
     padding: 0 0 40px 0;
     margin-bottom: 20px;
@@ -224,3 +224,45 @@ form {
 }//.form-group 
 
 
+.form-group-full {
+    width: 100%;
+    height: 40px;
+    width: 80%;
+    margin: 0 auto;
+
+    @media (min-width: $sm) {
+        margin: 0;
+    }
+
+    @media (min-width: $md) {
+        height: 30px;
+        
+    }
+}//.form-group 
+
+.newsletter-form {
+    position: relative;
+
+    legend {
+        text-transform: uppercase;
+    }
+
+    input {
+        left: 1px;
+    }
+    input[type=submit] {
+        position: absolute;
+        right: 2px;
+        top: 15px;
+        width: 20px;
+        height: 20px;
+        display: block;
+        left: auto;
+        cursor: pointer;
+        bottom: auto;
+
+        @media (min-width: $md) {
+            top: 5px;
+        }
+    }
+}

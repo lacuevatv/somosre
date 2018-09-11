@@ -366,6 +366,42 @@ $(document).ready(function(){
 
     });//submit formulario default
 
+    /*
+     * SUBMIT FORMULARIO NEWSLETTER
+    */    
+
+   $(document).on('submit', '#newsletter-form', function( e ) {
+    e.preventDefault();
+    var loader = $('.loader');
+    var msj = $(this).find('.msj-form');
+    var contenedor = $(loader).closest('form');
+
+    formData = new FormData( this );
+    formData.append('function','newsletter-form');
+
+    $.ajax( {
+        type: 'POST',
+        url: ajaxFileUrl,
+        data: formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        //funcion antes de enviar
+        beforeSend: function() {
+            $(loader).fadeIn();
+        },
+        success: function ( response ) {
+            //console.log(response);
+            $(loader).fadeOut(); 
+            msj.html(response);    
+        },
+        error: function ( ) {
+            console.log('error');
+        },
+    });//cierre ajax
+
+});//submit formulario default
+
 })//ready
 
 /*--------------------------------------------------------------

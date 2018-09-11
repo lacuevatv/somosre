@@ -72,3 +72,94 @@ $provincias = array(
     array( 'tierra-del-fuego' => '', 'nombre' => 'Tierra del Fuego' ),
     array( 'tucuman' => '', 'nombre' => 'Tucumán' ),
 );
+
+//menues:
+global $menus;
+$menus = array(
+    //menu header
+    'menuHeader' => array(
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Sobre Re',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Programas',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Bonus Track',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Entrevista',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Info Útil',
+            'link_externo' => false,
+        ),
+    ),
+
+    //menu footer 1
+    'menuFooter1' => array(
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Sobre Re',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Programas Exclusivos',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Experiencia Re.',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Re by Celebrities',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Bonus Track',
+            'link_externo' => false,
+        ),
+    ),
+
+    //menu footer 2
+    'menuFooter2' => array(
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Fiesta de 15',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Seguridad',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Testimonios',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Agencias Autorizadas',
+            'link_externo' => false,
+        ),
+        array(
+            'slug' => MAINSURL . '/' . '#',
+            'nombre' => 'Tu Entrevista',
+            'link_externo' => false,
+        ),
+    ),
+);
