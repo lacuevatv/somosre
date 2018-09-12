@@ -59,7 +59,7 @@ html, body {
     position: relative;
     clear: both;
     margin: 0;
-    padding: 0;
+    padding: 40px 0;
 }
 
 .row {
@@ -93,13 +93,14 @@ html, body {
 
 .contenedor {
     padding: 0 30px;
-
+    width: 100%;
     @media (min-width: $sm) {
         padding: 0 9%;
     }
 }
 
 .contenedor-left {
+    width: 100%;
     padding-left: 30px;
     padding-right: 30px;
     @media (min-width: $sm) {
@@ -109,6 +110,7 @@ html, body {
 }
 
 .contenedor-right {
+    width: 100%;
     padding-left: 30px;
     padding-right: 30px;
     @media (min-width: $sm) {
@@ -117,6 +119,10 @@ html, body {
     }
 }
 
+.hr-separador {
+    visibility: hidden;
+    height: 10px;
+}
 
 
 /*--------------------------------------------------------------

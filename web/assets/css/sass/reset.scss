@@ -89,6 +89,7 @@ input[type=submit] {
 button {
     border: none;
     background-color:transparent;
+    outline: none;
 }
 
 small {
@@ -101,4 +102,10 @@ strong {
 
 em {
     font-style: italic;
+}
+
+.reset-image {
+    display: initial!important;
+    width: initial!important;
+    height: initial!important;
 }

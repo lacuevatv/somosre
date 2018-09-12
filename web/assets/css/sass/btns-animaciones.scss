@@ -10,6 +10,7 @@
     color: $color-negro;
     font-size: .8em;
     line-height: 1em;
+    font-weight: 500;
 
     @media (min-width: $md) {
         font-size: .7em;
@@ -21,6 +22,7 @@
         zoom: 1;
         filter: alpha(opacity=80);
         opacity: 0.8;
+        color: inherit;
     }
 
     &:after {
@@ -28,7 +30,9 @@
         position: absolute;
         width: 16px;
         height: 16px;
-        background: url(../images/corazon-boton-gris.png) no-repeat center;
+        background-image: url(../images/corazon-boton-gris.png);
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: 16px 14px;
         display: block;
         right: 20px;
@@ -41,3 +45,196 @@
     }
 }
 
+.btn-blanco {
+    color: $color-negro;
+    background-color: $color-blanco;
+    border: none;
+
+    &:after {
+        background-image: url(../images/corazon-boton-fucsia.png);
+    }
+}
+
+.btn-amarillo {
+    color: $color-negro;
+    background-color: #ffe900;
+    border: none;
+
+    &:after {
+        background-image: url(../images/corazon-boton-gris.png);
+    }
+}
+
+.btn-verde {
+    color: $color-negro;
+    background-color: #75efd8;
+    border: none;
+
+    &:after {
+        background-image: url(../images/corazon-boton-gris.png);
+    }
+}
+
+.btn-fucsia {
+    color: $color-blanco;
+    background-color: #ff006c;
+    border: none;
+
+    &:after {
+        background-image: url(../images/corazon-boton-blanco.png);
+    }
+
+    &:hover {
+        color:$color-blanco;
+    }
+}
+
+.btn-borde-fucsia {
+    color: #ff006c;
+    border: 1px solid #ff006c;
+
+    &:after {
+        background-image: url(../images/corazon-boton-fucsia.png);
+    }
+
+    &:hover {
+        color:#ff006c;
+    }
+}
+
+.btn-facebook {
+    color: $color-blanco;
+    background-color: #3a5ca9;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media (min-width: $sm) {
+
+    }
+
+    &:after {
+        background-image: url(../images/facebook-formulario.png);
+        background-size: 16px 17px;
+    }
+
+    &:hover {
+        color:$color-blanco;
+    }
+}
+
+.btn-google {
+    background-color: #e6e6e6;
+    border: none;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media (min-width: $sm) {
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    &:after {
+        background-image: url(../images/google-formulario.png);
+        background-size: 18px 19px;
+        width: 18px;
+        height: 19px;
+        
+    }
+
+}
+
+.btn-share {
+    position: absolute;
+    z-index: 222;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    display: block;
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-image: url(../images/compartir-gris.png);
+    background-size: 22px 21px;
+
+    @media (min-width: $sm) {
+        width: 43px;
+        height: 42px;
+        background-size: 43px 42px;
+    }
+
+    @media (min-width: $md) {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .share-item {
+        position: absolute;
+        z-index: 220;
+        top: 0px;
+        border: 1px solid $color-negro;
+        @include border-radius(50%);
+        right: 3px;
+        width: 15px;
+        height: 15px;
+        line-height: 2em;
+        font-size: .6em;
+        opacity: 0;
+        @include transition(all $transitionSpeed);
+
+        @media (min-width: $sm) {
+            width: 30px;
+            height: 30px;
+            line-height: 2em;
+            font-size: 1em;
+            right: 7px;
+        }
+    }
+
+    .share-item1{
+        top: -25px;
+        @media (min-width: $sm) {
+            top: -40px;
+        }
+    }
+
+    .share-item2{
+        top: -50px;
+        @media (min-width: $sm) {
+            top: -80px;
+        }
+    }
+
+    .share-item3{
+        top: -75px;
+        @media (min-width: $sm) {
+            top: -120px;
+        }
+    }
+    &:hover {
+        zoom: 1;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+
+        .share-item {
+            opacity: 1;
+            @include transform(translateY(-25px));
+            @media (min-width: $sm) {
+                @include transform(translateY(-40px));
+            
+            }
+        }
+    }
+}
+
+.btn-share-blanco {
+    background-image: url(../images/compartir-blanco.png);
+    background-size: 22px 21px;
+    @media (min-width: $sm) {
+        background-size: 43px 42px;
+    }
+
+    .share-item-blanco {
+        border-color: $color-blanco;
+        color: $color-blanco;
+    }
+}

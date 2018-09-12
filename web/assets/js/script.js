@@ -122,6 +122,17 @@ $(document).ready(function(){
 
     });
 
+    $(document).on('click', '.btn-share span', function(e){
+        e.preventDefault();
+        
+        //prevee que se active por defecto
+        if ( $(this).css('opacity') == 0 ) {
+            return;
+        }
+        var red = $(this).attr('data-red');
+        console.log('Compartiendo en ' + red);
+    })
+
 
 });//.ready()
 
@@ -372,9 +383,8 @@ $(document).ready(function(){
 
    $(document).on('submit', '#newsletter-form', function( e ) {
     e.preventDefault();
-    var loader = $('.loader');
-    var msj = $(this).find('.msj-form');
-    var contenedor = $(loader).closest('form');
+
+    var input = $(this).find('input[name="email"]');
 
     formData = new FormData( this );
     formData.append('function','newsletter-form');
@@ -386,14 +396,10 @@ $(document).ready(function(){
         processData: false,
         contentType: false,
         cache: false,
-        //funcion antes de enviar
-        beforeSend: function() {
-            $(loader).fadeIn();
-        },
         success: function ( response ) {
             //console.log(response);
-            $(loader).fadeOut(); 
-            msj.html(response);    
+            $(input).val('Listo, muchas gracias');
+            $(input).css('color', 'red')
         },
         error: function ( ) {
             console.log('error');

@@ -8,11 +8,12 @@
 
     legend {
         font-size: 1.2em;
+        font-weight: 500;
     }
 
     .inner-wrapper-form {
         width: 100%;
-        margin: 20px 0;
+        margin: 40px 0;
     }//.inner-wrapper-form
 
     .inner-wrapper-form-sm {
@@ -80,7 +81,7 @@
     flex-grow: 1;
     @media (min-width: $xs) {
         width: 48%;
-        margin: 0 1%;
+        margin: 0;
     }
     @media (min-width: $sm) {
         height: 70px;
@@ -88,7 +89,7 @@
     @media (min-width: $md) {
         height: 40px;
         width: 30%;
-        margin: 5px 1%;
+        margin: 5px;
     }
     @media (min-width: $xlg) {
         height: 40px;
@@ -136,7 +137,7 @@
         height: 25px;
         position: absolute;
         bottom: 0;
-        left: 7px;
+        left: 1px;
         width: 100%;
         border: 0;
         background: transparent;

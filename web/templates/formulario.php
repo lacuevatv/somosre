@@ -1,15 +1,13 @@
 <form method="POST" name="default-form" id="default-form" class="formulario">
     <div class="loader"></div>
 
-    <div class="inner-wrapper-form">
-        <legend>
-            Completa tus datos para concretar tu entrevista.
-        </legend>
-    </div>
+    <legend class="parrafo-separador">
+        Completa tus datos para concretar tu entrevista.
+    </legend>
 
     <div class="inner-wrapper-form">
-        <button class="btn">Completar con </button>
-        <button class="btn">Completar con</button>
+        <button class="btn btn-facebook">Completar con</button>
+        <button class="btn btn-google">Completar con</button>
     </div>
 
     <div class="inner-wrapper-form">
@@ -104,12 +102,10 @@
         
         </div>
     </div>
-
-    <div class="inner-wrapper-form">
-        <legend>
-            Completa los datos de un adulto responsable.
-        </legend>
-    </div>
+    <hr class="hr-separador">
+    <legend class="parrafo-separador">
+        Completa los datos de un adulto responsable.
+    </legend>
 
     <div class="inner-wrapper-form inner-wrapper-form-sm">
         
@@ -155,8 +151,8 @@
     </div><!-- //.inner-wrapper-form -->
 
     <div class="inner-wrapper-form">
-        <button type="submit" class="btn btn-submit">Enviar</button>
-        <span class="msj-form"><?php echo MENSAJEEXITO; ?></span>
+        <button type="submit" class="btn btn-amarillo btn-submit">Enviar datos</button>
+        <span class="msj-form"></span>
     </div>
 
 </form><!-- //default-form -->

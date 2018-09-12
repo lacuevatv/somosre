@@ -1,13 +1,150 @@
+/*
+ * INICIO HEADER
+*/
+.header-inicio {
+    position: relative;
+    background-color: #75efd8;
+    padding: 50px 0 80px;
+
+    @media (min-width: $sm) {
+        padding: 50px 0;
+    }
+
+    .main-title-inicio {
+        margin-bottom:40px;
+
+        img {
+            width: 80%;
+            @media (min-width: $xs) {
+                width: 40%;
+            }
+            @media (min-width: $md) {
+                width: 31%;
+            }
+            @media (min-width: $xlg) {
+                width: 480px;
+            }
+        }
+    }//.main-title-inicio
+
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        position: absolute;
+        bottom: -15px;
+        left: 0;
+        background: url(../images/separador.png);
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+}//.header-inicio
+
+/*
+ * NOSOTROS
+*/
+#somosre {
+    width: 100%;
+    padding: 80px 0 40px;
+    @media (min-width: $sm) {
+        padding: 40px 0 40px;
+    }
+
+    p {
+        margin: 20px 0;
+        font-size: 1.2em;
+    }
+
+    .super-parrafo {
+        font-size: 1.5em;
+        line-height: 1.3em;
+    }
+}
+
+/*
+ * PROGRAMAS
+*/
+#programas {
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -40px;
+    @media (min-width: $sm) {
+        margin-bottom: 100px;
+    }
+}
+
+.btns-wrapper {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    li {
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 20px;
+        @media (min-width: $lg) {
+            width: initial;
+        }
+    }
+}
+
+.front-reduce {
+    @media (min-width: $md) {
+        width: 75%;
+    }
+    @media (min-width: $lg) {
+        width: 60%;
+    }
+}
 
 /*
  * GALERIAS
 */
 .galeria-box {
+    position: relative;
     overflow: hidden;
-    padding: 180px 0;
+    height: 350px;
+    //padding: 100px 0;
     width: 100%;
     @media (min-width: $sm) {
         width: 50%;
+        //padding: 100px 0;
+    }
+    @media (min-width: $md) {
+        height: 400px;
+    }
+    @media (min-width: $lg) {
+        height: 450px;
+    }
+    @media (min-width: $xlg) {
+        height: 500px;
+        //padding: 200px 0;
+    }
+}
+
+.contenido-boxes {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    left: 50%;
+    padding-right:30px;
+    font-size: 60%;
+
+    @media (min-width: $sm) {
+        padding-right:9%;
+        font-size: 90%;
+    }
+    @media (min-width: $md) {
+        font-size: 100%;
     }
 }
 
@@ -17,6 +154,7 @@
 
 #bonustrack {
     background-color: #ff006c;
+    color: $color-blanco;
 }
 
 #celebrities {
@@ -40,7 +178,28 @@
  * INSTRAGRAM
 */
 #instagram {
+    .instagram-title {
+        position: relative;
+        font-size: 1.2em;
+        line-height: 1.1em;
+        font-weight: 500;
+        margin: 10px 0 20px;
+        padding-left: 40px;
 
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background-image: url(../images/icono-instagram.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 30px;
+        }
+    }
 }//#instagram
 
 /*
@@ -56,20 +215,40 @@
 */
 .agencias {
     background-color: #ffe900;
-    padding: 150px 0;
     width: 100%;
-    
-    @media (min-width: $md) {
+    height: 350px;
+    @media (min-width: $sm) {
         width: 50%;
+    }
+    @media (min-width: $md) {
+        height: 400px;
+    }
+    @media (min-width: $lg) {
+        height: 450px;
+    }
+    @media (min-width: $xlg) {
+        height: 500px;
     }
 }//.agencias
 
 .map-wrapper {
+    background-color: $color-negro;
     overflow: hidden;
-    height: 100%;
-    @media (min-width: $md) {
+    width: 100%;
+    height: 350px;
+    @media (min-width: $sm) {
         width: 50%;
     }
+    @media (min-width: $md) {
+        height: 400px;
+    }
+    @media (min-width: $lg) {
+        height: 450px;
+    }
+    @media (min-width: $xlg) {
+        height: 500px;
+    }
+    
 }//.map-wrapper
 
 /*
@@ -79,6 +258,13 @@
     position: relative;
     
     .slider-item {
+        height: 350px;
+        @media (min-width: $sm) {
+            height: initial;
+        }
+        @media (min-width: $md) {
+            height: initial;
+        }
 
         figure {
             position: relative;
@@ -96,10 +282,19 @@
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6333333', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
 
                 @media (min-width: $md) {
-                    background: -moz-linear-gradient(left, rgba(51,51,51,0.9) 0%, rgba(21,21,21,0) 58%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-                    background: -webkit-linear-gradient(left, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 58%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-                    background: linear-gradient(to right, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 58%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    background: -moz-linear-gradient(left, rgba(51,51,51,0.9) 0%, rgba(21,21,21,0) 80%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 80%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 80%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
                     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6333333', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+                }
+            }
+
+            img {
+                width: auto;
+                height: 100%;
+                @media (min-width: $sm) {
+                    width: 100%;
+                    height: initial;
                 }
             }
         }
@@ -135,15 +330,31 @@
             @media (min-width: $md) {
                 width: 50%;
             }
+
+            h2 {
+                margin-bottom: 5px;
+            }
         }
 
         .comentario {
-            color: yellow;
-            font-weight: 500;
-
             q {
                 color: $color-blanco;
                 font-weight: 400;
+                font-size: 1.1em;
+                &:before {
+                    content: '"';
+                }
+                &:after {
+                    content: '"';
+                }
+            }
+
+            span {
+                color: #ffe900;
+                font-weight: 500;
+                font-size: .9em;
+                display: inline-block;
+                margin-top: 10px;
             }
         }
 
@@ -161,6 +372,15 @@
         display: -ms-flex;
         display: -moz-flex;
         display: -webkit-flex;
+
+        @media (min-width: $sm) {
+            right: 9%;
+            left: initial;
+        }
+        @media (min-width: $lg) {
+            left: 9%;
+            right: initial;
+        }
     }
 
     .icon-arrow {
@@ -187,3 +407,65 @@
     }
 
 }//.slider-wrapper
+
+
+/*
+ * ENTREVISTA
+*/
+#entrevista {
+    padding: 100px 0 0;
+    @media (min-width: $md) {
+        padding: 150px 0 100px;
+    }
+}
+
+
+/*
+ * TIPOGRAFIA
+*/
+.titulo-base {
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.texto-uppercase {
+    text-transform: uppercase;
+    font-size: 1.4em;
+    @media (min-width: $sm) {
+        font-size: 1.7em;
+    }
+}
+
+.parrafo-separador {
+    margin: 30px 0 20px;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 10px;
+        background: #666;
+        left: 0;
+        top: -10px;
+        position: absolute;
+    }
+}
+
+.parrafo-separador-blanco {
+    margin: 30px 0 20px;
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        height: 1px;
+        width: 10px;
+        background: #fff;
+        left: 0;
+        top: -10px;
+        position: absolute;
+    }
+}
