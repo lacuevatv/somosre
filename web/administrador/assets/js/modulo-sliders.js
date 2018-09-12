@@ -163,7 +163,7 @@ $(document).ready(function (){
 		var ImagenMostrar = ID.find('img');
 		var msjExito = 'No te olvides de guardar item'
 		var msj = ID.find('.msj-guardar-imagen');
-
+		
 		$( "#dialog" ).dialog({
 			title: 'Biblioteca de imágenes',
 			autoOpen: false,

@@ -11,7 +11,7 @@
             </div>
             <div class="form-group recargar-btn-wrapper">
                 
-                <button data-sliderID="<?php echo $data['slider_imagen']; ?>" type="button" class="btn btn-primary btn-recargar">Cargar nueva foto</button>
+                <button data-sliderID="<?php echo $data['slider_id']; ?>" type="button" class="btn btn-primary btn-recargar">Cargar nueva foto</button>
                 <span class="msj-guardar-imagen"></span>
                 
             </div>
