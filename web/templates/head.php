@@ -28,11 +28,6 @@
 	
 	<?php openPopUp( PAGEACTUAL ); ?>
 
-	<nav>
-		
-		<img src="<?php echo MAINSURL; ?>/assets/images/temp/head-sup.png" style="display:block;margin:0 auto;width:100%;">
-		<img src="<?php echo MAINSURL; ?>/assets/images/temp/head-nav.png" style="display:block;margin:0 auto;width:100%;">
-
-	</nav>
+	<?php getTemplate('header-nav'); ?>
 
 	<div class="inner-wrapper">

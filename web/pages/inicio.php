@@ -8,12 +8,12 @@ getTemplate('head'); ?>
 <!-- -------header------- -->
     <header>
         
-        <h1>Usa 15</h1>
+        <!--<h1>Usa 15</h1>
         <p>
             New York
             Miami
             Orlando
-        </p>
+        </p>-->
         <img src="<?php echo MAINSURL; ?>/assets/images/temp/banner-inicio.jpg" style="display:block;margin:0 auto;width:100%;">
     </header>
     
@@ -88,21 +88,106 @@ getTemplate('head'); ?>
     
 
 <!-- ------- GALERIAS ------- -->
-    <section>
+    <section >
+        <div class="row">
 
-        <img src="<?php echo MAINSURL; ?>/assets/images/temp/cuadrados.jpg" style="display:block;margin:0 auto;width:100%;">
+            <div id="experiencia" class="wrapper-box galeria-box">
+                <div class="contenedor-left">
+                    <h2>    
+                        La experiencia Re.
+                    </h2>
+                    <p>
+                        Mirá la experiencia Re.
+                    </p>
+                    <a class="btn" href="#">
+                        Ver experiencia
+                    </a>
+                </div>
+            </div>
+
+            <div id="celebrities" class="wrapper-box galeria-box">
+                <div class="contenedor-right">
+                    <h2>    
+                        Re by Celebrities.
+                    </h2>
+                    <p>
+                        Compartí con los Mellis Nayar.
+                    </p>
+                    <a class="btn" href="#">
+                        Ver experiencia
+                    </a>
+                </div>
+            </div>
+
+            <div id="bonustrack" class="wrapper-box galeria-box">
+                <div class="contenedor-left">
+                    <h2>    
+                        Bonus Track.
+                    </h2>
+                    <p>
+                        Siempre te damos más de lo que esperás.
+                    </p>
+                    <a class="btn" href="#">
+                        Ver extras
+                    </a>
+                </div>
+            </div>
+
+            <div id="fiesta15" class="wrapper-box galeria-box">
+                <div class="contenedor-right">
+                    <h2>    
+                        Tu fiesta de 15.
+                    </h2>
+                    <p>
+                        Ya no tenés que de3cidir entre Fiesta o Viaje.
+                    </p>
+                    <a class="btn" href="#">
+                        Ver fiesta
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- // .row -->
 
     </section>
     
 <!-- ------- SLIDER ------- -->
-    <section>
+    <section id="seguridad">
+         
+    <ul class="slider-wrapper owl-carousel">
         
-        <img src="<?php echo MAINSURL; ?>/assets/images/temp/seguridad.jpg" style="display:block;margin:0 auto;width:100%;">
+        <?php $sliderSeguridad = getSliders('seguridad');
+            
+            if ( $sliderSeguridad != null) : ?>
+                <?php foreach ( $sliderSeguridad as $item ) { ?>
+                    
+                    <li class="slider-item">
+                        <figure>
+                            <span class="background"></span>
+                            <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                        </figure>
+
+                        <div class="slider-contenido contenedor">
+                            <h2>
+                                <?php echo $item['slider_titulo']; ?>
+                            </h2>
+
+                            <p>
+                                <?php echo $item['slider_texto']; ?>
+                            </p>
+                            
+                        </div>
+                    </li>
+
+                <?php } ?>
+            <?php endif; ?>
+
+        </ul>
 
     </section>
 
 <!-- ------- INSTAGRAM ------- -->
-    <section class="section-wrapper">
+    <section id="instagram" class="section-wrapper">
         
         <div class="contenedor">
 
@@ -118,35 +203,65 @@ getTemplate('head'); ?>
     </section>
 
 <!-- ------- TESTIMONIOS ------- -->
-    <section class="section-wrapper">
+    <section id="testimonios" class="section-wrapper">
+        <ul class="slider-wrapper owl-carousel">
+        
+        <?php $testimonios = getSliders('comentarios');
+            
+            if ( $testimonios != null) : ?>
+                <?php foreach ( $testimonios as $item ) { ?>
+                    
+                    <li class="slider-item">
+                        <figure>
+                            <span class="background"></span>
+                            <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                        </figure>
 
-        <img src="<?php echo MAINSURL; ?>/assets/images/temp/chicas.jpg" style="display:block;margin:0 auto;width:100%;">
+                        <div class="slider-contenido contenedor">
+                            <h2>
+                                Lo que ellas dicen
+                            </h2>
 
+                            <p class="comentario">
+                                <q><?php echo $item['slider_texto']; ?></q><br>
+                                <?php echo $item['slider_titulo']; ?>
+                            </p>
+                            
+                        </div>
+                    </li>
+
+                <?php } ?>
+            <?php endif; ?>
+
+        </ul>
     </section>
 
 <!-- ------- AGENCIAS ------- -->
     <section class="section-wrapper">
 
-        <div class="agencias">
-            <div class="contenedor-left">
-                <h2>
-                    Dónde comprar tu viaje Re.
-                </h2>
-                <p>
-                    Encontrá la Agencia Autorizada de tu provincia.
-                </p>
+        <div class="row">
+            <div class="wrapper-box agencias">
+                <div class="contenedor-left">
+                    <h2>
+                        Dónde comprar tu viaje Re.
+                    </h2>
+                    <p>
+                        Encontrá la Agencia Autorizada de tu provincia.
+                    </p>
 
-                <p>
-                    <a href="#" target="_blank" class="btn">
-                        Ver agencias
-                    </a>
-                </p>
+                    <p>
+                        <a href="#" target="_blank" class="btn">
+                            Ver agencias
+                        </a>
+                    </p>
+                </div>
             </div>
-        </div>
-        
-        <div class="map-wrapper">
+            
+            <div class="wrapper-box map-wrapper">
 
-            <img src="<?php echo MAINSURL; ?>/assets/images/temp/mapa.jpg" style="display:block;margin:0 auto;width:100%;">
+                <img src="<?php echo MAINSURL; ?>/assets/images/temp/mapa.jpg" style="display:block;margin:0 auto;heigth:100%;">
+            </div>
+        
         </div>
 
     </section>

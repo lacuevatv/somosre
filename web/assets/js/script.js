@@ -441,20 +441,22 @@ $(window).on('load', function(){
 $(window).on('load', function(){
 
     //slider superior home
-    /*$('#slider-inicio').owlCarousel({
+    $('.owl-carousel').owlCarousel({
         loop:true,
         margin:50,
         nav:true,
+        lazyLoad: true,
+        autoHeight:true,
         navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
-        dots:true,
+        dots:false,
         responsive:{
             0:{
                 items:1
             },
         },
-    });*/
+    });
 
-    
+    /*
     /*
      * CARGA ASINCRONA DE IMAGENES
      * carga las imágenes con img src

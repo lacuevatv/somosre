@@ -1,9 +1,6 @@
 /*
  * FORMULARIO
 */
-
-
-
 .formulario {
     position: relative;
     padding: 0 0 40px 0;
@@ -61,10 +58,11 @@
         z-index: 111;
     }
     .msj-form {
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        display: block;
+        margin-top: 20px;
         color: red;
-        font-size: 100%;
+        font-size: 90%;
         @media (min-width: $md) {
             left: 50%;
             @include transform(translateX(-50%));

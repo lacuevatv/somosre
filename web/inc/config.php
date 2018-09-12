@@ -24,9 +24,9 @@ define ('UPLOADSURL', MAINSURL . '/contenido');
 define ('UPLOADSFILE', MAINSURL . '/contenido');
 
 //META TAGS
-define('SITETITLE', 'Titulo del sitio');
-define('METADESCRIPTION', '');
-define('METAKEYS', '');
+define('SITETITLE', 'Somos Re');
+define('METADESCRIPTION', 'Es el nombre de una comunidad cancherísima de Girls Teens, te proponemos un viaje diferente para festejar tus quince, vas a conocer mucho más que solo Disney.');
+define('METAKEYS', 'festejar tus quince, usa, Girls Teens, viaje diferente, viaje a estados unidos,');
 
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');

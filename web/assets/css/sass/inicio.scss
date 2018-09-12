@@ -1,0 +1,189 @@
+
+/*
+ * GALERIAS
+*/
+.galeria-box {
+    overflow: hidden;
+    padding: 180px 0;
+    width: 100%;
+    @media (min-width: $sm) {
+        width: 50%;
+    }
+}
+
+#experiencia {
+    background-color: #ffe900;
+}
+
+#bonustrack {
+    background-color: #ff006c;
+}
+
+#celebrities {
+    background-color: #75efd8;
+}
+
+#fiesta15 {
+    background-color: #fff;
+}
+
+
+/*
+ * SEGURIDAD
+*/
+#seguridad {
+    background-color: #75efd8;
+    color: $color-blanco;
+}//#seguridad
+
+/*
+ * INSTRAGRAM
+*/
+#instagram {
+
+}//#instagram
+
+/*
+ * TESTIMONIOS
+*/
+#testimonios {
+    background-color: #ff006c;
+    color: $color-blanco;
+}//#testimonios
+
+/*
+ * AGENCIAS
+*/
+.agencias {
+    background-color: #ffe900;
+    padding: 150px 0;
+    width: 100%;
+    
+    @media (min-width: $md) {
+        width: 50%;
+    }
+}//.agencias
+
+.map-wrapper {
+    overflow: hidden;
+    height: 100%;
+    @media (min-width: $md) {
+        width: 50%;
+    }
+}//.map-wrapper
+
+/*
+ * SLIDERS: testimonios y seguridad
+*/
+.slider-wrapper {
+    position: relative;
+    
+    .slider-item {
+
+        figure {
+            position: relative;
+            z-index: 1;
+
+            .background {
+                display: block;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background: -moz-linear-gradient(left, rgba(51,51,51,0.9) 0%, rgba(0,0,0,0.4) 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(left, rgba(51,51,51,0.9) 0%,rgba(0,0,0,0.4) 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, rgba(51,51,51,0.9) 0%,rgba(0,0,0,0.4) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6333333', endColorstr='#66000000',GradientType=1 ); /* IE6-9 */
+
+                @media (min-width: $md) {
+                    background: -moz-linear-gradient(left, rgba(51,51,51,0.9) 0%, rgba(21,21,21,0) 58%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 58%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, rgba(51,51,51,0.9) 0%,rgba(21,21,21,0) 58%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6333333', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+                }
+            }
+        }
+
+        .slider-contenido {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: flex-start;
+            -moz-align-items: flex-start;
+            -ms-align-items: flex-start;
+            -o-align-items: flex-start;
+            align-items: flex-start;
+            -webkit-justify-content: center;
+            -moz-justify-content: center;
+            -ms-justify-content: center;
+            -o-justify-content: center;
+            justify-content: center;
+            -webkit-flex-direction: column;
+            -moz-flex-direction: column;
+            -ms-flex-direction: column;
+            -o-flex-direction: column;
+            flex-direction: column;
+
+            @media (min-width: $md) {
+                width: 50%;
+            }
+        }
+
+        .comentario {
+            color: yellow;
+            font-weight: 500;
+
+            q {
+                color: $color-blanco;
+                font-weight: 400;
+            }
+        }
+
+    }//.slider-item
+
+    .owl-nav {
+        position: absolute;
+        bottom: 20px;
+        left: 9%;
+        display: block;
+        width: 100px;
+        height: 30px;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+    }
+
+    .icon-arrow {
+        display: block;
+        width: 30px;
+        height: 25px;
+    }
+
+    .icon-arrow-left {
+        background: url(../images/next-blanco-izquierda.png) no-repeat;
+        margin-right: 20px;
+        @include transition(all $transitionSpeed);
+        &:hover {
+            background: url(../images/next-gris-izquierda.png) no-repeat;
+        }
+    }
+
+    .icon-arrow-right {
+        background: url(../images/next-blanco-derecha.png) no-repeat;
+        @include transition(all $transitionSpeed);
+        &:hover {
+            background: url(../images/next-gris-derecha.png) no-repeat;
+        }
+    }
+
+}//.slider-wrapper
