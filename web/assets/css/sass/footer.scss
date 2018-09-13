@@ -129,6 +129,11 @@
         right: 20px;
         bottom: 20px;
 
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/sello-somos-re-footer@2x.png);
+            background-size: cover;
+        }
+
         @media (min-width: $sm) {
             right: 0;
             bottom: 0;
