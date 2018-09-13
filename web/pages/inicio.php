@@ -11,7 +11,10 @@ getTemplate('head'); ?>
         <div class="contenedor">
             <h1 class="main-title-inicio">
                 <span class="sr-only">Usa 15: New York, Miami, Orlando</span>
-                <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png" alt="Usa 15: New York, Miami, Orlando">
+                <picture>
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio@2x.png 2x" media="(min-width: 768px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png" alt="Usa 15: New York, Miami, Orlando">
+                </picture>
             </h1>
             <button href="entrevista" class="btn btn-fucsia scroll-to">
                 Pedí tu entrevista
@@ -32,7 +35,10 @@ getTemplate('head'); ?>
                 <div class="front-reduce">
                     <h2 class="titulo-base">
                         <span class="sr-only">Somos Re</span>
-                        <img src="<?php echo MAINSURL; ?>/assets/images/logo-inicio.png" alt="Logo Somos Re">
+                        <picture>
+                            <source srcset="<?php echo MAINSURL; ?>/assets/images/logo-inicio.png, <?php echo MAINSURL; ?>/assets/images/logo-inicio@2x.png 2x" media="(min-width: 768px)">
+                            <img src="<?php echo MAINSURL; ?>/assets/images/logo-inicio.png" alt="Logo Somos Re">
+                        </picture>
                     </h2>
 
                     <p class="super-parrafo">
@@ -186,10 +192,14 @@ getTemplate('head'); ?>
                     <li class="slider-item">
                         <figure>
                             <span class="background"></span>
+                            
                             <?php if ( dispositivo() == 'movil' && $item['slider_imagen_movil'] != '') : ?>
                                 <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen_movil']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
-                            <?php else : ?>
+                            
+                                <?php else : ?>
+                            
                             <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            
                             <?php endif; ?>
                         </figure>
 
@@ -245,15 +255,23 @@ getTemplate('head'); ?>
                     <li class="slider-item">
                         <figure>
                             <span class="background"></span>
+                            
                             <?php if ( dispositivo() == 'movil' && $item['slider_imagen_movil'] != '') : ?>
                                 <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen_movil']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
                             <?php else : ?>
+
                             <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            
                             <?php endif; ?>
                         </figure>
 
                         <div class="slider-contenido contenedor">
-                            <img class="reset-image" src="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png">
+                            
+                            <picture>
+                                <source srcset="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png, <?php echo MAINSURL; ?>/assets/images/re-logo-testimonio@2x.png 2x">
+                                <img class="reset-image" src="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png">
+                            </picture>
+
                             <h2 class="titulo-base">
                                 Lo que ellas dicen.
                             </h2>
@@ -277,7 +295,12 @@ getTemplate('head'); ?>
         <div class="row">
             <div class="wrapper-box agencias">
                 <div class="contenedor-left">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/usa-15.png">
+                    
+                    <picture>
+                        <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15.png, <?php echo MAINSURL; ?>/assets/images/usa-15@2x.png 2x">
+                        <img src="<?php echo MAINSURL; ?>/assets/images/usa-15.png">
+                    </picture>
+
                     <h2 class="titulo-base">
                         Dónde comprar tu viaje Re.
                     </h2>

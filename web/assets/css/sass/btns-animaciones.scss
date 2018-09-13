@@ -31,13 +31,18 @@
         width: 16px;
         height: 16px;
         background-image: url(../images/corazon-boton-gris.png);
+        background-size: 16px 14px;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 16px 14px;
         display: block;
         right: 20px;
         top: 47%;
         @include transform(translateY(-50%));
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-gris@2x.png);
+            background-size: 17.5px 13.5px;
+        }
 
         @media (min-width: $sm) {
             top: 50%;
@@ -52,6 +57,11 @@
 
     &:after {
         background-image: url(../images/corazon-boton-fucsia.png);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-fucsia@2x.png);
+            background-size: 13px 12px;
+        }
     }
 }
 
@@ -62,6 +72,11 @@
 
     &:after {
         background-image: url(../images/corazon-boton-gris.png);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-gris@2x.png);
+            background-size: 17.5px 13.5px;
+        }
     }
 }
 
@@ -72,6 +87,11 @@
 
     &:after {
         background-image: url(../images/corazon-boton-gris.png);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-gris@2x.png);
+            background-size: 17.5px 13.5px;
+        }
     }
 }
 
@@ -82,6 +102,11 @@
 
     &:after {
         background-image: url(../images/corazon-boton-blanco.png);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-blanco@2x.png);
+            background-size: 19px 15px;
+        }
     }
 
     &:hover {
@@ -95,6 +120,11 @@
 
     &:after {
         background-image: url(../images/corazon-boton-fucsia.png);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/corazon-boton-fucsia@2x.png);
+            background-size: 13px 12px;
+        }
     }
 
     &:hover {
@@ -115,6 +145,11 @@
     &:after {
         background-image: url(../images/facebook-formulario.png);
         background-size: 16px 17px;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/facebook-formulario.png);
+            background-size: 17.5px 18.5px;
+        }
     }
 
     &:hover {
@@ -138,6 +173,10 @@
         background-size: 18px 19px;
         width: 18px;
         height: 19px;
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/google-formulario.png);
+            background-size: 19.5px 19px;
+        }
         
     }
 
@@ -155,6 +194,11 @@
     background-repeat: no-repeat;
     background-image: url(../images/compartir-gris.png);
     background-size: 22px 21px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/compartir-gris@2x.png);
+        background-size: 22px 21px;
+    }
 
     @media (min-width: $sm) {
         width: 43px;
@@ -229,6 +273,12 @@
 .btn-share-blanco {
     background-image: url(../images/compartir-blanco.png);
     background-size: 22px 21px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/compartir-blanco@2x.png);
+        background-size: 22px 21px;
+    }
+
     @media (min-width: $sm) {
         background-size: 43px 42px;
     }

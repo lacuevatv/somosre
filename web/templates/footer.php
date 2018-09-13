@@ -6,7 +6,11 @@
 
 			<div class="menu-footer-wrapper brand-name">
 				<a href="<?php echo MAINSURL; ?>">
-					<img src="<?php echo MAINSURL; ?>/assets/images/logo-footer.png" alt="Somos Re">
+					
+					<picture>
+                        <source srcset="<?php echo MAINSURL; ?>/assets/images/logo-footer.png, <?php echo MAINSURL; ?>/assets/images/logo-footer@2x.png 2x">
+						<img src="<?php echo MAINSURL; ?>/assets/images/logo-footer.png" alt="Somos Re">
+					</picture>
 				</a>
 				<p><small>Todos los derechos reservados.</small></p>
 			</div>

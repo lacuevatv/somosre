@@ -195,9 +195,14 @@
             width: 30px;
             height: 30px;
             background-image: url(../images/icono-instagram.png);
+            background-size: 30px 30px;
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 30px;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/icono-instagram@2x.png);
+                background-size: 30px 30px;
+            }
         }
     }
 }//#instagram
@@ -404,19 +409,49 @@
     }
 
     .icon-arrow-left {
-        background: url(../images/next-blanco-izquierda.png) no-repeat;
+        background-image: url(../images/next-blanco-izquierda.png);
+        background-size: 29px 23px;
+        background-repeat: no-repeat;
         margin-right: 20px;
         @include transition(all $transitionSpeed);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/next-blanco-izquierda@2x.png);
+            background-size: 22px 21px;
+        }
+        
         &:hover {
-            background: url(../images/next-gris-izquierda.png) no-repeat;
+            background-image: url(../images/next-gris-izquierda.png);
+            background-size: 26px 21px;
+            background-repeat: no-repeat;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/next-gris-izquierda@2x.png);
+                background-size: 22px 21px;
+            }
         }
     }
 
     .icon-arrow-right {
-        background: url(../images/next-blanco-derecha.png) no-repeat;
+        background-image: url(../images/next-blanco-derecha.png);
+        background-size: 27px 23px;
+        background-repeat: no-repeat;
         @include transition(all $transitionSpeed);
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/next-blanco-derecha@2x.png);
+            background-size: 22px 21px;
+        }
+        
         &:hover {
-            background: url(../images/next-gris-derecha.png) no-repeat;
+            background-image: url(../images/next-gris-derecha.png);
+            background-size: 27px 21px;
+            background-repeat: no-repeat;
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/next-gris-derecha@2x.png);
+                background-size: 22px 21px;
+            }
         }
     }
 
