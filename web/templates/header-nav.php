@@ -42,7 +42,7 @@
             <?php global $menus;
             foreach ($menus['menuHeader'] as $menu ) { ?>
                <li>
-                    <a href="<?php echo $menu['slug']; ?>" title="<?php echo $menu['nombre']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?>>
+                    <a href="<?php if ( PAGEACTUAL != 'inicio' ) { echo MAINSURL . '/' . $menu['slug']; } else { echo $menu['slug']; } ?>" title="<?php echo $menu['nombre']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?> <?php if ( !($menu['link_externo']) && PAGEACTUAL == 'inicio' ) {echo 'class="scroll-to"'; } ?>>
                         <?php echo $menu['nombre']; ?>
                     </a>
                 </li> 

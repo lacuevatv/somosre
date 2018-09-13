@@ -79,28 +79,28 @@ $menus = array(
     //menu header
     'menuHeader' => array(
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'somosre',
             'nombre' => 'Sobre Re',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'programas',
             'nombre' => 'Programas',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'bonustrack',
             'nombre' => 'Bonus Track',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'entrevista',
             'nombre' => 'Entrevista',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
-            'nombre' => 'Info Útil',
+            'slug' => 'agencias',
+            'nombre' => 'Agencias',
             'link_externo' => false,
         ),
     ),

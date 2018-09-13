@@ -462,6 +462,15 @@ $(window).on('load', function(){
     });
 
     /*
+     * CARGAR INSTAGRAM
+    */
+
+   //getInstagram();
+
+    
+   
+
+    /*
     /*
      * CARGA ASINCRONA DE IMAGENES
      * carga las imágenes con img src
@@ -509,3 +518,48 @@ $(window).on('load', function(){
 
 
 });
+
+
+/*
+ * FUNCIONES
+*/
+
+/*
+* CARGAR PLUGIN DE INSTAGRAM
+*/
+function getInstagram() {
+    var html = '<script src="'+baseUrl+'/assets/js/lightwidget.js"></script>';
+    var altura = 330;
+
+    if (window.innerWidth > '400')  {
+        altura = 370;
+    }
+
+    if (window.innerWidth > '480')  {
+        altura = 560;
+    }
+
+    if (window.innerWidth > '767')  {
+        altura = 200;
+    }
+
+    if (window.innerWidth > '992')  {
+        altura = 250;
+    }
+
+    if (window.innerWidth > '1279')  {
+        altura = 310;
+    }
+    if (window.innerWidth > '1600')  {
+        altura = 380;
+    }
+
+    if (window.innerWidth > '767')  {
+        html += '<iframe src="//lightwidget.com/widgets/5f76bd453f335434aba8ae21a25bb57e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
+    } else {
+        html += '<iframe src="//lightwidget.com/widgets/3a71a1be6fe05cd4a511ad12c4c138d8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
+    }
+
+    contenedor = $('#instagram-wrapper').empty().append($(html));
+    contenedor.height(altura);
+}

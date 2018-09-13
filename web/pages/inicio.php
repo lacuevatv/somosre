@@ -218,7 +218,12 @@ getTemplate('head'); ?>
                     <?php echo USUARIO_INSTAGRAM; ?>
                 </a>
             </h2>
-            <img src="<?php echo MAINSURL; ?>/assets/images/temp/instagram.jpg" style="display:block;margin:0 auto;width:100%;">
+            
+            <div id="instagram-wrapper">
+                
+                Cargando.<span class="animation-blink">.</span><span class="animation-blink" style="animation-delay: 0.5s;">.</span>
+
+            </div>
 
         </div>
 
