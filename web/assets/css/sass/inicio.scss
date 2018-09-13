@@ -202,6 +202,20 @@
     }
 }//#instagram
 
+#instagram-wrapper {
+    width: 100%;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+}
+
 /*
  * TESTIMONIOS
 */
@@ -468,4 +482,13 @@
         top: -10px;
         position: absolute;
     }
+}
+
+.text-center {
+    text-align: center;
+    width: 100%;
+}
+
+.text-blanco {
+    color: $color-blanco;
 }

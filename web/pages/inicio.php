@@ -186,7 +186,11 @@ getTemplate('head'); ?>
                     <li class="slider-item">
                         <figure>
                             <span class="background"></span>
+                            <?php if ( dispositivo() == 'movil' && $item['slider_imagen_movil'] != '') : ?>
+                                <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen_movil']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            <?php else : ?>
                             <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            <?php endif; ?>
                         </figure>
 
                         <div class="slider-contenido contenedor">
@@ -219,7 +223,7 @@ getTemplate('head'); ?>
                 </a>
             </h2>
             
-            <div id="instagram-wrapper">
+            <div id="instagram-wrapper" class="center-box">
                 
                 Cargando.<span class="animation-blink">.</span><span class="animation-blink" style="animation-delay: 0.5s;">.</span>
 
@@ -241,7 +245,11 @@ getTemplate('head'); ?>
                     <li class="slider-item">
                         <figure>
                             <span class="background"></span>
+                            <?php if ( dispositivo() == 'movil' && $item['slider_imagen_movil'] != '') : ?>
+                                <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen_movil']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            <?php else : ?>
                             <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $item['slider_imagen']; ?>" alt="<?php echo $item['slider_titulo']; ?>">
+                            <?php endif; ?>
                         </figure>
 
                         <div class="slider-contenido contenedor">
@@ -285,9 +293,13 @@ getTemplate('head'); ?>
                 </div>
             </div>
             
-            <div class="wrapper-box map-wrapper">
+            <div class="wrapper-box map-wrapper" id="map">
+                
+                <p class="text-center text-blanco">
+                    Cargando.<span class="animation-blink">.</span><span class="animation-blink" style="animation-delay: 0.5s;">.</span>
+                </p>
 
-                <!--<img src="<?php echo MAINSURL; ?>/assets/images/temp/mapa.jpg" style="display:block;margin:0 auto;heigth:100%;">-->
+            
             </div>
         
         </div>
