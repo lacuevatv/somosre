@@ -244,6 +244,11 @@
 
     legend {
         text-transform: uppercase;
+        text-align: center;
+        @media (min-width: $sm) {
+            text-align: left;
+        }
+
     }
 
     input {

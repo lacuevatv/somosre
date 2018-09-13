@@ -781,8 +781,8 @@ html, body {
     overflow: visible;
     position: relative;
     z-index: 1;
-    top: initial;
-    left: initial;
+    top: 0;
+    left: 0;
     display: flex;
     display: -o-flex;
     display: -ms-flex;
@@ -1423,6 +1423,12 @@ html, body {
 }
 .newsletter-form legend {
   text-transform: uppercase;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .newsletter-form legend {
+    text-align: left;
+  }
 }
 .newsletter-form input {
   left: 1px;
