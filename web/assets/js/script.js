@@ -72,10 +72,9 @@ $(document).ready(function(){
    $('.toggle').click(MovilMenuToggle);
     function MovilMenuToggle (){
         $('.toggle').toggleClass('toggle-open');
-          $('.brand-name').toggleClass('brand-name-open');
         
-         var menu = $('.menus-wrapper')
-         var h = menu.prop('scrollHeight');
+         var menu = $('.main-menu')
+         var h = menu.prop('scrollHeight')+40;
          if ( $(menu).height() == 0 ) {
              menu.animate({
                  'height': h+'px',

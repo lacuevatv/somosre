@@ -57,7 +57,7 @@
 
 .btn-amarillo {
     color: $color-negro;
-    background-color: #ffe900;
+    background-color: $color-amarillo;
     border: none;
 
     &:after {
@@ -67,7 +67,7 @@
 
 .btn-verde {
     color: $color-negro;
-    background-color: #75efd8;
+    background-color: $color-verde;
     border: none;
 
     &:after {
@@ -77,7 +77,7 @@
 
 .btn-fucsia {
     color: $color-blanco;
-    background-color: #ff006c;
+    background-color:$color-rojo;
     border: none;
 
     &:after {
@@ -90,15 +90,15 @@
 }
 
 .btn-borde-fucsia {
-    color: #ff006c;
-    border: 1px solid #ff006c;
+    color:$color-rojo;
+    border: 1px solid $color-rojo;
 
     &:after {
         background-image: url(../images/corazon-boton-fucsia.png);
     }
 
     &:hover {
-        color:#ff006c;
+        color: $color-rojo;
     }
 }
 

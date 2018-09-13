@@ -27,7 +27,7 @@ define ('UPLOADSFILE', MAINSURL . '/contenido');
 define('SITETITLE', 'Somos Re');
 define('METADESCRIPTION', 'Es el nombre de una comunidad cancherísima de Girls Teens, te proponemos un viaje diferente para festejar tus quince, vas a conocer mucho más que solo Disney.');
 define('METAKEYS', 'festejar tus quince, usa, Girls Teens, viaje diferente, viaje a estados unidos,');
-
+define('ACCESOAGENCIAS', 'https://app.redevt.com/red/ag/login.asp?xpid=6C672D35353130335548');
 //LINKS REDES SOCIALES:
 define('LINK_FACEBOOK', 'https://www.facebook.com/');
 define('USUARIO_INSTAGRAM', 'SomosRe');

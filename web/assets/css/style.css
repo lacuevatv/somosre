@@ -482,6 +482,297 @@ html, body {
 /*--------------------------------------------------------------
 7.0 NAV
 --------------------------------------------------------------*/
+/*
+* BARRA SUPERIOR
+*/
+.sup-nav-wrapper {
+  background-color: #353a34;
+  height: 35px;
+  padding-left: 10px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .sup-nav-wrapper {
+    height: 40px;
+  }
+}
+.sup-nav-wrapper .call-center {
+  color: #ffe900;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.sup-nav-wrapper .sup-nav {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  padding-right: 5px;
+}
+.sup-nav-wrapper .sup-nav a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 12px;
+}
+.sup-nav-wrapper .sup-nav a:hover {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.sup-nav-wrapper .sup-nav .a-agencias {
+  border-right: 1px solid #999;
+  position: relative;
+  margin-right: 5px;
+  background-image: url(../images/icono-agencia.png);
+  background-size: 12px 15px;
+}
+@media (min-width: 768px) {
+  .sup-nav-wrapper .sup-nav .a-agencias {
+    position: relative;
+    padding-right: 235px;
+  }
+}
+.sup-nav-wrapper .sup-nav .a-facebook {
+  background-image: url(../images/facebook.png);
+  background-size: 12px 12px;
+}
+.sup-nav-wrapper .sup-nav .a-instagram {
+  background-image: url(../images/instagram.png);
+  background-size: 13px 12px;
+}
+.sup-nav-wrapper .sup-nav .agencias-button {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sup-nav-wrapper .sup-nav .agencias-button {
+    display: block;
+    position: absolute;
+    text-align: right;
+    right: 10px;
+    text-transform: uppercase;
+    font-size: 75%;
+    line-height: 180%;
+    color: #ccc;
+    font-weight: 500;
+  }
+}
+
+/*
+* MAIN NAV
+*/
+.main-nav-wrapper {
+  position: relative;
+  z-index: 22;
+  height: 40px;
+  background-color: #fff;
+  padding: 0 10px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+.main-nav-wrapper .brand-name {
+  height: 35px;
+  width: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/logo-menu-bar.png);
+  background-size: 31px 30px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.main-nav-wrapper .brand-name:hover {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.main-nav-wrapper .toggle {
+  position: relative;
+  z-index: 11;
+  cursor: pointer;
+  display: block;
+  border: none;
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media (min-width: 992px) {
+  .main-nav-wrapper .toggle {
+    display: none;
+  }
+}
+.main-nav-wrapper .toggle:focus {
+  border: none;
+  outline: none;
+}
+.main-nav-wrapper .toggle .tog1 {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+.main-nav-wrapper .toggle .tog2 {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+.main-nav-wrapper .toggle .tog3 {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  left: 5px;
+  top: 30px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+.main-nav-wrapper .toggle:hover .tog2 {
+  left: 5px;
+}
+.main-nav-wrapper .toggle-open .tog2 {
+  display: none;
+}
+.main-nav-wrapper .toggle-open .tog1 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: initial;
+}
+.main-nav-wrapper .toggle-open .tog3 {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: initial;
+}
+.main-nav-wrapper .main-menu {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 40px;
+  background-color: #fff;
+  left: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media (min-width: 992px) {
+  .main-nav-wrapper .main-menu {
+    height: 100%;
+    overflow: visible;
+    position: relative;
+    z-index: 1;
+    top: initial;
+    left: initial;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+}
+.main-nav-wrapper .main-menu li {
+  padding: 5px 20px;
+  margin: 5px 0;
+}
+.main-nav-wrapper .main-menu li:first-child {
+  margin-top: 20px;
+}
+@media (min-width: 992px) {
+  .main-nav-wrapper .main-menu li:first-child {
+    margin-top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .main-nav-wrapper .main-menu li {
+    margin: 0;
+    padding: 5px 10px;
+  }
+}
+.main-nav-wrapper .main-menu li a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .main-nav-wrapper .main-menu li a {
+    font-size: 0.7em;
+  }
+}
+.main-nav-wrapper .main-menu li a:hover {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+
 /*--------------------------------------------------------------
 8.0 BTNS Y ANIMACIONES
 --------------------------------------------------------------*/
