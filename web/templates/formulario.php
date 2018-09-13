@@ -23,7 +23,7 @@
             </div>
 
             <div class="form-group">
-                <input type="contacto_email" name="email" class="input-default" required>
+                <input type="email" name="contacto_email" class="input-default" required>
                 <label for="contacto_email">Email</label>
                 <span class="msj-error-input">
                     Formato de email inválido
@@ -71,8 +71,8 @@
             </div>
 
             <div class="form-group">
-                <input type="text" name="ciudad" class="input-default">
-                <label for="ciudad" class="">Ciudad</label>
+                <input type="text" name="contacto_ciudad" class="input-default">
+                <label for="contacto_ciudad" class="">Ciudad</label>
                 <span class="msj-error-input">
                     Ciudad donde habita
                 </span>

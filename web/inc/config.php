@@ -40,37 +40,37 @@ define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
 define('POSTPERPAG', '1');
 
 //EMAILS Y MENSAJES
-define ( 'EMAILDEFAULT', '' );
-define ( 'ASUNTODEFAULT', 'Muchas gracias por contestarnos' );
+define ( 'EMAILDEFAULT', 'info@lacueva.tv' );
+define ( 'ASUNTODEFAULT', 'Nuevo formulario' );
 define('MENSAJEEXITO', 'Su email fue enviado con éxito, muchas gracias.');//este mensaje se imprime en el html
 define('MENSAJEERROR', 'Hubo un pequeño error, intente otra vez.');
 
 global $provincias;
 $provincias = array(
-    array( 'caba' => '', 'nombre' => 'Ciudad de Buenos Aires' ),
-    array( 'buenos-aires' => '', 'nombre' => 'Buenos Aires' ),
-    array( 'catamarca' => '', 'nombre' => 'Catamarca' ),
-    array( 'chaco' => '', 'nombre' => 'Chaco' ),
-    array( 'chubut' => '', 'nombre' => 'Chubut' ),
-    array( 'cordoba' => '', 'nombre' => 'Córdoba' ),
-    array( 'corrientes' => '', 'nombre' => 'Corrientes' ),
-    array( 'entre-rios' => '', 'nombre' => 'Entre Ríos' ),
-    array( 'formosa' => '', 'nombre' => 'Formosa' ),
-    array( 'jujuy' => '', 'nombre' => 'Jujuy' ),
-    array( 'la-pampa' => '', 'nombre' => 'La Pampa' ),
-    array( 'la-rioja' => '', 'nombre' => 'La Rioja' ),
-    array( 'mendoza' => '', 'nombre' => 'Mendoza' ),
-    array( 'misiones' => '', 'nombre' => 'Misiones' ),
-    array( 'neuquen' => '', 'nombre' => 'Neuquén' ),
-    array( 'rio-negro' => '', 'nombre' => 'Río Negro' ),
-    array( 'salta' => '', 'nombre' => 'Salta' ),
-    array( 'san-juan' => '', 'nombre' => 'San Juan' ),
-    array( 'san-luis' => '', 'nombre' => 'San Luis' ),
-    array( 'stanta-cruz' => '', 'nombre' => 'Santa Cruz' ),
-    array( 'santa-fe' => '', 'nombre' => 'Santa Fe' ),
-    array( 'santiago-del-estero' => '', 'nombre' => 'Santiago del Estero' ),
-    array( 'tierra-del-fuego' => '', 'nombre' => 'Tierra del Fuego' ),
-    array( 'tucuman' => '', 'nombre' => 'Tucumán' ),
+    array( 'slug' => 'caba', 'nombre' => 'Ciudad de Buenos Aires' ),
+    array( 'slug' => 'buenos-aires', 'nombre' => 'Buenos Aires' ),
+    array( 'slug' => 'catamarca', 'nombre' => 'Catamarca' ),
+    array( 'slug' => 'chaco', 'nombre' => 'Chaco' ),
+    array( 'slug' => 'chubut', 'nombre' => 'Chubut' ),
+    array( 'slug' => 'cordoba', 'nombre' => 'Córdoba' ),
+    array( 'slug' => 'corrientes', 'nombre' => 'Corrientes' ),
+    array( 'slug' => 'entre-rios', 'nombre' => 'Entre Ríos' ),
+    array( 'slug' => 'formosa', 'nombre' => 'Formosa' ),
+    array( 'slug' => 'jujuy', 'nombre' => 'Jujuy' ),
+    array( 'slug' => 'la-pampa', 'nombre' => 'La Pampa' ),
+    array( 'slug' => 'la-rioja', 'nombre' => 'La Rioja' ),
+    array( 'slug' => 'mendoza', 'nombre' => 'Mendoza' ),
+    array( 'slug' => 'misiones', 'nombre' => 'Misiones' ),
+    array( 'slug' => 'neuquen', 'nombre' => 'Neuquén' ),
+    array( 'slug' => 'rio-negro', 'nombre' => 'Río Negro' ),
+    array( 'slug' => 'salta', 'nombre' => 'Salta' ),
+    array( 'slug' => 'san-juan', 'nombre' => 'San Juan' ),
+    array( 'slug' => 'san-luis', 'nombre' => 'San Luis' ),
+    array( 'slug' => 'santa-cruz', 'nombre' => 'Santa Cruz' ),
+    array( 'slug' => 'santa-fe', 'nombre' => 'Santa Fe' ),
+    array( 'slug' => 'santiago-del-estero', 'nombre' => 'Santiago del Estero' ),
+    array( 'slug' => 'tierra-del-fuego', 'nombre' => 'Tierra del Fuego' ),
+    array( 'slug' => 'tucuman', 'nombre' => 'Tucumán' ),
 );
 
 //menues:

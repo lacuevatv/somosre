@@ -47,7 +47,7 @@
 					<form method="POST" name="newsletter-form" id="newsletter-form" class="newsletter-form">
 						<legend>Newsletter</legend>
 						<div class="form-group form-group-full">
-							<input type="contacto_email" name="email" class="input-default" required>
+							<input type="email" name="contacto_email" class="input-default" required>
 							<label for="contacto_email">Email</label>
 							<span class="msj-error-input">
 								Formato de email inválido

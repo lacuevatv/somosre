@@ -259,7 +259,7 @@ $(document).ready(function(){
     */
     //FOCUS OUT INPUT
     //input text
-    $(document).on('focusout', 'input[type=text]', function() {
+    /*$(document).on('focusout', 'input[type=text]', function() {
         var valor = $(this).val();
         var contenedor = $(this).closest('.form-group');
         var msj = $(contenedor).find('.msj-error-input');
@@ -284,7 +284,7 @@ $(document).ready(function(){
             $(msj).fadeOut();
            
         }
-    });
+    });*/
 
     //input type numbers
     $(document).on('focusout', 'input[type=number]', function() {
@@ -365,9 +365,10 @@ $(document).ready(function(){
                 $(loader).fadeIn();
             },
             success: function ( response ) {
-                //console.log(response);
+                console.log(response);
+                var respuesta = JSON.parse(response);
                 $(loader).fadeOut(); 
-                msj.html(response);    
+                msj.html(respuesta.email);    
             },
             error: function ( ) {
                 console.log('error');
@@ -396,7 +397,7 @@ $(document).ready(function(){
         contentType: false,
         cache: false,
         success: function ( response ) {
-            //console.log(response);
+            console.log(response);
             $(input).val('Listo, muchas gracias');
             $(input).css('color', 'red')
         },

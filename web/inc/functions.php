@@ -450,18 +450,28 @@ function sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo,
 		return $error;
 		
 	} else {
-		return 'ok';
+		return MENSAJEEXITO;
 	}
 }
 
-function saveNewContact ( $nombre = '', $telefono = '', $email = '', $mensaje = '', $escuela = '', $cargo = '', $fecha_viaje = '', $cant_alumnos = '', $form_type = 'contacto') {
+
+
+function saveNewContact ( $form_type, $email = '', $nombre = '', $telefono = '', $celular = '', $mensaje = '', $colegio = '', $provincia = '', $ciudad = '', $nacimiento = '', $comoLlegaste= 'pagina-web', $adultoNombre = '', $adultoEmail = '', $adultoTelefono = '', $adultoHorarios = '') {
 	$connection = connectDB();
 	$tabla      = 'contacto';
 		
-	$queryCreate  = "INSERT INTO " .$tabla. " (nombre,telefono,email,mensaje,escuela,cargo,fecha_viaje,cant_alumnos,form_type) VALUES ('".$nombre."','".$telefono."','".$email."','".$mensaje."','".$escuela."','".$cargo."','".$fecha_viaje."','".$cant_alumnos."','".$form_type."')";
+	$queryCreate  = "INSERT INTO " .$tabla. " (contacto_nombre,contacto_telefono,contacto_celular,contacto_email,contacto_mensaje,contacto_notas,form_type,contacto_colegio,contacto_provincia,contacto_ciudad,contacto_nacimiento,contacto_como_llegaste,contacto_adulto_nombre,contacto_adulto_email,contacto_adulto_telefono,contacto_adulto_horario) VALUES ('".$nombre."','".$telefono."','".$celular."','".$email."','".$mensaje."','','".$form_type."','".$colegio."','".$provincia."','".$ciudad."','".$nacimiento."','".$comoLlegaste."','".$adultoNombre."','".$adultoEmail."','".$adultoTelefono."','".$adultoHorarios."')";
+	
 	$result = mysqli_query($connection, $queryCreate);
 	
-	echo mysqli_insert_id($connection);
-	//cierre base de datos
+	if ($result) {
+		$respuesta = 'ok';
+	} else {
+		$respuesta = 'error';
+		//print_r($connection);
+	}
+	
 	mysqli_close($connection);
+
+	return $respuesta;
 }
