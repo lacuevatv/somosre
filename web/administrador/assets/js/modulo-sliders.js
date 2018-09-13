@@ -80,11 +80,13 @@ $(document).ready(function (){
 		var imagen = ID.find('input[type=hidden]').val()
 		var input = $(ID.find('input'));
 		var orden = $(input[1]).val()
-		var titulo = $(input[2]).val()
-		var url = $(input[3]).val()
-		var textoBtn = $(input[4]).val()
+		var imagenmovil = $(input[2]).val()
+		var titulo = $(input[3]).val()
+		var url = $(input[4]).val()
+		var textoBtn = $(input[5]).val()
 		var ubicacion = $('.sliders-wrapper').attr('id');
 		var msj = ID.find('.msj-guardar');
+		
 		if (orden == '') {
 			orden = 0;
 			$(ID.find('input')[4]).val(orden);
@@ -105,7 +107,8 @@ $(document).ready(function (){
 	                url: url,
 	                textoBtn: textoBtn,
 	                orden: orden,
-	                ubicacion: ubicacion,
+					ubicacion: ubicacion,
+					imagenmovil:imagenmovil,
 	                new: 'false',
 	            },
 	            beforeSend: function() {
@@ -159,8 +162,8 @@ $(document).ready(function (){
 		var sliderId = $(this).attr('data-sliderid');
 		var item = '#'+sliderId
 		var ID = $(item);
-		var InputImagen = ID.find('input[type=hidden]');
-		var ImagenMostrar = ID.find('img');
+		var InputImagen = ID.find('input[name="slider_imagen"]');
+		var ImagenMostrar = ID.find('.imagen-slider');
 		var msjExito = 'No te olvides de guardar item'
 		var msj = ID.find('.msj-guardar-imagen');
 		
@@ -197,5 +200,51 @@ $(document).ready(function (){
 		.load( templatesDir + '/media-browser.php' );
 
 	});//modificar la foto
+
+
+
+	//modificar la foto de movil
+	$(document).on('click', '.btn-recargar-movil', function(){
+		var sliderId = $(this).attr('data-sliderid');
+		var item = '#'+sliderId
+		var ID = $(item);
+		var InputImagen = ID.find('input[name="slider_imagen_movil"]');
+		var ImagenMostrar = ID.find('.imagen-para-movil');
+		var msjExito = 'No te olvides de guardar item'
+		var msj = ID.find('.msj-guardar-imagen');
+		
+		$( "#dialog" ).dialog({
+			title: 'Biblioteca de imágenes',
+			autoOpen: false,
+			appendTo: '.contenido-modulo',
+			height: 600,
+			width:768,
+			modal: true,
+			buttons: [
+		    {
+		    	text: "Cerrar",
+		      	class: 'btn btn-default',
+		      	click: function() {
+		        $( this ).dialog( "close" );
+		      }
+		    },
+		    {
+		    	text: 'Insertar imagen',
+		    	class: 'btn btn-primary',
+		    	click: function () {
+		    		newImage = $('.previewAtachment').val();
+					msj.html(msjExito);
+		    		InputImagen.val(newImage);
+		    		ImagenMostrar.attr('src', uploadsDir + '/' + newImage);
+		    		$( this ).dialog( "close" );
+		    	}
+		    },
+		  ],
+		});
+
+		$( "#dialog" ).dialog( 'open' )
+		.load( templatesDir + '/media-browser.php' );
+
+	});//modificar la foto movil
 
 });//ready
