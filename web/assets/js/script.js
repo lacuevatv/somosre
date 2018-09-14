@@ -564,7 +564,14 @@ function getInstagram() {
     contenedor = $('#instagram-wrapper').empty().append($(html));
     contenedor.height(altura);
 
+    //agrega el texto vertical
     $('#instagram').find('.texto-vertical').css('opacity','1');
+
+    //agrega el sello rojo
+    $('#instagram-wrapper').append( $('<span class="sello-rojo"></span>') );
+    $('.sello-rojo').fadeIn();
+
+
 }
 
 

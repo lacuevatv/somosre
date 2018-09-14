@@ -312,9 +312,11 @@
             }
         }
     }
+
 }//#instagram
 
 #instagram-wrapper {
+    position: relative;
     width: 100%;
     display: flex;
     display: -o-flex;
@@ -326,6 +328,24 @@
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
+
+    .sello-rojo {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: -20px;
+        width: 50px;
+        height: 50px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../images/sello-rojo.png);
+        background-size: cover;
+
+        @media (min-width: $md) {
+            bottom: -20px;
+        }
+        
+    }
 }
 
 /*
@@ -711,5 +731,24 @@
     color: $color-blanco;
     &:after {
         background-color: $color-blanco;
+    }
+}
+
+.imagen-formulario {
+    position: absolute;
+    width: 20%;
+    max-width: 393px;
+    top: 45%;
+    right: 9%;
+    @include transform(translateY(-50%));
+    display: none;
+    @media (min-width: $md) {
+        display: block;
+        width: 25%;
+        top: 72%;
+    }
+    @media (min-width: $lg) {
+        top: 45%;
+        width: 20%;
     }
 }

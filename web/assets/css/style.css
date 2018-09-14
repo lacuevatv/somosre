@@ -1805,6 +1805,7 @@ html, body {
 }
 
 #instagram-wrapper {
+  position: relative;
   width: 100%;
   display: flex;
   display: -o-flex;
@@ -1816,6 +1817,23 @@ html, body {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
+}
+#instagram-wrapper .sello-rojo {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/sello-rojo.png);
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  #instagram-wrapper .sello-rojo {
+    bottom: -20px;
+  }
 }
 
 /*
@@ -2239,6 +2257,32 @@ html, body {
 }
 .texto-vertical-blanco:after {
   background-color: #fff;
+}
+
+.imagen-formulario {
+  position: absolute;
+  width: 20%;
+  max-width: 393px;
+  top: 45%;
+  right: 9%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+@media (min-width: 992px) {
+  .imagen-formulario {
+    display: block;
+    width: 25%;
+    top: 72%;
+  }
+}
+@media (min-width: 1250px) {
+  .imagen-formulario {
+    top: 45%;
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

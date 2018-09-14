@@ -502,3 +502,24 @@ function getMapDataSucursales( $limit= '') {
         return $sucursales;
     }
 }
+
+//trae los archivos
+function getFile ( $optionName ) {
+    $connection = connectDB();
+    $tabla      = 'options';
+    $query      = "SELECT * FROM " .$tabla. " WHERE options_name= '" .$optionName. "'";
+    $result     = mysqli_query($connection, $query);
+
+    if ( $result->num_rows == 0 ) {
+        
+        echo '#';
+    
+    } else {
+        
+        $data = mysqli_fetch_array($result);
+        
+        echo UPLOADSURL . '/' .  $data['options_value'];    
+    }
+    
+    closeDataBase($connection);
+}

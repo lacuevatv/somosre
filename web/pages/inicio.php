@@ -56,7 +56,7 @@ getTemplate('head'); ?>
                     </p>
 
                     <p>
-                        <a href="#" target="_blank" class="btn btn-borde-fucsia">
+                        <a href="<?php getFile( 'asistencia' ); ?>" target="_blank" class="btn btn-borde-fucsia">
                             Ver asistencia
                         </a>
                     </p>
@@ -79,19 +79,19 @@ getTemplate('head'); ?>
 
                     <ul class="btns-wrapper">
                         <li>
-                            <a href="#" target="_blank" class="btn btn-amarillo">
+                            <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo">
                                 Itinerarios
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" target="_blank" class="btn btn-verde">
+                            <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde">
                                 Salidas y Precios
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" target="_blank" class="btn btn-fucsia">
+                            <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia">
                                 Comparar programas
                             </a>
                         </li>
@@ -361,7 +361,7 @@ getTemplate('head'); ?>
                     </p>
 
                     <p>
-                        <a href="#" target="_blank" class="btn btn-blanco">
+                        <a href="<?php getFile( 'agencias' ); ?>" target="_blank" class="btn btn-blanco">
                             Ver agencias
                         </a>
                     </p>
@@ -424,6 +424,11 @@ getTemplate('head'); ?>
                 <?php getTemplate('formulario'); ?>
             </div>
         </div>
+
+        <picture>
+            <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png, <?php echo MAINSURL; ?>/assets/images/usa-15-footer@2x.png 2x" media="(min-width: 768px)">
+            <img class="imagen-formulario" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando">
+        </picture>
 
     </section>
 
