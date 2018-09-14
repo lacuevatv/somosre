@@ -108,6 +108,16 @@ getTemplate('head'); ?>
         <div class="row">
 
             <div id="experiencia" class="wrapper-box galeria-box">
+            
+                <span class="deco-corazon-boxes"></span>
+                
+                <span class="texto-vertical">Galería</span>
+
+                <picture>
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/camara.png, <?php echo MAINSURL; ?>/assets/images/camara@2x.png 2x" media="(min-width: 315px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/camara.png" alt="Experiencia Re" class="image-boxes">
+                </picture>
+
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">   
                         La experiencia Re.
@@ -125,6 +135,16 @@ getTemplate('head'); ?>
             </div>
 
             <div id="celebrities" class="wrapper-box galeria-box">
+
+                <span class="deco-corazon-boxes"></span>
+
+                <span class="texto-vertical texto-vertical-blanco">Celebrities</span>
+
+                <picture>
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/chicos.png, <?php echo MAINSURL; ?>/assets/images/chicos@2x.png 2x" media="(min-width: 315px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/chicos.png" alt="Mellí Nayar en Re" class="image-boxes">
+                </picture>
+
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">
                         Re by Celebrities.
@@ -142,6 +162,16 @@ getTemplate('head'); ?>
             </div>
 
             <div id="bonustrack" class="wrapper-box galeria-box">
+
+                <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
+
+                <span class="texto-vertical texto-vertical-blanco">Bonus Track</span>
+
+                <picture>
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/auriculares.png, <?php echo MAINSURL; ?>/assets/images/auriculares@2x.png 2x" media="(min-width: 315px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/auriculares.png" alt="Bonux Track Re" class="image-boxes">
+                </picture>
+
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">
                         Bonus Track.
@@ -159,6 +189,17 @@ getTemplate('head'); ?>
             </div>
 
             <div id="fiesta15" class="wrapper-box galeria-box">
+
+                <span class="deco-corazon-boxes"></span>
+                <span class="texto-vertical">Fiesta 15</span>
+
+                <picture>
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png, <?php echo MAINSURL; ?>/assets/images/quince-globos-box@2x.png 2x" media="(min-width: 315px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png" alt="Tu fiesta de 15 en Re" class="image-boxes">
+                </picture>
+                
+                <span class="span-confeti"></span>
+
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">
                         Tu fiesta de 15.
@@ -181,7 +222,10 @@ getTemplate('head'); ?>
     
 <!-- ------- SLIDER ------- -->
     <section id="seguridad">
-         
+    
+    <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
+    <span class="texto-vertical texto-vertical-blanco">Seguridad</span>
+
     <ul class="slider-wrapper owl-carousel">
         
         <?php $sliderSeguridad = getSliders('seguridad');
@@ -225,6 +269,9 @@ getTemplate('head'); ?>
 <!-- ------- INSTAGRAM ------- -->
     <section id="instagram" class="section-wrapper">
         
+        <span class="deco-corazon-boxes"></span>
+        <span class="texto-vertical" style="opacity:0;">Instagram</span>
+
         <div class="contenedor">
 
             <h2 class="instagram-title">
@@ -245,6 +292,9 @@ getTemplate('head'); ?>
 
 <!-- ------- TESTIMONIOS ------- -->
     <section id="testimonios">
+        <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
+        <span class="texto-vertical texto-vertical-blanco">Testimonios</span>
+        
         <ul class="slider-wrapper owl-carousel">
         
         <?php $testimonios = getSliders('comentarios');
@@ -295,6 +345,8 @@ getTemplate('head'); ?>
         <div class="row">
             <div class="wrapper-box agencias">
                 <div class="contenedor-left">
+                    <span class="deco-corazon-boxes"></span>
+                    <span class="texto-vertical">Agencias</span>
                     
                     <picture>
                         <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15.png, <?php echo MAINSURL; ?>/assets/images/usa-15@2x.png 2x">
@@ -331,6 +383,9 @@ getTemplate('head'); ?>
 
 <!-- ------- FORMULARIO ------- -->
     <section class="section-wrapper" id="entrevista">
+
+        <span class="deco-corazon-boxes"></span>
+        <span class="texto-vertical">Formulario</span>
 
         <div class="contenedor">
             <div class="front-reduce">

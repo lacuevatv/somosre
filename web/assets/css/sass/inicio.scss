@@ -112,12 +112,16 @@
 .galeria-box {
     position: relative;
     overflow: hidden;
-    height: 350px;
-    //padding: 100px 0;
     width: 100%;
+    height: 230px;
+    
+    @media (min-width: $xs) {
+        height: 320px;
+    }
+
     @media (min-width: $sm) {
         width: 50%;
-        //padding: 100px 0;
+        height: 350px;
     }
     @media (min-width: $md) {
         height: 400px;
@@ -148,21 +152,121 @@
     }
 }
 
+.image-boxes {
+    position: absolute;
+}
+
 #experiencia {
     background-color: #ffe900;
+    
+    .image-boxes{
+        max-width: 300px;
+        width: 45%;
+        left: 2%;
+        top: 45%;
+        @include transform (translateY(-50%));
+        
+        @media (min-width: $xlg) {
+            left: 5%;
+        }
+    }
 }
 
 #bonustrack {
     background-color: #ff006c;
     color: $color-blanco;
+    
+    .image-boxes{
+        bottom: -30px;
+        width: 70%;
+        left: -50px;
+        max-width: 425px;
+
+        @media (min-width: $xs) {
+            width: 60%;
+        }
+
+        @media (min-width: $sm) {
+            bottom: -10px;
+            width: 70%;
+            left: -50px;
+        }
+        @media (min-width: $md) {
+            bottom: -20px;
+            width: 60%;
+            left: -10px;
+        }
+    }
 }
 
 #celebrities {
     background-color: #75efd8;
+
+    .image-boxes{
+        bottom: -50px;
+        width: 65%;
+        left: -30px;
+        max-width: 439px;
+
+        @media (min-width: $xs) {
+            bottom: -100px;
+            width: 65%;
+            left: -60px;
+        }
+        @media (min-width: $sm) {
+            bottom: -50px;
+            width: 70%;
+            left: -40px;
+        }
+        @media (min-width: $md) {
+            left: -10%;
+        }
+        @media (min-width: $lg) {
+            bottom: -15%;
+        }
+        @media (min-width: $xlg) {
+            left: -5%;
+            bottom: -15%;
+        }
+
+    }
 }
 
 #fiesta15 {
     background-color: #fff;
+
+    .image-boxes{
+        max-width: 222px;
+        width: 45%;
+        top: 50%;
+        left: 2%;
+        @include transform (translateY(-50%));
+
+        @media (min-width: $lg) {
+            left: 10%;
+        }
+        @media (min-width: $xlg) {
+            left: 15%;
+        }
+    }
+
+    .span-confeti {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: url(../images/confeti-box.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        width: 60%;
+        height: 100%;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/confeti-box@2x.png);
+            background-size: contain;
+        }
+    }
 }
 
 
@@ -170,6 +274,7 @@
  * SEGURIDAD
 */
 #seguridad {
+    position: relative;
     background-color: #75efd8;
     color: $color-blanco;
 }//#seguridad
@@ -178,6 +283,8 @@
  * INSTRAGRAM
 */
 #instagram {
+    position: relative;
+
     .instagram-title {
         position: relative;
         font-size: 1.2em;
@@ -225,6 +332,7 @@
  * TESTIMONIOS
 */
 #testimonios {
+    position: relative;
     background-color: #ff006c;
     color: $color-blanco;
 }//#testimonios
@@ -234,6 +342,7 @@
 */
 .agencias {
     background-color: #ffe900;
+    position: relative;
     width: 100%;
     height: 350px;
     @media (min-width: $sm) {
@@ -468,7 +577,6 @@
     }
 }
 
-
 /*
  * TIPOGRAFIA
 */
@@ -526,4 +634,78 @@
 
 .text-blanco {
     color: $color-blanco;
+}
+
+/*
+ * VERTICALES Y DECORADOS
+*/
+.deco-corazon-boxes {
+    position: absolute;
+    z-index: 11;
+    top: 20px;
+    left: 20px;
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/corazon-boton-gris.png);
+    background-size: 16px 14px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/corazon-boton-gris@2x.png);
+        background-size: 16px 14px;
+    }
+
+    @media (min-width: $sm) {
+        top: 30px;
+        left: 30px;
+    }
+}
+
+.deco-corazon-boxes-blanco {
+    background-image: url(../images/corazon-boton-blanco.png);
+    background-size: 17px 16px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/corazon-boton-blanco@2x.png);
+        background-size: 17px 16px;
+    }
+}
+
+.texto-vertical {
+    position: absolute;
+    z-index: 11;
+    bottom: 10px;
+    left: 30px;
+    color: $color-negro;
+    text-transform: uppercase;
+    font-family: $fuente-secundaria;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    @include transform(rotate(-90deg));
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    @include transition(all $transitionSpeed);
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: -55px;
+        bottom: 9px;
+        width: 50px;
+        height: 1px;
+        background-color: $color-negro;
+    }
+}
+
+.texto-vertical-blanco {
+    color: $color-blanco;
+    &:after {
+        background-color: $color-blanco;
+    }
 }

@@ -1576,12 +1576,18 @@ html, body {
 .galeria-box {
   position: relative;
   overflow: hidden;
-  height: 350px;
   width: 100%;
+  height: 230px;
+}
+@media (min-width: 480px) {
+  .galeria-box {
+    height: 320px;
+  }
 }
 @media (min-width: 768px) {
   .galeria-box {
     width: 50%;
+    height: 350px;
   }
 }
 @media (min-width: 992px) {
@@ -1620,27 +1626,146 @@ html, body {
   }
 }
 
+.image-boxes {
+  position: absolute;
+}
+
 #experiencia {
   background-color: #ffe900;
+}
+#experiencia .image-boxes {
+  max-width: 300px;
+  width: 45%;
+  left: 2%;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 1600px) {
+  #experiencia .image-boxes {
+    left: 5%;
+  }
 }
 
 #bonustrack {
   background-color: #ff006c;
   color: #fff;
 }
+#bonustrack .image-boxes {
+  bottom: -30px;
+  width: 70%;
+  left: -50px;
+  max-width: 425px;
+}
+@media (min-width: 480px) {
+  #bonustrack .image-boxes {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  #bonustrack .image-boxes {
+    bottom: -10px;
+    width: 70%;
+    left: -50px;
+  }
+}
+@media (min-width: 992px) {
+  #bonustrack .image-boxes {
+    bottom: -20px;
+    width: 60%;
+    left: -10px;
+  }
+}
 
 #celebrities {
   background-color: #75efd8;
 }
+#celebrities .image-boxes {
+  bottom: -50px;
+  width: 65%;
+  left: -30px;
+  max-width: 439px;
+}
+@media (min-width: 480px) {
+  #celebrities .image-boxes {
+    bottom: -100px;
+    width: 65%;
+    left: -60px;
+  }
+}
+@media (min-width: 768px) {
+  #celebrities .image-boxes {
+    bottom: -50px;
+    width: 70%;
+    left: -40px;
+  }
+}
+@media (min-width: 992px) {
+  #celebrities .image-boxes {
+    left: -10%;
+  }
+}
+@media (min-width: 1250px) {
+  #celebrities .image-boxes {
+    bottom: -15%;
+  }
+}
+@media (min-width: 1600px) {
+  #celebrities .image-boxes {
+    left: -5%;
+    bottom: -15%;
+  }
+}
 
 #fiesta15 {
   background-color: #fff;
+}
+#fiesta15 .image-boxes {
+  max-width: 222px;
+  width: 45%;
+  top: 50%;
+  left: 2%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 1250px) {
+  #fiesta15 .image-boxes {
+    left: 10%;
+  }
+}
+@media (min-width: 1600px) {
+  #fiesta15 .image-boxes {
+    left: 15%;
+  }
+}
+#fiesta15 .span-confeti {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(../images/confeti-box.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  width: 60%;
+  height: 100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  #fiesta15 .span-confeti {
+    background-image: url(../images/confeti-box@2x.png);
+    background-size: contain;
+  }
 }
 
 /*
  * SEGURIDAD
 */
 #seguridad {
+  position: relative;
   background-color: #75efd8;
   color: #fff;
 }
@@ -1648,6 +1773,9 @@ html, body {
 /*
  * INSTRAGRAM
 */
+#instagram {
+  position: relative;
+}
 #instagram .instagram-title {
   position: relative;
   font-size: 1.2em;
@@ -1694,6 +1822,7 @@ html, body {
  * TESTIMONIOS
 */
 #testimonios {
+  position: relative;
   background-color: #ff006c;
   color: #fff;
 }
@@ -1703,6 +1832,7 @@ html, body {
 */
 .agencias {
   background-color: #ffe900;
+  position: relative;
   width: 100%;
   height: 350px;
 }
@@ -2021,6 +2151,88 @@ html, body {
 
 .text-blanco {
   color: #fff;
+}
+
+/*
+ * VERTICALES Y DECORADOS
+*/
+.deco-corazon-boxes {
+  position: absolute;
+  z-index: 11;
+  top: 20px;
+  left: 20px;
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/corazon-boton-gris.png);
+  background-size: 16px 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .deco-corazon-boxes {
+    background-image: url(../images/corazon-boton-gris@2x.png);
+    background-size: 16px 14px;
+  }
+}
+@media (min-width: 768px) {
+  .deco-corazon-boxes {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+.deco-corazon-boxes-blanco {
+  background-image: url(../images/corazon-boton-blanco.png);
+  background-size: 17px 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .deco-corazon-boxes-blanco {
+    background-image: url(../images/corazon-boton-blanco@2x.png);
+    background-size: 17px 16px;
+  }
+}
+
+.texto-vertical {
+  position: absolute;
+  z-index: 11;
+  bottom: 10px;
+  left: 30px;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0 0;
+  -moz-transform-origin: 0 0 0;
+  -ms-transform-origin: 0 0 0;
+  -o-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.texto-vertical:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -55px;
+  bottom: 9px;
+  width: 50px;
+  height: 1px;
+  background-color: #333;
+}
+
+.texto-vertical-blanco {
+  color: #fff;
+}
+.texto-vertical-blanco:after {
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

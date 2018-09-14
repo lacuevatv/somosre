@@ -563,4 +563,6 @@ function getInstagram() {
 
     contenedor = $('#instagram-wrapper').empty().append($(html));
     contenedor.height(altura);
+
+    $('#instagram').find('.texto-vertical').css('opacity','1');
 }
