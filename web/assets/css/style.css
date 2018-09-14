@@ -262,6 +262,10 @@ html, body {
   }
 }
 
+.main {
+  position: relative;
+}
+
 .contenedor {
   padding: 0 30px;
   width: 100%;
@@ -770,10 +774,6 @@ html, body {
   top: 40px;
   background-color: #fff;
   left: 0;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
 }
 @media (min-width: 992px) {
   .main-nav-wrapper .main-menu {
@@ -1569,6 +1569,11 @@ html, body {
     width: 60%;
   }
 }
+@media (min-width: 1600px) {
+  .front-reduce {
+    width: 65%;
+  }
+}
 
 /*
  * GALERIAS
@@ -1829,6 +1834,12 @@ html, body {
   background-position: center;
   background-image: url(../images/sello-rojo.png);
   background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  #instagram-wrapper .sello-rojo {
+    background-image: url(../images/sello-rojo@2x.png);
+    background-size: cover;
+  }
 }
 @media (min-width: 992px) {
   #instagram-wrapper .sello-rojo {
@@ -2210,6 +2221,56 @@ html, body {
   }
 }
 
+.corazon-header {
+  position: absolute;
+  z-index: 11;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/corazon-blanco.png);
+  background-size: 50px 43px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .corazon-header {
+    background-image: url(../images/corazon-blanco@2x.png);
+    background-size: 50px 43px;
+  }
+}
+@media (min-width: 768px) {
+  .corazon-header {
+    top: 30px;
+    right: 30px;
+  }
+}
+
+.corazon-header-gris {
+  position: absolute;
+  z-index: 11;
+  top: 20px;
+  left: 20px;
+  width: 17px;
+  height: 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/corazon-boton-gris.png);
+  background-size: 16px 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .corazon-header-gris {
+    background-image: url(../images/corazon-boton-gris@2x.png);
+    background-size: 16px 14px;
+  }
+}
+@media (min-width: 768px) {
+  .corazon-header-gris {
+    top: 30px;
+    left: 30px;
+  }
+}
+
 .texto-vertical {
   position: absolute;
   z-index: 11;
@@ -2259,6 +2320,53 @@ html, body {
   background-color: #fff;
 }
 
+.lista-vertical {
+  position: absolute;
+  z-index: 11;
+  bottom: 17%;
+  left: 30px;
+  color: #333;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0 0;
+  -moz-transform-origin: 0 0 0;
+  -ms-transform-origin: 0 0 0;
+  -o-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  display: none;
+}
+@media (min-width: 992px) {
+  .lista-vertical {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+  }
+}
+.lista-vertical li {
+  margin-right: 7px;
+}
+.lista-vertical .lista-vertical-separador {
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #333;
+  position: relative;
+  top: 8px;
+}
+
 .imagen-formulario {
   position: absolute;
   width: 20%;
@@ -2282,6 +2390,120 @@ html, body {
   .imagen-formulario {
     top: 45%;
     width: 20%;
+  }
+}
+
+.valija-wrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: -60px;
+  width: 450px;
+  height: 500px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .valija-wrapper {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .valija-wrapper {
+    right: 3%;
+  }
+}
+@media (min-width: 1250px) {
+  .valija-wrapper {
+    display: block;
+    overflow: visible;
+  }
+}
+@media (min-width: 1600px) {
+  .valija-wrapper {
+    right: 8%;
+  }
+}
+.valija-wrapper .confeti {
+  position: relative;
+  z-index: 1;
+  top: 80px;
+  width: 360px;
+  left: 60px;
+}
+@media (min-width: 992px) {
+  .valija-wrapper .confeti {
+    top: 50px;
+    width: 400px;
+    left: 0;
+  }
+}
+@media (min-width: 1250px) {
+  .valija-wrapper .confeti {
+    top: -50px;
+    width: 340px;
+  }
+}
+.valija-wrapper .numero {
+  position: absolute;
+  z-index: 11;
+  top: 123px;
+  right: 27%;
+  width: 192px;
+}
+@media (min-width: 992px) {
+  .valija-wrapper .numero {
+    top: 90px;
+    right: 30%;
+    width: 192px;
+  }
+}
+@media (min-width: 1250px) {
+  .valija-wrapper .numero {
+    top: 20px;
+    right: 30%;
+    width: 222px;
+  }
+}
+.valija-wrapper .corazon {
+  position: absolute;
+  z-index: 111;
+  top: 242px;
+  right: 110px;
+  width: 89px;
+}
+@media (min-width: 992px) {
+  .valija-wrapper .corazon {
+    top: 206px;
+    right: 140px;
+    width: 99px;
+  }
+}
+@media (min-width: 1250px) {
+  .valija-wrapper .corazon {
+    top: 165px;
+    right: 93px;
+    width: 109px;
+  }
+}
+.valija-wrapper .valija {
+  position: absolute;
+  z-index: 1111;
+  bottom: 0;
+  left: 120px;
+  width: 150px;
+}
+@media (min-width: 992px) {
+  .valija-wrapper .valija {
+    bottom: 0;
+    left: 70px;
+    width: 170px;
+  }
+}
+@media (min-width: 1250px) {
+  .valija-wrapper .valija {
+    bottom: 0;
+    left: 70px;
+    width: 200px;
   }
 }
 

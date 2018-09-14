@@ -104,6 +104,9 @@
     @media (min-width: $lg) {
         width: 60%;
     }
+    @media (min-width: $xlg) {
+        width: 65%;
+    }
 }
 
 /*
@@ -340,6 +343,11 @@
         background-position: center;
         background-image: url(../images/sello-rojo.png);
         background-size: cover;
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+            background-image: url(../images/sello-rojo@2x.png);
+            background-size: cover;
+        }
 
         @media (min-width: $md) {
             bottom: -20px;
@@ -692,6 +700,52 @@
     }
 }
 
+.corazon-header {
+    position: absolute;
+    z-index: 11;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/corazon-blanco.png);
+    background-size: 50px 43px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/corazon-blanco@2x.png);
+        background-size: 50px 43px;
+    }
+
+    @media (min-width: $sm) {
+        top: 30px;
+        right: 30px;
+    }
+}
+
+.corazon-header-gris {
+    position: absolute;
+    z-index: 11;
+    top: 20px;
+    left: 20px;
+    width: 17px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/corazon-boton-gris.png);
+    background-size: 16px 14px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/corazon-boton-gris@2x.png);
+        background-size: 16px 14px;
+    }
+
+    @media (min-width: $sm) {
+        top: 30px;
+        left: 30px;
+    }
+}
+
 .texto-vertical {
     position: absolute;
     z-index: 11;
@@ -734,6 +788,47 @@
     }
 }
 
+.lista-vertical {
+    position: absolute;
+    z-index: 11;
+    bottom: 17%;
+    left: 30px;
+    color: $color-negro;
+    text-transform: uppercase;
+    font-family: $fuente-secundaria;
+    font-size: .9em;
+    font-weight: 500;
+    letter-spacing: .1em;
+    @include transform(rotate(-90deg));
+    -webkit-transform-origin: 0 0 0;
+    -moz-transform-origin: 0 0 0;
+    -ms-transform-origin: 0 0 0;
+    -o-transform-origin: 0 0 0;
+    transform-origin: 0 0 0;
+    @include transition(all $transitionSpeed);
+    display: none;
+    @media (min-width: $md) {
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+    }
+
+    li {
+        margin-right: 7px;
+    }
+
+    .lista-vertical-separador {
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: $color-negro;
+        position: relative;
+        top: 8px;
+    }
+}
+
 .imagen-formulario {
     position: absolute;
     width: 20%;
@@ -752,3 +847,103 @@
         width: 20%;
     }
 }
+
+
+
+.valija-wrapper {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    width: 450px;
+    height: 500px;
+    overflow: hidden;
+    
+    @media (min-width: $sm) {
+        display: block;
+    }
+    @media (min-width: $md) {
+        right: 3%;
+    }
+    @media (min-width: $lg) {
+        display: block;
+        overflow: visible;
+    }
+
+    @media (min-width: $xlg) {
+        right: 8%;
+    }
+
+    .confeti {
+        position: relative;
+        z-index: 1;
+        top: 80px;
+        width: 360px;
+        left: 60px;
+        @media (min-width: $md) {
+            top: 50px;
+            width: 400px;
+            left: 0;
+        }
+        @media (min-width: $lg) {
+            top: -50px;
+            width: 340px;
+        }
+    }//.confeti
+    
+    
+    .numero {
+        position: absolute;
+        z-index: 11;
+        top: 123px;
+        right: 27%;
+        width: 192px;
+        @media (min-width: $md) {
+            top: 90px;
+            right: 30%;
+            width: 192px;
+        }
+        @media (min-width: $lg) {
+            top: 20px;
+            right: 30%;
+            width: 222px;
+        }
+    }//.numero
+    
+    .corazon {
+        position: absolute;
+        z-index: 111;
+        top: 242px;
+        right: 110px;
+        width: 89px;
+        @media (min-width: $md) {
+            top: 206px;
+            right: 140px;
+            width: 99px;
+        }
+        @media (min-width: $lg) {
+            top: 165px;
+            right: 93px;
+            width: 109px;
+        }
+    }//.corazon
+
+    .valija {
+        position: absolute;
+        z-index: 1111;
+        bottom: 0;
+        left: 120px;
+        width: 150px;
+        @media (min-width: $md) {
+            bottom: 0;
+            left: 70px;
+            width: 170px;
+        }
+        @media (min-width: $lg) {
+            bottom: 0;
+            left: 70px;
+            width: 200px;
+        }
+    }//.valija
+
+}//.valija-wrapper

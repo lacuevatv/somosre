@@ -264,7 +264,6 @@
         top: 40px;
         background-color: $color-blanco;
         left: 0;
-        @include transition(all $transitionSpeed);
         
         @media (min-width: $md) {
             height: 100%;

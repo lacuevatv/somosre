@@ -8,6 +8,15 @@ getTemplate('head'); ?>
 <!-- -------header------- -->
     <header class="header-inicio">
         
+        <ul class="lista-vertical">
+            <li>Instagram</li>
+            <li><span class="lista-vertical-separador"></span></li>
+            <li>Facebook</li>
+
+        </ul>
+        <span class="corazon-header-gris"></span>
+        <span class="corazon-header"></span>
+
         <div class="contenedor">
             <h1 class="main-title-inicio">
                 <span class="sr-only">Usa 15: New York, Miami, Orlando</span>
@@ -26,7 +35,7 @@ getTemplate('head'); ?>
 
     </header>
     
-    <main role="main">
+    <main role="main" class="main">
     
     <!-- ------- NOSOTROS ------- -->
 
@@ -100,6 +109,30 @@ getTemplate('head'); ?>
             </div>
         </div>
         
+        <figure class="valija-wrapper">
+            
+            <picture>
+                <source srcset="<?php echo MAINSURL; ?>/assets/images/confeti-valija.png, <?php echo MAINSURL; ?>/assets/images/confeti-valija@2x.png 2x" media="(min-width: 767px)">
+                <img src="<?php echo MAINSURL; ?>/assets/images/confeti-valija.png" alt="Fiesta 15 Re" class="confeti">
+            </picture>
+
+            <picture>
+                <source srcset="<?php echo MAINSURL; ?>/assets/images/quince-valija.png, <?php echo MAINSURL; ?>/assets/images/quince-valija@2x.png 2x" media="(min-width: 767px)">
+                <img src="<?php echo MAINSURL; ?>/assets/images/quince-valija.png" alt="Fiesta 15 Re" class="numero">
+            </picture>
+
+            <picture>
+                <source srcset="<?php echo MAINSURL; ?>/assets/images/globo-valija.png, <?php echo MAINSURL; ?>/assets/images/globo-valija@2x.png 2x" media="(min-width: 767px)">
+                <img src="<?php echo MAINSURL; ?>/assets/images/globo-valija.png" alt="Fiesta 15 Re" class="corazon">
+            </picture>
+
+            <picture>
+                <source srcset="<?php echo MAINSURL; ?>/assets/images/valija.png, <?php echo MAINSURL; ?>/assets/images/valija@2x.png 2x" media="(min-width: 767px)">
+                <img src="<?php echo MAINSURL; ?>/assets/images/valija.png" alt="Fiesta 15 Re" class="valija">
+            </picture>
+
+        </figure>
+
     </main>
     
 

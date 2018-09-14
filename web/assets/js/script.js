@@ -5,45 +5,29 @@
  * @ver 1.0
  --------------------------------------------------------------
 >>> TABLE OF CONTENTS:
-1.0 NAVIGATION
-2.0 FORMULARIOS
-3.0 POPUP PROMO
-4.0 IMAGENES ANIMACIONES Y SLIDERS
+1.0 ON READY (carga las funciones y realiza algunos eventos simples)
+2.0 ON LOAD (carga otras funciones que necesita que este todo cargado)
+3.0 FORMULARIOS (funciones)
+3.0 POPUP PROMO (funciones)
+5.0 SLIDERS (funciones)
+6.0 OTRAS FUNCIONES: (scroll to, openCloseMenu, instagram, cargar mapa)
 --------------------------------------------------------------*/
 
+//VARIABLES GENERALES
 var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var paginaActual = 1;
-//se pasa con numeral #page
-function scrollToID ( id ) {
-    $('html, body').stop().animate({
-        scrollTop: $(id).offset().top -90
-    }, 'slow');
-}
+
 
 /*--------------------------------------------------------------
-1.0 NAVIGATION
+1.0 ON READY
 --------------------------------------------------------------*/
 
 $(document).ready(function(){
-    $(document).on('click', '.toggle_menu', function(){
-        var menu = $('.main-menu');
 
-        if ( menu.css('height') == '0px' ) {
-            menu.css('height', 'auto');
-            var h = menu.css('height');
-            menu.css('height', '0px');
-            menu.animate({
-                'height': h,
-            }, 2000);
-        } else {
-            menu.animate({
-                'height': '0px',
-            }, 500);
-        }
-    });//.click toggle
+    //iniciar formularios
+    formularios();
 
-    
     /*
      * SCROLL TOP
     */
@@ -62,34 +46,40 @@ $(document).ready(function(){
         scrollToID(href);
         if ( window.innerWidth < 992 ) {
             //cierra el menu movil
-            MovilMenuToggle();
+            openCloseMenu();
         }
     });
 
     /*
      * TOGGLE
     */
-   $('.toggle').click(MovilMenuToggle);
-    function MovilMenuToggle (){
-        $('.toggle').toggleClass('toggle-open');
+   $('.toggle').click(function(e){
+       e.preventDefault();
+       $('.toggle').toggleClass('toggle-open');
+       openCloseMenu();
+   });
+    
+   
+
+    //boton que muestra compartir
+    $(document).on('click', '.btn-share span', function(e){
+        e.preventDefault();
         
-         var menu = $('.main-menu')
-         var h = menu.prop('scrollHeight')+40;
-         if ( $(menu).height() == 0 ) {
-             menu.animate({
-                 'height': h+'px',
-             }, 500);
-         } else {
-             menu.animate({
-                 'height': '0px',
-             }, 500);
-         }
-     }
+        //prevee que se active por defecto
+        if ( $(this).css('opacity') == 0 ) {
+            return;
+        }
+        var red = $(this).attr('data-red');
+        console.log('Compartiendo en ' + red);
+    })
+
+
+    
 
      /*
       * LOAD MORE AJAX
      */
-     $(document).on('click', '#load-more', function(){
+     /*$(document).on('click', '#load-more', function(){
                 
         $.ajax( {
           type: 'POST',
@@ -119,26 +109,36 @@ $(document).ready(function(){
           },
         });//cierre ajax
 
-    });
+    });*/
 
-    $(document).on('click', '.btn-share span', function(e){
-        e.preventDefault();
-        
-        //prevee que se active por defecto
-        if ( $(this).css('opacity') == 0 ) {
-            return;
-        }
-        var red = $(this).attr('data-red');
-        console.log('Compartiendo en ' + red);
-    })
+   
 
 
 });//.ready()
 
 /*--------------------------------------------------------------
-2.0 FORMULARIOS
+2.0 ON LOAD
 --------------------------------------------------------------*/
-$(document).ready(function(){
+
+$(window).on('load', function(){
+    //instagram:
+    getInstagram();
+
+    iniciarSliders();
+
+    $(window).on('resize', function(){
+        getInstagram();
+    });
+    
+    
+});
+
+
+/*--------------------------------------------------------------
+3.0 FUNCION FORMULARIOS
+--------------------------------------------------------------*/
+
+function formularios() {
 
     var specialcharacters = '@#$^&%*()+=[]\'\"\/{}|:;¡!¿?<>,.';
     var numeros = '0123456789';
@@ -408,14 +408,13 @@ $(document).ready(function(){
 
 });//submit formulario default
 
-})//ready
+}//function formularios
 
 /*--------------------------------------------------------------
-3.0 POPUP PROMO
+4.0 POPUP PROMO
 --------------------------------------------------------------*/
 
-$(window).on('load', function(){
-
+function popupPromo() {
     var popup = $( '.popup' );
     var popupIMG = $( '.popup img' );
     var tiempo = 7000;
@@ -438,13 +437,13 @@ $(window).on('load', function(){
         closeX.click(closePopup);
         closeBTN.click(closePopup);
     }
-});
+}
 
 /*--------------------------------------------------------------
-4.0 IMAGENES, ANIMACIONES SLIDERS
+5.0 SLIDERS
 --------------------------------------------------------------*/
 
-$(window).on('load', function(){
+function iniciarSliders(){
 
     //slider superior home
     $('.owl-carousel').owlCarousel({
@@ -462,68 +461,40 @@ $(window).on('load', function(){
         },
     });
 
-    /*
-     * CARGAR INSTAGRAM
-    */
+}
 
-   //getInstagram();
-
-    
-   
-
-    /*
-    /*
-     * CARGA ASINCRONA DE IMAGENES
-     * carga las imágenes con img src
-    */
-    /*$('.load-images').each(function(){
-        var img = $(this).find('img');
-
-        $(img).attr('src', $(img).attr('data-src') );
-        if ( $(img).attr('src') != '') {
-            $(this).fadeIn();
-        }
-    });*/
-
-    /*
-     * IN VIEW ANIMATION
-    */
-    /*var $animation_elements = $('.animate-element');
-    var $window = $(window);
-
-    function check_if_in_view() {
-        var window_height = $window.height();
-        var window_top_position = $window.scrollTop();
-        var window_bottom_position = (window_top_position + window_height);
-
-        $.each($animation_elements, function() {
-            var $element = $(this);
-            var element_height = $element.outerHeight();
-            var element_top_position = $element.offset().top;
-            var element_bottom_position = (element_top_position + element_height);
-
-            //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
-                $element.addClass('in-view');
-            } else {
-                $element.removeClass('in-view');
-            }
-        });
-    }
-
-    $window.on('scroll resize', check_if_in_view);
-    $window.trigger('scroll');
-
-    */
-
-
-});
-
+/*--------------------------------------------------------------
+6.0 OTRAS FUNCIONES
+--------------------------------------------------------------*/
 
 /*
- * FUNCIONES
+ * scroll to id
+ * se pasa con numeral #LINK
 */
+function scrollToID ( id ) {
+    $('html, body').stop().animate({
+        scrollTop: $(id).offset().top -90
+    }, 'slow');
+}
+
+/*
+ * ABRE Y CIERRA MENU MOVIL
+*/
+function openCloseMenu(){
+    
+     var menu = $('.main-menu')
+     var h = $(menu).prop('scrollHeight')+40;
+
+     if ( $(menu).height() == 0 ) {
+            $(menu).animate({
+             'height': h+'px',
+         }, 500);
+     } else {
+            $(menu).animate({
+             'height': '0px',
+         }, 500);
+     }
+ }
 
 /*
 * CARGAR PLUGIN DE INSTAGRAM
@@ -571,9 +542,7 @@ function getInstagram() {
     $('#instagram-wrapper').append( $('<span class="sello-rojo"></span>') );
     $('.sello-rojo').fadeIn();
 
-
 }
-
 
 
 function cargarMapa() {
@@ -611,3 +580,51 @@ function cargarMapa() {
       })(marker, i));
     }
   }
+
+
+
+/*
+    * CARGA ASINCRONA DE IMAGENES
+    * carga las imágenes con img src
+*/
+/*$('.load-images').each(function(){
+    var img = $(this).find('img');
+
+    $(img).attr('src', $(img).attr('data-src') );
+    if ( $(img).attr('src') != '') {
+        $(this).fadeIn();
+    }
+});*/
+
+/*
+    * IN VIEW ANIMATION
+*/
+/*var $animation_elements = $('.animate-element');
+var $window = $(window);
+
+function check_if_in_view() {
+    var window_height = $window.height();
+    var window_top_position = $window.scrollTop();
+    var window_bottom_position = (window_top_position + window_height);
+
+    $.each($animation_elements, function() {
+        var $element = $(this);
+        var element_height = $element.outerHeight();
+        var element_top_position = $element.offset().top;
+        var element_bottom_position = (element_top_position + element_height);
+
+        //check to see if this current container is within viewport
+        if ((element_bottom_position >= window_top_position) &&
+            (element_top_position <= window_bottom_position)) {
+            $element.addClass('in-view');
+        } else {
+            $element.removeClass('in-view');
+        }
+    });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+*/
+
