@@ -2216,6 +2216,12 @@ html, body {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+  display: none;
+}
+@media (min-width: 992px) {
+  .texto-vertical {
+    display: block;
+  }
 }
 .texto-vertical:after {
   content: "";

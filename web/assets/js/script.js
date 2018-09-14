@@ -566,3 +566,41 @@ function getInstagram() {
 
     $('#instagram').find('.texto-vertical').css('opacity','1');
 }
+
+
+
+function cargarMapa() {
+    //$('#map').empty();
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 6,
+      center: new google.maps.LatLng(-32.6890983, -62.103681300000005),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var icons = {
+        re: {
+          icon: baseUrl + '/assets/images/location.png'
+        },
+    }
+
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    for (i = 0; i < marcadores.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+        icon:icons.re.icon,
+        map: map
+      });
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            
+            var id = '.sucursal-texto-'+marcadores[i][3];
+            var html = $(id).find('article');
+            console.log(html)
+            
+            infowindow.setContent(html.html());
+            infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  }

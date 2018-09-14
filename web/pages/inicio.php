@@ -368,13 +368,41 @@ getTemplate('head'); ?>
                 </div>
             </div>
             
+            <?php $marcadores = getMapDataSucursales();
+
+            if ( $marcadores != null ) : ?>
+
+                <ul style="display:none">
+                    <?php foreach ($marcadores as $marcador ) { ?>
+
+                        <li class="sucursales-textos sucursal-texto-<?php echo $marcador["sucursal_id"]; ?>">
+                            <article>
+                                <div style="font-family:'Montserrat';font-size:0.8em;">
+                                    <h1 style="font-size:110%;font-weight:500;font-family:'Montserrat';">
+                                        <?php echo $marcador['sucursal_titulo']; ?>
+                                    </h1>
+                                    -
+                                    <?php echo $marcador['sucursal_texto']; ?>
+                                    -
+                                    <?php echo $marcador['sucursal_email']; ?>
+                                </div>
+                            </article>
+                        </li>
+
+                    <?php } ?>
+                </ul>
+            <?php endif; ?>
+
             <div class="wrapper-box map-wrapper" id="map">
-                
                 <p class="text-center text-blanco">
                     Cargando.<span class="animation-blink">.</span><span class="animation-blink" style="animation-delay: 0.5s;">.</span>
                 </p>
+                
+                <?php if ( $marcadores != null ) : ?>
 
-            
+                <?php getTemplate('google-maps', $marcadores); ?>
+                
+                <?php endif; ?>
             </div>
         
         </div>

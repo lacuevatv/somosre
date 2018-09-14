@@ -475,3 +475,30 @@ function saveNewContact ( $form_type, $email = '', $nombre = '', $telefono = '',
 
 	return $respuesta;
 }
+
+//devuelve la data de las sucursales
+function getMapDataSucursales( $limit= '') {
+	$connection = connectDB();
+	$tabla = 'sucursales';
+
+	//queries según parámetros
+    $query = "SELECT * FROM ".$tabla." ORDER by sucursal_orden ASC";   
+
+    //limite
+    if ($limit != '') {
+        $query  .= " LIMIT ".$limit;
+    }
+	
+	$result = mysqli_query($connection, $query);
+	
+	if ( $result->num_rows == 0 ) {
+		return null;
+	} else {
+
+		while ( $row = $result->fetch_array() ) {
+			$sucursales[] = $row;
+        }
+
+        return $sucursales;
+    }
+}
