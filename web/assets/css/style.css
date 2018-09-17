@@ -1696,6 +1696,7 @@ html, body {
 */
 .header-inicio {
   position: relative;
+  z-index: 1;
   background-color: #75efd8;
   padding: 50px 0 80px;
 }
@@ -1705,7 +1706,13 @@ html, body {
   }
 }
 .header-inicio .main-title-inicio {
+  position: relative;
+  z-index: 111;
   margin-bottom: 40px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .header-inicio .main-title-inicio img {
   width: 80%;
@@ -1737,6 +1744,59 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+}
+.header-inicio .header-image-wrapper {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.header-inicio .header-image {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.header-inicio .corazon-inicio {
+  position: absolute;
+  z-index: 11;
+  display: block;
+  width: 150px;
+  bottom: -50px;
+  right: 0;
+  display: none;
+}
+@media (min-width: 768px) {
+  .header-inicio .corazon-inicio {
+    width: 35%;
+    max-width: 645px;
+    bottom: -100px;
+  }
+}
+@media (min-width: 992px) {
+  .header-inicio .corazon-inicio {
+    bottom: -140px;
+  }
+}
+@media (min-width: 1250px) {
+  .header-inicio .corazon-inicio {
+    bottom: -170px;
+  }
+}
+@media (min-width: 1600px) {
+  .header-inicio .corazon-inicio {
+    bottom: -230px;
+  }
+}
+.header-inicio button {
+  z-index: 22;
 }
 
 /*
@@ -2691,7 +2751,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .valija-wrapper {
-    right: 8%;
+    right: 10%;
   }
 }
 .valija-wrapper .confeti {
@@ -2775,6 +2835,44 @@ html, body {
     bottom: 0;
     left: 70px;
     width: 200px;
+  }
+}
+
+.deco-amarillo {
+  position: absolute;
+  z-index: 1;
+  bottom: -150px;
+  right: 0;
+  border-right: 150px solid #ffe900;
+  border-top: 0 solid transparent;
+  border-bottom: 150px solid transparent;
+}
+@media (min-width: 768px) {
+  .deco-amarillo {
+    bottom: -250px;
+    border-right-width: 250px;
+    border-bottom-width: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .deco-amarillo {
+    bottom: -350px;
+    border-right-width: 350px;
+    border-bottom-width: 350px;
+  }
+}
+@media (min-width: 1250px) {
+  .deco-amarillo {
+    bottom: -450px;
+    border-right-width: 450px;
+    border-bottom-width: 450px;
+  }
+}
+@media (min-width: 1600px) {
+  .deco-amarillo {
+    bottom: -600px;
+    border-right-width: 600px;
+    border-bottom-width: 600px;
   }
 }
 

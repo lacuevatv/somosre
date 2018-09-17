@@ -128,9 +128,12 @@ $(window).on('load', function(){
     //3. Iniciar animaciones
     startAnimations('.animate-element', false);
     startAnimations('.animate-element-loop', true);
-    //4. iniciarparallax
+    //4.iniciar header
+    initHeader()
+    //5. iniciarparallax
     startAnimations('.parallax', true);
     initParallax();
+    
 
     //3.on rezise: 
     $(window).on('resize', function(){
@@ -891,9 +894,76 @@ function initParallax () {
             }    
         }
 
-        
+
 
     });//on scroll
 
 }//initParallax()
 
+function initHeader(){
+    var contenedor = $('.header-inicio');
+    var button = $(contenedor).find('.btn-fucsia')
+    var contenedorImagen = $(contenedor).find('.header-image-wrapper');
+    var retina = window.devicePixelRatio>1;
+    var windowWidth = window.innerWidth;
+    var movil = windowWidth < 768;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    var imagen = '';
+    var corazon = 'corazones-inicio.png';
+
+    if (retina) {
+        corazon = 'corazones-inicio@2x.png';
+    }
+
+    if (movil) {
+        if (retina) {
+            //movil retina
+            imagen = 'banner-inicio-movil@2x.jpg';
+        } else {
+            //movil no retina   
+            imagen = 'banner-inicio-movil.jpg';
+        }
+    } else {
+      //no es movil  
+      if (retina) {
+            //no movil retina
+            imagen = 'banner-inicio@2x.jpg';
+        } else {
+        //no movil no retina   
+            imagen = 'banner-inicio.jpg';
+        }
+    }
+
+    var htmlbackground = '<img src="'+baseUrl+'/assets/images/'+imagen+'" alt="Somos Re" class="header-image">';
+    var htmlheart = '<img src="'+baseUrl+'/assets/images/'+corazon+'" alt="Somos Re Heart" class="corazon-inicio">';
+
+    $(contenedorImagen).append( $(htmlbackground) );
+    $(contenedorImagen).fadeIn();
+
+    contenedor.append( $(htmlheart) );
+    var imagenCorazon = $('.corazon-inicio');
+    $(imagenCorazon).fadeIn();
+
+    var imagenHeaderParallax = $('.header-image');
+
+    if ( imagenHeaderParallax.length > 0 ) {
+        
+        //movimiento header on scroll
+        $(window).scroll(function(){
+            
+            //valor de barra que necesitan todos
+            var barra = ($(window).scrollTop());
+
+            //imagen header chica
+            imagenHeaderParallax.css('top', ( barra/1.9 )+'px');
+            
+            //titulo
+            $('.main-title-inicio').css('bottom', ( barra/1.9 )+'px');
+            $(button).css('bottom', ( barra/1.5 )+'px');
+
+
+        });//onscrll
+    }
+
+}//initHeader()

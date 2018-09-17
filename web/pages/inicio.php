@@ -7,7 +7,7 @@
 getTemplate('head'); ?>
 <!-- -------header------- -->
     <header class="header-inicio">
-        
+        <div class="header-image-wrapper"></div>
         <ul class="lista-vertical">
             <li class="animate-element slide-down">Instagram</li>
             <li><span class="lista-vertical-separador animate-element slide-left"></span></li>
@@ -24,14 +24,14 @@ getTemplate('head'); ?>
                     <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png" alt="Usa 15: New York, Miami, Orlando">
                 </picture>
             </h1>
-            <button href="entrevista" class="btn btn-fucsia scroll-to">
+            <button href="entrevista" class="btn btn-fucsia scroll-to animate-element fade-in">
                 Pedí tu entrevista
             </button>
             
             <?php getTemplate('button-share', $data = array( 'color'=>'blanco' ) ); ?>
 
         </div>
-
+        <div class="deco-amarillo animate-element fade-in"></div>
     </header>
     
     <main role="main" class="main">

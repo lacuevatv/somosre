@@ -1,4 +1,4 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&callback=cargarMapa" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&callback=initmap" async defer></script>
 
 <script>
 var marcadores = [
@@ -10,4 +10,7 @@ var marcadores = [
 <?php } ?>
     
     ];
+    function initmap() {
+        document.addEventListener('load', cargarMapa);
+    }
 </script>
