@@ -441,8 +441,12 @@ html, body {
 }
 .menu-footer .go-up-wrapper button {
   background-color: #fff;
-  border: none;
+  border-color: transparent;
   font-weight: 500;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .menu-footer .go-up-wrapper button > span {
   font-size: 1.4em;
@@ -466,6 +470,20 @@ html, body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .menu-footer .go-up-wrapper button:after {
     background-image: url(../images/corazon-boton-fucsia@2x.png);
+    background-size: 13px 12px;
+  }
+}
+.menu-footer .go-up-wrapper button:hover {
+  background-color: transparent;
+  border-color: #333;
+}
+.menu-footer .go-up-wrapper button:hover:after {
+  background-image: url(../images/corazon-boton-gris.png);
+  background-size: 16px 14px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .menu-footer .go-up-wrapper button:hover:after {
+    background-image: url(../images/corazon-boton-gris@2x.png);
     background-size: 13px 12px;
   }
 }
@@ -901,10 +919,18 @@ html, body {
 .btn-blanco {
   color: #333;
   background-color: #fff;
-  border: none;
+  border-color: transparent;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-blanco:after {
   background-image: url(../images/corazon-boton-fucsia.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-blanco:after {
@@ -912,14 +938,36 @@ html, body {
     background-size: 13px 12px;
   }
 }
+.btn-blanco:hover {
+  color: #333;
+  background-color: transparent;
+  border-color: #333;
+}
+.btn-blanco:hover:after {
+  background-image: url(../images/corazon-boton-gris.png);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-blanco:hover:after {
+    background-image: url(../images/corazon-boton-gris@2x.png);
+    background-size: 13px 12px;
+  }
+}
 
 .btn-amarillo {
   color: #333;
   background-color: #ffe900;
-  border: none;
+  border-color: transparent;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-amarillo:after {
   background-image: url(../images/corazon-boton-gris.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-amarillo:after {
@@ -927,14 +975,26 @@ html, body {
     background-size: 17.5px 13.5px;
   }
 }
+.btn-amarillo:hover {
+  background-color: transparent;
+  border-color: #333;
+}
 
 .btn-verde {
   color: #333;
   background-color: #75efd8;
-  border: none;
+  border-color: transparent;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-verde:after {
   background-image: url(../images/corazon-boton-gris.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-verde:after {
@@ -942,11 +1002,19 @@ html, body {
     background-size: 17.5px 13.5px;
   }
 }
+.btn-verde:hover {
+  background-color: transparent;
+  border-color: #333;
+}
 
 .btn-fucsia {
   color: #fff;
   background-color: #ff006c;
-  border: none;
+  border-color: transparent;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-fucsia:after {
   background-image: url(../images/corazon-boton-blanco.png);
@@ -958,12 +1026,31 @@ html, body {
   }
 }
 .btn-fucsia:hover {
-  color: #fff;
+  color: #ff006c;
+  border-color: #ff006c;
+  background-color: transparent;
+}
+.btn-fucsia:hover:after {
+  background-image: url(../images/corazon-boton-fucsia.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-fucsia:hover:after {
+    background-image: url(../images/corazon-boton-fucsia@2x.png);
+    background-size: 19px 15px;
+  }
 }
 
 .btn-borde-fucsia {
   color: #ff006c;
   border: 1px solid #ff006c;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-borde-fucsia:after {
   background-image: url(../images/corazon-boton-fucsia.png);
@@ -975,19 +1062,42 @@ html, body {
   }
 }
 .btn-borde-fucsia:hover {
-  color: #ff006c;
+  color: #fff;
+  background-color: #ff006c;
+  border-color: transparent;
+}
+.btn-borde-fucsia:hover:after {
+  background-image: url(../images/corazon-boton-blanco.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-borde-fucsia:hover:after {
+    background-image: url(../images/corazon-boton-blanco@2x.png);
+    background-size: 13px 12px;
+  }
 }
 
 .btn-facebook {
   color: #fff;
   background-color: #3a5ca9;
-  border: none;
+  border-color: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .btn-facebook:after {
   background-image: url(../images/facebook-formulario.png);
   background-size: 16px 17px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-facebook:after {
@@ -996,15 +1106,21 @@ html, body {
   }
 }
 .btn-facebook:hover {
-  color: #fff;
+  color: #3a5ca9;
+  background-color: transparent;
+  border-color: #3a5ca9;
 }
 
 .btn-google {
   background-color: #e6e6e6;
-  border: none;
+  border-color: transparent;
   margin-top: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media (min-width: 768px) {
   .btn-google {
@@ -1017,12 +1133,20 @@ html, body {
   background-size: 18px 19px;
   width: 18px;
   height: 19px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-google:after {
     background-image: url(../images/google-formulario.png);
     background-size: 19.5px 19px;
   }
+}
+.btn-google:hover {
+  background-color: transparent;
+  border-color: #333;
 }
 
 .btn-share {
@@ -1171,6 +1295,120 @@ html, body {
   }
   100% {
     opacity: 0;
+  }
+}
+.animate-element {
+  opacity: 0;
+}
+
+.animate-element-loop {
+  opacity: 0;
+}
+
+.slide-left-slider {
+  opacity: 0;
+}
+
+.animate-element.fade-in.in-view {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animate-element-loop.fade-in.in-view {
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slide-left-slider.in-view {
+  opacity: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animate-element.slide-left.in-view {
+  opacity: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animate-element-loop.slide-left.in-view {
+  opacity: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-element-loop.slide-right.in-view {
+  opacity: 0;
+  animation-name: slide-right;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.animate-element.slide-right.in-view {
+  opacity: 0;
+  animation-name: slide-right;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.animate-element.slide-down.in-view {
+  opacity: 0;
+  animation-name: slide-down;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 /*--------------------------------------------------------------
@@ -2046,10 +2284,16 @@ html, body {
     left: initial;
   }
 }
-@media (min-width: 1250px) {
+@media (min-width: 992px) {
   .slider-wrapper .owl-nav {
     left: 9%;
     right: initial;
+    bottom: 10px;
+  }
+}
+@media (min-width: 1250px) {
+  .slider-wrapper .owl-nav {
+    bottom: 20px;
   }
 }
 .slider-wrapper .icon-arrow {
@@ -2268,6 +2512,33 @@ html, body {
   .corazon-header-gris {
     top: 30px;
     left: 30px;
+  }
+}
+
+.deco-corazon-seguridad {
+  position: absolute;
+  z-index: 11;
+  bottom: -25px;
+  right: 10px;
+  width: 74px;
+  height: 71px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/corazones-seguridad.png);
+  background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .deco-corazon-seguridad {
+    background-image: url(../images/corazones-seguridad@2x.png);
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .deco-corazon-seguridad {
+    bottom: -80px;
+    right: 20px;
+    width: 184px;
+    height: 201px;
   }
 }
 

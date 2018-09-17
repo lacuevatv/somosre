@@ -533,9 +533,13 @@
             right: 9%;
             left: initial;
         }
-        @media (min-width: $lg) {
+        @media (min-width: $md) {
             left: 9%;
             right: initial;
+            bottom: 10px;
+        }
+        @media (min-width: $lg) {
+            bottom: 20px;
         }
     }
 
@@ -746,6 +750,31 @@
     }
 }
 
+.deco-corazon-seguridad {
+    position: absolute;
+    z-index: 11;
+    bottom: -25px;
+    right: 10px;
+    width: 74px;
+    height: 71px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/corazones-seguridad.png);
+    background-size: cover;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/corazones-seguridad@2x.png);
+        background-size: cover;
+    }
+
+    @media (min-width: $md) {
+        bottom: -80px;
+        right: 20px;
+        width: 184px;
+        height: 201px;
+    }
+}//.deco-corazon-seguridad
+
 .texto-vertical {
     position: absolute;
     z-index: 11;
@@ -947,3 +976,4 @@
     }//.valija
 
 }//.valija-wrapper
+

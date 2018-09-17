@@ -87,8 +87,9 @@
 
         button {
             background-color: $color-blanco;
-            border: none;
+            border-color: transparent;
             font-weight: 500;
+            @include transition(all $transitionSpeed);
         
             > span {
                 font-size: 1.4em;
@@ -113,8 +114,22 @@
                     background-size: 13px 12px;
                 }
             }
-        }
 
+            &:hover {
+                background-color: transparent;
+                border-color: $color-negro;
+
+                &:after {
+                    background-image: url(../images/corazon-boton-gris.png);
+                    background-size: 16px 14px;
+    
+                    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                        background-image: url(../images/corazon-boton-gris@2x.png);
+                        background-size: 13px 12px;
+                    }
+                }
+            }
+        }//button
         
 
     }//.menu-footer-wrapper

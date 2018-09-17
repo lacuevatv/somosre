@@ -53,52 +53,85 @@
 .btn-blanco {
     color: $color-negro;
     background-color: $color-blanco;
-    border: none;
+    border-color: transparent;
+    @include transition(all $transitionSpeed ease-out);
 
     &:after {
         background-image: url(../images/corazon-boton-fucsia.png);
+        @include transition(all $transitionSpeed ease-out);
 
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
             background-image: url(../images/corazon-boton-fucsia@2x.png);
             background-size: 13px 12px;
         }
     }
+
+    &:hover {
+        color: $color-negro;
+        background-color: transparent;
+        border-color: $color-negro;
+        &:after {
+            background-image: url(../images/corazon-boton-gris.png);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-gris@2x.png);
+                background-size: 13px 12px;
+            }
+        }
+    }
+
+    
 }
 
 .btn-amarillo {
     color: $color-negro;
     background-color: $color-amarillo;
-    border: none;
-
+    border-color: transparent;
+    @include transition(all $transitionSpeed ease-out);
+    
     &:after {
         background-image: url(../images/corazon-boton-gris.png);
+        @include transition(all $transitionSpeed ease-out);
 
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
             background-image: url(../images/corazon-boton-gris@2x.png);
             background-size: 17.5px 13.5px;
         }
+    }
+
+    &:hover {
+        background-color: transparent;
+        border-color: $color-negro;    
     }
 }
 
 .btn-verde {
     color: $color-negro;
     background-color: $color-verde;
-    border: none;
+    border-color: transparent;
+    @include transition(all $transitionSpeed ease-out);
 
     &:after {
         background-image: url(../images/corazon-boton-gris.png);
+        @include transition(all $transitionSpeed ease-out);
 
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
             background-image: url(../images/corazon-boton-gris@2x.png);
             background-size: 17.5px 13.5px;
         }
     }
+
+    &:hover {
+        background-color: transparent;
+        border-color: $color-negro;
+    }
 }
 
 .btn-fucsia {
     color: $color-blanco;
     background-color:$color-rojo;
-    border: none;
+    border-color: transparent;
+    @include transition(all $transitionSpeed ease-out);
 
     &:after {
         background-image: url(../images/corazon-boton-blanco.png);
@@ -110,13 +143,26 @@
     }
 
     &:hover {
-        color:$color-blanco;
+        color:$color-rojo;
+        border-color: $color-rojo;
+        background-color: transparent;
+
+        &:after {
+            background-image: url(../images/corazon-boton-fucsia.png);
+            @include transition(all $transitionSpeed ease-out);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-fucsia@2x.png);
+                background-size: 19px 15px;
+            }
+        }
     }
 }
 
 .btn-borde-fucsia {
     color:$color-rojo;
     border: 1px solid $color-rojo;
+    @include transition(all $transitionSpeed ease-out);
 
     &:after {
         background-image: url(../images/corazon-boton-fucsia.png);
@@ -128,23 +174,33 @@
     }
 
     &:hover {
-        color: $color-rojo;
+        color: $color-blanco;
+        background-color: $color-rojo;
+        border-color: transparent;
+        &:after {
+            background-image: url(../images/corazon-boton-blanco.png);
+            @include transition(all $transitionSpeed ease-out);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-blanco@2x.png);
+                background-size: 13px 12px;
+            }
+        }
     }
 }
 
 .btn-facebook {
     color: $color-blanco;
     background-color: #3a5ca9;
-    border: none;
+    border-color: transparent;
     padding-top: 15px;
     padding-bottom: 15px;
-    @media (min-width: $sm) {
-
-    }
+    @include transition(all $transitionSpeed ease-out);
 
     &:after {
         background-image: url(../images/facebook-formulario.png);
         background-size: 16px 17px;
+        @include transition(all $transitionSpeed ease-out);
 
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
             background-image: url(../images/facebook-formulario.png);
@@ -153,16 +209,20 @@
     }
 
     &:hover {
-        color:$color-blanco;
+        color:#3a5ca9;
+        background-color: transparent;
+        border-color: #3a5ca9;
     }
 }
 
 .btn-google {
     background-color: #e6e6e6;
-    border: none;
+    border-color: transparent;
     margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
+    @include transition(all $transitionSpeed ease-out);
+
     @media (min-width: $sm) {
         margin: 0;
         margin-left: 10px;
@@ -173,11 +233,16 @@
         background-size: 18px 19px;
         width: 18px;
         height: 19px;
+        @include transition(all $transitionSpeed ease-out);
         @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
             background-image: url(../images/google-formulario.png);
             background-size: 19.5px 19px;
         }
-        
+    }
+
+    &:hover {
+        background-color: transparent;
+        border-color: $color-negro;
     }
 
 }
@@ -306,4 +371,100 @@
 	0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;}
+}
+
+
+.animate-element {
+	opacity: 0;
+}
+
+.animate-element-loop {
+	opacity: 0;
+}
+
+
+
+.slide-left-slider {
+	opacity: 0;
+}
+
+
+.animate-element.fade-in.in-view {
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+.animate-element-loop.fade-in.in-view {
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes fade-in {
+	from {opacity: 0;}
+        to {opacity: 1;}
+}
+
+
+.slide-left-slider.in-view {
+	opacity: 0;
+	animation-name: slide-left;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+.animate-element.slide-left.in-view {
+	opacity: 0;
+	animation-name: slide-left;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+.animate-element-loop.slide-left.in-view {
+	opacity: 0;
+	animation-name: slide-left;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes slide-left {
+	from {opacity: 0;transform:translateX(-50%);}
+        to {opacity: 1;transform:translateX(0);}
+}
+
+
+.animate-element-loop.slide-right.in-view {
+	opacity: 0;
+	animation-name: slide-right;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+.animate-element.slide-right.in-view {
+	opacity: 0;
+	animation-name: slide-right;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes slide-right {
+	from {opacity: 0;transform:translateX(50%);}
+    to {opacity: 1;transform:translateX(0);}
+}
+
+
+
+.animate-element.slide-down.in-view {
+	opacity: 0;
+	animation-name: slide-down;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes slide-down {
+	from {opacity: 0;transform:translateY(-50%);}
+    to {opacity: 1;transform:translateX(0);}
 }

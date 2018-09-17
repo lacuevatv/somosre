@@ -121,14 +121,23 @@ $(document).ready(function(){
 --------------------------------------------------------------*/
 
 $(window).on('load', function(){
-    //instagram:
+    //1. iniciar instagram:
     getInstagram();
-
+    //2. iniciar sliders
     iniciarSliders();
+    //3. Iniciar animaciones
+    startAnimations('.animate-element', false);
+    startAnimations('.animate-element-loop', true);
+    //4. iniciarparallax
+    startAnimations('.parallax', true);
+    initParallax();
 
+    //3.on rezise: 
     $(window).on('resize', function(){
         getInstagram();
     });
+
+    
     
     
 });
@@ -446,12 +455,14 @@ function popupPromo() {
 function iniciarSliders(){
 
     //slider superior home
-    $('.owl-carousel').owlCarousel({
+    owl = $('.owl-carousel');
+    owl.owlCarousel({
         loop:true,
         margin:50,
         nav:true,
         lazyLoad: true,
         autoHeight:true,
+        animateOut: 'fadeOut',
         navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
         dots:false,
         responsive:{
@@ -545,10 +556,202 @@ function getInstagram() {
 }
 
 
+/*
+* INICIA Y CARGA EL MAPA DE GOOGLE CON LAS SUCURSALES
+*/
 function cargarMapa() {
-    //$('#map').empty();
+    
+    var styles = [
+        {
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.icon",
+          "stylers": [
+            {
+              "visibility": "on"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "color": "#f5f5f5"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.country",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#bdbdbd"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.locality",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "administrative.province",
+          "elementType": "labels.text.stroke",
+          "stylers": [
+            {
+              "visibility": "off"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#ffffff"
+            }
+          ]
+        },
+        {
+          "featureType": "road.arterial",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#757575"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#dadada"
+            }
+          ]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#616161"
+            }
+          ]
+        },
+        {
+          "featureType": "road.local",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#e5e5e5"
+            }
+          ]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#eeeeee"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [
+            {
+              "color": "#c9c9c9"
+            }
+          ]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [
+            {
+              "color": "#9e9e9e"
+            }
+          ]
+        }
+      ];
+
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 6,
+      styles: styles,
       center: new google.maps.LatLng(-32.6890983, -62.103681300000005),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -584,47 +787,113 @@ function cargarMapa() {
 
 
 /*
-    * CARGA ASINCRONA DE IMAGENES
-    * carga las imágenes con img src
+* CARGA ASINCRONA DE IMAGENES
+* carga las imágenes con img src
 */
-/*$('.load-images').each(function(){
-    var img = $(this).find('img');
-
-    $(img).attr('src', $(img).attr('data-src') );
-    if ( $(img).attr('src') != '') {
-        $(this).fadeIn();
-    }
-});*/
-
-/*
-    * IN VIEW ANIMATION
-*/
-/*var $animation_elements = $('.animate-element');
-var $window = $(window);
-
-function check_if_in_view() {
-    var window_height = $window.height();
-    var window_top_position = $window.scrollTop();
-    var window_bottom_position = (window_top_position + window_height);
-
-    $.each($animation_elements, function() {
-        var $element = $(this);
-        var element_height = $element.outerHeight();
-        var element_top_position = $element.offset().top;
-        var element_bottom_position = (element_top_position + element_height);
-
-        //check to see if this current container is within viewport
-        if ((element_bottom_position >= window_top_position) &&
-            (element_top_position <= window_bottom_position)) {
-            $element.addClass('in-view');
-        } else {
-            $element.removeClass('in-view');
+function getLazyImages() {
+    $('.load-images').each(function(){
+        var img = $(this).find('img');
+    
+        $(img).attr('src', $(img).attr('data-src') );
+        if ( $(img).attr('src') != '') {
+            $(this).fadeIn();
         }
     });
 }
 
-$window.on('scroll resize', check_if_in_view);
-$window.trigger('scroll');
-
+/*
+* IN VIEW ANIMATION
+* loop se usa como true o false, si es true, la animacion se ejecuta siempre, es decir el elemento entra y sale del view y cada vez se ejecuta la animación, en cambio en false solo se ejecuta una vez y luego queda fija
 */
+function startAnimations( clase, loop ) {
+    var $animation_elements = $(clase);
+    var $window = $(window);
+
+    function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            if ( loop ) {
+                //check to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+                } else {
+                    $element.removeClass('in-view');
+                }
+            } else {
+                //check to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                    $element.addClass('in-view');
+                }
+            }
+            
+        });
+
+    }//check_if_in_view
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+}//startAnimations()
+
+
+
+/*
+ * INICIA LOS PARALLAXS
+*/
+function initParallax () {
+
+    var confetiBox = $('.span-confeti');
+    var valijaWrapper = $('.valija-wrapper');
+
+    $(window).scroll(function(){
+      
+        //valor de barra que necesitan todos
+        var barra = ($(window).scrollTop());
+
+        /*
+        CONFETI BOX
+        */
+        if (window.innerWidth > 992) {
+            if ( confetiBox.hasClass('in-view') ) {
+                var mover = (barra * 1.9 / 100 ) + (barra* 1.1 /100);
+                $(confetiBox).css('background-position-y', mover + '%'); 
+                
+            }
+        }
+
+        /*
+        VALIJA SUPERIOR
+        */
+       var confeti = valijaWrapper.find('.confeti');
+       var numero = valijaWrapper.find('.numero');
+       var corazon = valijaWrapper.find('.corazon');
+       var valija = valijaWrapper.find('.valija');
+       if (window.innerWidth > 992) {
+            if ( confeti.hasClass('in-view') ) {
+                
+                var mover = (barra * 1.1 / 100 ) ;
+                var mover2 = (barra * 1.9 / 100 ) ;
+                var mover3 = (barra * 0.7 / 10 ) + 120;
+                var mover4 = (barra * 1.5 / 100 );
+
+                $(confeti).css('top', mover + 'px'); 
+                $(numero).css('top', mover2 + 'px'); 
+                $(corazon).css('top', mover3 + 'px'); 
+                $(valija).css('bottom', mover4 + 'px'); 
+   
+            }    
+        }
+
+        
+
+    });//on scroll
+
+}//initParallax()
 

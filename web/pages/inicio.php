@@ -9,16 +9,15 @@ getTemplate('head'); ?>
     <header class="header-inicio">
         
         <ul class="lista-vertical">
-            <li>Instagram</li>
-            <li><span class="lista-vertical-separador"></span></li>
-            <li>Facebook</li>
-
+            <li class="animate-element slide-down">Instagram</li>
+            <li><span class="lista-vertical-separador animate-element slide-left"></span></li>
+            <li class="animate-element slide-down">Facebook</li>
         </ul>
-        <span class="corazon-header-gris"></span>
-        <span class="corazon-header"></span>
+        <span class="corazon-header-gris animate-element fade-in"></span>
+        <span class="corazon-header animate-element fade-in"></span>
 
         <div class="contenedor">
-            <h1 class="main-title-inicio">
+            <h1 class="main-title-inicio animate-element fade-in">
                 <span class="sr-only">Usa 15: New York, Miami, Orlando</span>
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio@2x.png 2x" media="(min-width: 768px)">
@@ -42,7 +41,7 @@ getTemplate('head'); ?>
         <div id="somosre" class="section-wrapper">
             <div class="contenedor">
                 <div class="front-reduce">
-                    <h2 class="titulo-base">
+                    <h2 class="titulo-base animate-element slide-left">
                         <span class="sr-only">Somos Re</span>
                         <picture>
                             <source srcset="<?php echo MAINSURL; ?>/assets/images/logo-inicio.png, <?php echo MAINSURL; ?>/assets/images/logo-inicio@2x.png 2x" media="(min-width: 768px)">
@@ -50,21 +49,21 @@ getTemplate('head'); ?>
                         </picture>
                     </h2>
 
-                    <p class="super-parrafo">
+                    <p class="super-parrafo animate-element slide-left">
                         Es el nombre de una comunidad cancherísima de Girls Teens donde podés encontrar un mundo pensado para vos. En RE te proponemos un viaje diferente para festejar tus quince. Con nosotros vas a conocer mucho más que solo Disney.
                     </p>
 
-                    <p>
+                    <p class="animate-element slide-left">
                         Te ofrecemos un itinerario único en su tipo con servicios de primer nivel y contenidos exclusivos que te garantizan la experiencias más segura y divertida.
                     </p>
-                    <p>
+                    <p class="animate-element slide-left">
                         Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.
                     </p>
-                    <p>
+                    <p class="animate-element slide-left">
                         Además, nuestro equipo de profesionales especificamente preparado para desarrollarse en el mundo RE, te va a cuidar siempre para que tu única preocupación sea pasarla bien.
                     </p>
 
-                    <p>
+                    <p class="animate-element slide-left">
                         <a href="<?php getFile( 'asistencia' ); ?>" target="_blank" class="btn btn-borde-fucsia">
                             Ver asistencia
                         </a>
@@ -78,29 +77,29 @@ getTemplate('head'); ?>
 
             <div class="contenedor">
                 <div class="front-reduce">
-                    <h2 class="titulo-base texto-uppercase">
+                    <h2 class="titulo-base texto-uppercase animate-element slide-left">
                         Programas Exclusivos.
                     </h2>
 
-                    <p class="parrafo-separador">
+                    <p class="parrafo-separador animate-element slide-left">
                         Descubrí la información sobre nuestros productos.
                     </p>
 
                     <ul class="btns-wrapper">
                         <li>
-                            <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo">
+                            <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo animate-element slide-left">
                                 Itinerarios
                             </a>
                         </li>
 
                         <li>
-                            <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde">
+                            <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde animate-element slide-left">
                                 Salidas y Precios
                             </a>
                         </li>
 
                         <li>
-                            <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia">
+                            <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia animate-element slide-left">
                                 Comparar programas
                             </a>
                         </li>
@@ -109,26 +108,26 @@ getTemplate('head'); ?>
             </div>
         </div>
         
-        <figure class="valija-wrapper">
+        <figure class="valija-wrapper animate-element slide-right">
             
             <picture>
                 <source srcset="<?php echo MAINSURL; ?>/assets/images/confeti-valija.png, <?php echo MAINSURL; ?>/assets/images/confeti-valija@2x.png 2x" media="(min-width: 767px)">
-                <img src="<?php echo MAINSURL; ?>/assets/images/confeti-valija.png" alt="Fiesta 15 Re" class="confeti">
+                <img src="<?php echo MAINSURL; ?>/assets/images/confeti-valija.png" alt="Fiesta 15 Re" class="confeti parallax">
             </picture>
 
             <picture>
                 <source srcset="<?php echo MAINSURL; ?>/assets/images/quince-valija.png, <?php echo MAINSURL; ?>/assets/images/quince-valija@2x.png 2x" media="(min-width: 767px)">
-                <img src="<?php echo MAINSURL; ?>/assets/images/quince-valija.png" alt="Fiesta 15 Re" class="numero">
+                <img src="<?php echo MAINSURL; ?>/assets/images/quince-valija.png" alt="Fiesta 15 Re" class="numero parallax">
             </picture>
 
             <picture>
                 <source srcset="<?php echo MAINSURL; ?>/assets/images/globo-valija.png, <?php echo MAINSURL; ?>/assets/images/globo-valija@2x.png 2x" media="(min-width: 767px)">
-                <img src="<?php echo MAINSURL; ?>/assets/images/globo-valija.png" alt="Fiesta 15 Re" class="corazon">
+                <img src="<?php echo MAINSURL; ?>/assets/images/globo-valija.png" alt="Fiesta 15 Re" class="corazon parallax">
             </picture>
 
             <picture>
                 <source srcset="<?php echo MAINSURL; ?>/assets/images/valija.png, <?php echo MAINSURL; ?>/assets/images/valija@2x.png 2x" media="(min-width: 767px)">
-                <img src="<?php echo MAINSURL; ?>/assets/images/valija.png" alt="Fiesta 15 Re" class="valija">
+                <img src="<?php echo MAINSURL; ?>/assets/images/valija.png" alt="Fiesta 15 Re" class="valija parallax">
             </picture>
 
         </figure>
@@ -140,11 +139,11 @@ getTemplate('head'); ?>
     <section >
         <div class="row">
 
-            <div id="experiencia" class="wrapper-box galeria-box">
+            <div id="experiencia" class="wrapper-box galeria-box animate-element slide-left">
             
-                <span class="deco-corazon-boxes"></span>
+                <span class="deco-corazon-boxes animate-element fade-in"></span>
                 
-                <span class="texto-vertical">Galería</span>
+                <span class="texto-vertical animate-element fade-in">Galería</span>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/camara.png, <?php echo MAINSURL; ?>/assets/images/camara@2x.png 2x" media="(min-width: 315px)">
@@ -167,11 +166,11 @@ getTemplate('head'); ?>
 
             </div>
 
-            <div id="celebrities" class="wrapper-box galeria-box">
+            <div id="celebrities" class="wrapper-box galeria-box animate-element slide-left" style="animation-delay: 0.5s;">
 
-                <span class="deco-corazon-boxes"></span>
+                <span class="deco-corazon-boxes animate-element fade-in"></span>
 
-                <span class="texto-vertical texto-vertical-blanco">Celebrities</span>
+                <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Celebrities</span>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/chicos.png, <?php echo MAINSURL; ?>/assets/images/chicos@2x.png 2x" media="(min-width: 315px)">
@@ -194,11 +193,11 @@ getTemplate('head'); ?>
 
             </div>
 
-            <div id="bonustrack" class="wrapper-box galeria-box">
+            <div id="bonustrack" class="wrapper-box galeria-box animate-element slide-left" style="animation-delay: 0.8s;">
 
-                <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
+                <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
 
-                <span class="texto-vertical texto-vertical-blanco">Bonus Track</span>
+                <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Bonus Track</span>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/auriculares.png, <?php echo MAINSURL; ?>/assets/images/auriculares@2x.png 2x" media="(min-width: 315px)">
@@ -221,17 +220,17 @@ getTemplate('head'); ?>
 
             </div>
 
-            <div id="fiesta15" class="wrapper-box galeria-box">
+            <div id="fiesta15" class="wrapper-box galeria-box animate-element slide-left" style="animation-delay: 1s;">
 
-                <span class="deco-corazon-boxes"></span>
-                <span class="texto-vertical">Fiesta 15</span>
+                <span class="deco-corazon-boxes animate-element fade-in"></span>
+                <span class="texto-vertical animate-element fade-in">Fiesta 15</span>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png, <?php echo MAINSURL; ?>/assets/images/quince-globos-box@2x.png 2x" media="(min-width: 315px)">
                     <img src="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png" alt="Tu fiesta de 15 en Re" class="image-boxes">
                 </picture>
                 
-                <span class="span-confeti"></span>
+                <span class="span-confeti animate-element-loop fade-in"></span>
 
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">
@@ -256,8 +255,9 @@ getTemplate('head'); ?>
 <!-- ------- SLIDER ------- -->
     <section id="seguridad">
     
-    <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
-    <span class="texto-vertical texto-vertical-blanco">Seguridad</span>
+    <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
+    <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Seguridad</span>
+    <span class="deco-corazon-seguridad animate-element fade-in"></span>
 
     <ul class="slider-wrapper owl-carousel">
         
@@ -302,7 +302,7 @@ getTemplate('head'); ?>
 <!-- ------- INSTAGRAM ------- -->
     <section id="instagram" class="section-wrapper">
         
-        <span class="deco-corazon-boxes"></span>
+        <span class="deco-corazon-boxes animate-element fade-in"></span>
         <span class="texto-vertical" style="opacity:0;">Instagram</span>
 
         <div class="contenedor">
@@ -325,8 +325,8 @@ getTemplate('head'); ?>
 
 <!-- ------- TESTIMONIOS ------- -->
     <section id="testimonios">
-        <span class="deco-corazon-boxes deco-corazon-boxes-blanco"></span>
-        <span class="texto-vertical texto-vertical-blanco">Testimonios</span>
+        <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
+        <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Testimonios</span>
         
         <ul class="slider-wrapper owl-carousel">
         
@@ -378,23 +378,23 @@ getTemplate('head'); ?>
         <div class="row">
             <div class="wrapper-box agencias">
                 <div class="contenedor-left">
-                    <span class="deco-corazon-boxes"></span>
-                    <span class="texto-vertical">Agencias</span>
+                    <span class="deco-corazon-boxes animate-element fade-in"></span>
+                    <span class="texto-vertical animate-element fade-in">Agencias</span>
                     
                     <picture>
                         <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15.png, <?php echo MAINSURL; ?>/assets/images/usa-15@2x.png 2x">
-                        <img src="<?php echo MAINSURL; ?>/assets/images/usa-15.png">
+                        <img src="<?php echo MAINSURL; ?>/assets/images/usa-15.png" class="animate-element slide-left">
                     </picture>
 
-                    <h2 class="titulo-base">
+                    <h2 class="titulo-base animate-element slide-left">
                         Dónde comprar tu viaje Re.
                     </h2>
-                    <p class="parrafo-separador">
+                    <p class="parrafo-separador animate-element slide-left">
                         Encontrá la Agencia Autorizada de tu provincia.
                     </p>
 
                     <p>
-                        <a href="<?php getFile( 'agencias' ); ?>" target="_blank" class="btn btn-blanco">
+                        <a href="<?php getFile( 'agencias' ); ?>" target="_blank" class="btn btn-blanco animate-element slide-left">
                             Ver agencias
                         </a>
                     </p>
@@ -445,12 +445,12 @@ getTemplate('head'); ?>
 <!-- ------- FORMULARIO ------- -->
     <section class="section-wrapper" id="entrevista">
 
-        <span class="deco-corazon-boxes"></span>
-        <span class="texto-vertical">Formulario</span>
+        <span class="deco-corazon-boxes animate-element fade-in"></span>
+        <span class="texto-vertical animate-element fade-in">Formulario</span>
 
         <div class="contenedor">
             <div class="front-reduce">
-                <h2 class="titulo-base">
+                <h2 class="titulo-base animate-element slide-left">
                     Pedí tu entrevista.
                 </h2>
 
@@ -460,7 +460,7 @@ getTemplate('head'); ?>
 
         <picture>
             <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png, <?php echo MAINSURL; ?>/assets/images/usa-15-footer@2x.png 2x" media="(min-width: 768px)">
-            <img class="imagen-formulario" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando">
+            <img class="imagen-formulario animate-element slide-right" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando">
         </picture>
 
     </section>

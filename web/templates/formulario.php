@@ -1,18 +1,18 @@
 <form method="POST" name="default-form" id="default-form" class="formulario">
     <div class="loader"></div>
 
-    <legend class="parrafo-separador">
+    <legend class="parrafo-separador animate-element slide-left">
         Completa tus datos para concretar tu entrevista.
     </legend>
 
     <div class="inner-wrapper-form">
-        <button class="btn btn-facebook">Completar con</button>
-        <button class="btn btn-google">Completar con</button>
+        <button class="btn btn-facebook animate-element slide-left" style="animation-delay:0.5s">Completar con</button>
+        <button class="btn btn-google animate-element slide-left" style="animation-delay:0.7s">Completar con</button>
     </div>
 
     <div class="inner-wrapper-form">
 
-        <div class="form-row">
+        <div class="form-row animate-element slide-left">
 
             <div class="form-group">
                 <input type="text" name="contacto_nombre" class="input-default text-uppercase" required>
@@ -102,14 +102,16 @@
         
         </div>
     </div>
+
     <hr class="hr-separador">
-    <legend class="parrafo-separador">
+    
+    <legend class="parrafo-separador animate-element slide-left">
         Completa los datos de un adulto responsable.
     </legend>
 
     <div class="inner-wrapper-form inner-wrapper-form-sm">
         
-        <div class="form-row">
+        <div class="form-row animate-element slide-left">
 
             <div class="form-group">
                 <input type="text" name="contacto_adulto_nombre" class="text-uppercase input-default">
@@ -128,7 +130,7 @@
             </div>
         
         </div>
-        <div class="form-row">
+        <div class="form-row animate-element slide-left">
     
             <div class="form-group">
                 <input type="number" name="contacto_adulto_telefono" class="input-default">
@@ -150,7 +152,7 @@
 
     </div><!-- //.inner-wrapper-form -->
 
-    <div class="inner-wrapper-form">
+    <div class="inner-wrapper-form animate-element slide-left">
         <button type="submit" class="btn btn-amarillo btn-submit">Enviar datos</button>
         <span class="msj-form"></span>
     </div>
