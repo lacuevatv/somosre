@@ -12,10 +12,16 @@
     line-height: 1em;
     font-weight: 500;
 
-    @media (min-width: $md) {
+    @media (min-width: $sm) {
         font-size: .7em;
         padding: 15px 30px;
         padding-right: 50px;
+    }
+
+    @media (min-width: $xlg) {
+        font-size: .7em;
+        padding: 20px 40px;
+        padding-right: 60px;
     }
 
     &:hover {

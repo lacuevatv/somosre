@@ -14,6 +14,7 @@ getTemplate('head'); ?>
             <li class="animate-element slide-down">Facebook</li>
         </ul>
         <span class="corazon-header-gris animate-element fade-in"></span>
+        <span class="linea-vertical-header animate-element fade-in"></span>
         <span class="corazon-header animate-element fade-in"></span>
 
         <div class="contenedor">

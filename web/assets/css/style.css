@@ -207,13 +207,8 @@ html, body {
   font-family: "Montserrat", sans-serif;
   color: #333;
   background-color: #fff;
-  font-size: 0.9em;
+  font-size: 1em;
   line-height: 1.5em;
-}
-@media (min-width: 768px) {
-  html, body {
-    font-size: 0.9em;
-  }
 }
 
 .main-wrapper {
@@ -402,7 +397,8 @@ html, body {
   text-align: center;
   font-size: 1.2em;
   line-height: 2em;
-  font-weight: 500;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 @media (min-width: 768px) {
   .menu-footer .menu-footer-wrapper {
@@ -416,8 +412,6 @@ html, body {
   .menu-footer .menu-footer-wrapper {
     text-align: left;
     width: 20%;
-    font-size: 0.8em;
-    line-height: 1.5em;
   }
 }
 .menu-footer .newsleter-wrapper {
@@ -551,7 +545,8 @@ html, body {
   position: relative;
   color: #ffe900;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 0.8em;
   padding-left: 25px;
 }
 .sup-nav-wrapper .call-center:before {
@@ -874,11 +869,18 @@ html, body {
   line-height: 1em;
   font-weight: 500;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .btn {
     font-size: 0.7em;
     padding: 15px 30px;
     padding-right: 50px;
+  }
+}
+@media (min-width: 1600px) {
+  .btn {
+    font-size: 0.7em;
+    padding: 20px 40px;
+    padding-right: 60px;
   }
 }
 .btn:hover {
@@ -1492,16 +1494,14 @@ html, body {
   margin-bottom: 0.5em;
   border-bottom: 1px solid #333;
   flex-grow: 1;
+  /*@media (min-width: $sm) {
+      height: 70px;
+  }*/
 }
 @media (min-width: 480px) {
   .form-group {
     width: 48%;
-    margin: 0;
-  }
-}
-@media (min-width: 768px) {
-  .form-group {
-    height: 70px;
+    margin: 0 5px;
   }
 }
 @media (min-width: 992px) {
@@ -1521,9 +1521,9 @@ html, body {
   top: 10px;
   left: 1px;
   z-index: 2;
+  font-weight: 300;
+  color: #b2b2b2;
   cursor: pointer;
-  font-weight: 500;
-  color: #666;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -ms-transition: all 1s;
@@ -1532,6 +1532,11 @@ html, body {
 @media (min-width: 992px) {
   .form-group label {
     top: 8px;
+  }
+}
+@media (min-width: 1250px) {
+  .form-group label {
+    font-size: 1em;
   }
 }
 .form-group label.long-label {
@@ -1808,16 +1813,40 @@ html, body {
 }
 @media (min-width: 768px) {
   #somosre {
-    padding: 40px 0 40px;
+    padding: 200px 0 80px;
   }
 }
 #somosre p {
   margin: 20px 0;
-  font-size: 1.2em;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+@media (min-width: 768px) {
+  #somosre p {
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 992px) {
+  #somosre p {
+    font-size: 1.5em;
+  }
 }
 #somosre .super-parrafo {
   font-size: 1.5em;
-  line-height: 1.3em;
+  line-height: 1.5em;
+  font-weight: 300;
+}
+@media (min-width: 992px) {
+  #somosre .super-parrafo {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+  }
+}
+@media (min-width: 1600px) {
+  #somosre .super-parrafo {
+    font-size: 2.9em;
+  }
 }
 
 /*
@@ -1869,7 +1898,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .front-reduce {
-    width: 65%;
+    width: 60%;
   }
 }
 
@@ -2051,7 +2080,6 @@ html, body {
   left: 0;
   top: 0;
   background-image: url(../images/confeti-box.png);
-  background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
   width: 60%;
@@ -2436,6 +2464,16 @@ html, body {
   font-weight: 500;
   margin: 10px 0;
 }
+@media (min-width: 1250px) {
+  .titulo-base {
+    font-size: 2em;
+  }
+}
+@media (min-width: 1600px) {
+  .titulo-base {
+    font-size: 2.2em;
+  }
+}
 
 .texto-uppercase {
   text-transform: uppercase;
@@ -2448,8 +2486,14 @@ html, body {
 }
 
 .parrafo-separador {
-  margin: 30px 0 20px;
+  margin: 30px 0;
   position: relative;
+}
+@media (min-width: 1250px) {
+  .parrafo-separador {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
 .parrafo-separador:before {
   content: "";
@@ -2463,8 +2507,14 @@ html, body {
 }
 
 .parrafo-separador-blanco {
-  margin: 30px 0 20px;
+  margin: 30px 0;
   position: relative;
+}
+@media (min-width: 1250px) {
+  .parrafo-separador-blanco {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
 }
 .parrafo-separador-blanco:before {
   content: "";
@@ -2575,6 +2625,36 @@ html, body {
   }
 }
 
+.linea-vertical-header {
+  position: absolute;
+  z-index: 11;
+  top: 60px;
+  left: 39.5px;
+  width: 100px;
+  background-color: #333;
+  height: 1px;
+  letter-spacing: 0.1em;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 0 0 0;
+  -moz-transform-origin: 0 0 0;
+  -ms-transform-origin: 0 0 0;
+  -o-transform-origin: 0 0 0;
+  transform-origin: 0 0 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  display: none;
+}
+@media (min-width: 992px) {
+  .linea-vertical-header {
+    display: block;
+  }
+}
+
 .deco-corazon-seguridad {
   position: absolute;
   z-index: 11;
@@ -2654,7 +2734,7 @@ html, body {
 .lista-vertical {
   position: absolute;
   z-index: 11;
-  bottom: 17%;
+  bottom: 21%;
   left: 30px;
   color: #333;
   text-transform: uppercase;
@@ -2686,6 +2766,16 @@ html, body {
     display: -webkit-flex;
   }
 }
+@media (min-width: 1250px) {
+  .lista-vertical {
+    bottom: 18%;
+  }
+}
+@media (min-width: 1600px) {
+  .lista-vertical {
+    bottom: 14%;
+  }
+}
 .lista-vertical li {
   margin-right: 7px;
 }
@@ -2702,7 +2792,7 @@ html, body {
   position: absolute;
   width: 20%;
   max-width: 393px;
-  top: 45%;
+  top: 55%;
   right: 9%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2714,13 +2804,18 @@ html, body {
   .imagen-formulario {
     display: block;
     width: 25%;
-    top: 72%;
   }
 }
 @media (min-width: 1250px) {
   .imagen-formulario {
-    top: 45%;
-    width: 20%;
+    top: 20%;
+    width: 30%;
+    right: 4%;
+  }
+}
+@media (min-width: 1600px) {
+  .imagen-formulario {
+    right: 9%;
   }
 }
 
@@ -2728,30 +2823,27 @@ html, body {
   display: none;
   position: absolute;
   right: 0;
-  bottom: -60px;
+  bottom: -10px;
   width: 450px;
   height: 500px;
   overflow: hidden;
 }
-@media (min-width: 768px) {
-  .valija-wrapper {
-    display: block;
-  }
-}
 @media (min-width: 992px) {
   .valija-wrapper {
-    right: 3%;
+    display: block;
   }
 }
 @media (min-width: 1250px) {
   .valija-wrapper {
     display: block;
     overflow: visible;
+    bottom: 40px;
   }
 }
 @media (min-width: 1600px) {
   .valija-wrapper {
-    right: 10%;
+    right: 6%;
+    bottom: 60px;
   }
 }
 .valija-wrapper .confeti {

@@ -869,7 +869,8 @@ function initParallax () {
         */
         if (window.innerWidth > 992) {
             if ( confetiBox.hasClass('in-view') ) {
-                var mover = (barra * 1.9 / 100 ) + (barra* 1.1 /100);
+                //var mover = (barra * 1.9 / 100 ) + (barra* 0.1 /100);
+                var mover = (barra * 1.9 / 100 )*1.9-10;
                 $(confetiBox).css('background-position-y', mover + '%'); 
                 
             }
@@ -885,10 +886,10 @@ function initParallax () {
        if (window.innerWidth > 992) {
             if ( confeti.hasClass('in-view') ) {
                 
-                var mover = (barra * 1.1 / 100 ) ;
-                var mover2 = (barra * 1.9 / 100 ) ;
-                var mover3 = (barra * 0.7 / 10 ) + 120;
-                var mover4 = (barra * 1.5 / 100 );
+                var mover = ( (barra * 1.9 / 100 )*1.9 *1.9) -60;
+                var mover2 = (barra * 1.2 / 100 ) -20 ;
+                var mover3 = (barra * 0.7 / 10 ) + 80;
+                var mover4 = (barra * 1.9 / 100 );
 
                 $(confeti).css('top', mover + 'px'); 
                 $(numero).css('top', mover2 + 'px'); 
@@ -968,8 +969,8 @@ function initHeader(){
             imagenHeaderParallax.css('top', ( barra/1.9 )+'px');
             
             //titulo
-            $('.main-title-inicio').css('bottom', ( barra/1.9 )+'px');
-            $(button).css('bottom', ( barra/1.5 )+'px');
+            //$('.main-title-inicio').css('bottom', ( barra/1.9 )+'px');
+            //$(button).css('bottom', ( barra/1.5 )+'px');
 
 
         });//onscrll
