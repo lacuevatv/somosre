@@ -541,9 +541,9 @@ function getInstagram() {
     }
 
     if (window.innerWidth > '767')  {
-        html += '<iframe src="//lightwidget.com/widgets/5f76bd453f335434aba8ae21a25bb57e.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
+        html += '<iframe src="http://lightwidget.com/widgets/418e78cfd98750138b9391947cb2bf35.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
     } else {
-        html += '<iframe src="//lightwidget.com/widgets/3a71a1be6fe05cd4a511ad12c4c138d8.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
+        html += '<iframe src="http://lightwidget.com/widgets/1eabd1b7b4eb5682b8475170930a89c2.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
     }
 
     contenedor = $('#instagram-wrapper').empty().append($(html));
