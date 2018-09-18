@@ -235,7 +235,11 @@
 
     @media (min-width: $md) {
         height: 30px;
-        
+    }
+
+    label {
+        font-size: 1em;
+        top: 1px;
     }
 }//.form-group 
 

@@ -5,7 +5,7 @@
     position: relative;
     z-index: 1;
     background-color: #75efd8;
-    padding: 50px 0 80px;
+    padding: 50px 0 70px;
 
     @media (min-width: $sm) {
         padding: 50px 0;
@@ -35,13 +35,16 @@
         display: block;
         width: 100%;
         position: absolute;
-        bottom: -15px;
+        bottom: -14px;
         left: 0;
         background: url(../images/separador.png);
         height: 15px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
+        background-repeat: repeat-x;
+        background-size: contain;
+        background-position: top;
+        @media (min-width: $lg) {
+            bottom: -13px;
+        }
     }
 
     .header-image-wrapper {
