@@ -11,6 +11,8 @@ var marcadores = [
     
     ];
     function initmap() {
-        document.addEventListener('load', cargarMapa);
+        window.addEventListener('load', function(){
+            cargarMapa();
+        });
     }
 </script>

@@ -851,6 +851,10 @@ function startAnimations( clase, loop ) {
  * INICIA LOS PARALLAXS
 */
 function initParallax () {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+    }
 
     var confetiBox = $('.span-confeti');
     var valijaWrapper = $('.valija-wrapper');
@@ -945,7 +949,12 @@ function initHeader(){
     var imagenCorazon = $('.corazon-inicio');
     $(imagenCorazon).fadeIn();
 
+    
     var imagenHeaderParallax = $('.header-image');
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+    }
 
     if ( imagenHeaderParallax.length > 0 ) {
         
