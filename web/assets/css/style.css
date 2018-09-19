@@ -1155,7 +1155,7 @@ html, body {
   position: absolute;
   z-index: 222;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   cursor: pointer;
   display: block;
   width: 21px;
@@ -1174,6 +1174,8 @@ html, body {
   .btn-share {
     width: 43px;
     height: 42px;
+    left: initial;
+    right: 20px;
     background-size: 43px 42px;
   }
 }
@@ -1707,7 +1709,12 @@ html, body {
   position: relative;
   z-index: 1;
   background-color: #75efd8;
-  padding: 50px 0 70px;
+  padding: 40px 0 70px;
+}
+@media (min-width: 400px) and (min-height: 650px) {
+  .header-inicio {
+    padding: 40px 0 30px;
+  }
 }
 @media (min-width: 768px) {
   .header-inicio {
@@ -1717,11 +1724,16 @@ html, body {
 .header-inicio .main-title-inicio {
   position: relative;
   z-index: 111;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+}
+@media (min-width: 768px) {
+  .header-inicio .main-title-inicio {
+    margin-bottom: 40px;
+  }
 }
 .header-inicio .main-title-inicio img {
   width: 80%;
@@ -1811,6 +1823,12 @@ html, body {
 }
 .header-inicio button {
   z-index: 22;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .header-inicio-tablet {
+    padding: 10px 0;
+  }
 }
 
 /*

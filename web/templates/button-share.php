@@ -7,10 +7,9 @@
     <span data-red="twitter" class="share-item share-item-blanco share-item1">
         T
     </span>
-    <span data-red="instagram" class="share-item share-item-blanco share-item2">
-        I
-    </span>
-    <span data-red="whatsapp" class="share-item share-item-blanco share-item3">
+    <?php if (dispositivo() == 'movil' ) : ?>
+    <span data-red="whatsapp" class="share-item share-item-blanco share-item2">
         W
     </span>
+    <?php endif; ?>
 </button>

@@ -5,7 +5,12 @@
     position: relative;
     z-index: 1;
     background-color: #75efd8;
-    padding: 50px 0 70px;
+    padding: 40px 0 70px;
+
+    //protege la imagen por la altura
+    @media (min-width: '400px') and (min-height: '650px') {
+        padding: 40px 0 30px;
+    }
 
     @media (min-width: $sm) {
         padding: 50px 0;
@@ -14,8 +19,13 @@
     .main-title-inicio {
         position: relative;
         z-index: 111;
-        margin-bottom:40px;
+        margin-bottom:30px;
         @include transition(all $transitionSpeed);
+
+        @media (min-width: $sm) {
+            margin-bottom:40px;
+        }
+
         img {
             width: 80%;
             @media (min-width: $xs) {
@@ -100,6 +110,12 @@
     }
 
 }//.header-inicio
+
+.header-inicio-tablet {
+    @media (min-width: $sm) and (max-width: $md){
+        padding: 10px 0;
+    }
+}
 
 /*
  * NOSOTROS

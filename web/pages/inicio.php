@@ -6,7 +6,7 @@
 
 getTemplate('head'); ?>
 <!-- -------header------- -->
-    <header class="header-inicio">
+    <header class="header-inicio header-inicio-tablet">
         <div class="header-image-wrapper"></div>
         <ul class="lista-vertical">
             <li class="animate-element slide-down">Instagram</li>

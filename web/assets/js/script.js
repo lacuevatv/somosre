@@ -70,8 +70,19 @@ $(document).ready(function(){
             return;
         }
         var red = $(this).attr('data-red');
-        console.log('Compartiendo en ' + red);
-    })
+
+        switch (red) {
+            case 'facebook':
+                window.open('https://www.facebook.com/sharer/sharer.php?u='+baseUrl);
+            break;
+            case 'twitter':
+                window.open('https://twitter.com/intent/tweet?url='+baseUrl+'&text='+document.title+'-'+baseUrl);
+            break;
+            case 'whatsapp':
+                window.location.href=('whatsapp://send?text='+document.title+'%20'+baseUrl);
+            break;
+        }
+    });
 
 
     
@@ -966,7 +977,12 @@ function initHeader(){
             var barra = ($(window).scrollTop());
 
             //imagen header chica
-            imagenHeaderParallax.css('top', ( barra/1.9 )+'px');
+            if (movil) {
+                imagenHeaderParallax.css('top', ( barra/1.9 )-30+'px');
+            } else {
+                imagenHeaderParallax.css('top', ( barra/1.9 )-80+'px');
+            }
+            
             
             //titulo
             //$('.main-title-inicio').css('bottom', ( barra/1.9 )+'px');
