@@ -2,6 +2,10 @@
 	</div><!-- // INNER WRAPPER -->
 
 	<footer class="main-footer">
+		<p class="legales-footer animate-element slide-left">
+			Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.
+		</p>
+
 		<nav class="menu-footer">
 
 			<div class="menu-footer-wrapper brand-name">

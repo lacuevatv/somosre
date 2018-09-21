@@ -124,7 +124,11 @@
             left: 5px;
         }
     }
-
+    label.como {
+        @media (min-width: $md) {
+            font-size: 88%;
+        }
+    }
     //cuando el input está en focus o tiene contentenido la etiqueta se achica
     label.on {
         font-size: 60%;

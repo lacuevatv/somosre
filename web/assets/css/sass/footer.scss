@@ -8,11 +8,11 @@
     }
 
     @media (min-width: $md) {
-        padding: 90px  9%;
+        padding: 40px  9% 70px;
     }
 
     @media (min-width: $lg) {
-        padding: 90px  9% 100px;
+        padding: 40px  9% 100px;
     }
 
     &:after {
@@ -27,6 +27,15 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: bottom;
+    }
+
+    .legales-footer {
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        width: 100%;
+        max-width: 767px;
+        margin: 0px auto 40px
     }
 }//.main-footer
 

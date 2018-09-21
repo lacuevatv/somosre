@@ -57,12 +57,12 @@ getTemplate('head'); ?>
                     <p class="animate-element slide-left">
                         Te ofrecemos un itinerario único en su tipo con servicios de primer nivel y contenidos exclusivos que te garantizan la experiencias más segura y divertida.
                     </p>
-                    <p class="animate-element slide-left">
+                    <!--<p class="animate-element slide-left">
                         Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.
                     </p>
                     <p class="animate-element slide-left">
                         Además, nuestro equipo de profesionales especificamente preparado para desarrollarse en el mundo RE, te va a cuidar siempre para que tu única preocupación sea pasarla bien.
-                    </p>
+                    </p>--> 
 
                     <p class="animate-element slide-left">
                         <a href="<?php getFile( 'asistencia' ); ?>" target="_blank" class="btn btn-borde-fucsia">
@@ -86,26 +86,28 @@ getTemplate('head'); ?>
                         Descubrí la información sobre nuestros productos.
                     </p>
 
-                    <ul class="btns-wrapper">
-                        <li>
-                            <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo animate-element slide-left">
-                                Itinerarios
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde animate-element slide-left">
-                                Salidas y Precios
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia animate-element slide-left">
-                                Comparar programas
-                            </a>
-                        </li>
-                    </ul>
+                    
                 </div>
+
+                <ul class="btns-wrapper">
+                    <li>
+                        <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo animate-element slide-left">
+                            Itinerarios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde animate-element slide-left">
+                            Salidas y Precios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia animate-element slide-left">
+                            Comparar programas
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
@@ -461,7 +463,7 @@ getTemplate('head'); ?>
 
         <picture>
             <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png, <?php echo MAINSURL; ?>/assets/images/usa-15-footer@2x.png 2x" media="(min-width: 768px)">
-            <img class="imagen-formulario animate-element slide-right" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando">
+            <img class="imagen-formulario animate-element slide-right" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando" style="animation-delay:1s;">
         </picture>
 
     </section>

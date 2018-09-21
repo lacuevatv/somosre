@@ -109,6 +109,12 @@ input[type=submit] {
   -webkit-border-radius: 0;
 }
 
+select {
+  -webkit-border-radius: 0;
+  border: none;
+  background: transparent;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -356,12 +362,12 @@ html, body {
 }
 @media (min-width: 992px) {
   .main-footer {
-    padding: 90px 9%;
+    padding: 40px 9% 70px;
   }
 }
 @media (min-width: 1250px) {
   .main-footer {
-    padding: 90px 9% 100px;
+    padding: 40px 9% 100px;
   }
 }
 .main-footer:after {
@@ -376,6 +382,14 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+}
+.main-footer .legales-footer {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  width: 100%;
+  max-width: 767px;
+  margin: 0px auto 40px;
 }
 
 .menu-footer {
@@ -1552,6 +1566,11 @@ html, body {
 @media (min-width: 992px) {
   .form-group label.label-col-right {
     left: 5px;
+  }
+}
+@media (min-width: 992px) {
+  .form-group label.como {
+    font-size: 88%;
   }
 }
 .form-group label.on {

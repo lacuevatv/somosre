@@ -85,6 +85,12 @@ input[type=submit] {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
+select {
+    //-webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border: none;
+    background:transparent;
+}
 
 button {
     border: none;

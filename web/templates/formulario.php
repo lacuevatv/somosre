@@ -87,14 +87,8 @@
             </div>
 
             <div class="form-group">
-                <select name="contacto_como_llegaste">
-                    <option value=""></option>
-                    <option value="facebook">Facebook</option>
-                    <option value="email">email</option>
-                    <option value="sugerido">Sugerido</option>
-                    <option value="email">otro</option>
-                </select>
-                <label for="contacto_como_llegaste" class="">¿Cómo llegaste a nosotros?</label>
+                <input type="text" name="contacto_como_llegaste" class="input-default">
+                <label for="contacto_como_llegaste" class="como">¿Cómo llegaste a nosotros?</label>
                 <span class="msj-error-input">
                     Este dato nos ayuda mucho
                 </span>
