@@ -150,7 +150,7 @@ getTemplate('head'); ?>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/camara.png, <?php echo MAINSURL; ?>/assets/images/camara@2x.png 2x" media="(min-width: 315px)">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/camara.png" alt="Experiencia Re" class="image-boxes">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/camara.png" alt="Experiencia Re" class="image-boxes" id="camara">
                 </picture>
 
                 <div class="contenido-boxes">
@@ -177,7 +177,7 @@ getTemplate('head'); ?>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/chicos.png, <?php echo MAINSURL; ?>/assets/images/chicos@2x.png 2x" media="(min-width: 315px)">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/chicos.png" alt="Mellí Nayar en Re" class="image-boxes">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/chicos.png" alt="Mellí Nayar en Re" class="image-boxes" id="mellis">
                 </picture>
 
                 <div class="contenido-boxes">
@@ -204,7 +204,7 @@ getTemplate('head'); ?>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/auriculares.png, <?php echo MAINSURL; ?>/assets/images/auriculares@2x.png 2x" media="(min-width: 315px)">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/auriculares.png" alt="Bonux Track Re" class="image-boxes">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/auriculares.png" alt="Bonux Track Re" class="image-boxes" id="headphones">
                 </picture>
 
                 <div class="contenido-boxes">
@@ -230,7 +230,7 @@ getTemplate('head'); ?>
 
                 <picture>
                     <source srcset="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png, <?php echo MAINSURL; ?>/assets/images/quince-globos-box@2x.png 2x" media="(min-width: 315px)">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png" alt="Tu fiesta de 15 en Re" class="image-boxes">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/quince-globos-box.png" alt="Tu fiesta de 15 en Re" class="image-boxes" id="fifteen">
                 </picture>
                 
                 <span class="span-confeti animate-element-loop fade-in"></span>
@@ -463,7 +463,7 @@ getTemplate('head'); ?>
 
         <picture>
             <source srcset="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png, <?php echo MAINSURL; ?>/assets/images/usa-15-footer@2x.png 2x" media="(min-width: 768px)">
-            <img class="imagen-formulario animate-element slide-right" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando" style="animation-delay:1s;">
+            <img class="imagen-formulario animate-element slide-right" src="<?php echo MAINSURL; ?>/assets/images/usa-15-footer.png" alt="Usa 15: New York, Miami, Orlando" style="animation-delay:1s;" id="contact-usa">
         </picture>
 
     </section>

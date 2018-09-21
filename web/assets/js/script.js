@@ -866,30 +866,16 @@ function initParallax () {
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return true;
     }
-
-    var confetiBox = $('.span-confeti');
-    var valijaWrapper = $('.valija-wrapper');
-
+    
     $(window).scroll(function(){
       
         //valor de barra que necesitan todos
         var barra = ($(window).scrollTop());
 
         /*
-        CONFETI BOX
-        */
-        if (window.innerWidth > 992) {
-            if ( confetiBox.hasClass('in-view') ) {
-                //var mover = (barra * 1.9 / 100 ) + (barra* 0.1 /100);
-                var mover = (barra * 1.9 / 100 )*1.9-10;
-                $(confetiBox).css('background-position-y', mover + '%'); 
-                
-            }
-        }
-
-        /*
         VALIJA SUPERIOR
         */
+       var valijaWrapper = $('.valija-wrapper');
        var confeti = valijaWrapper.find('.confeti');
        var numero = valijaWrapper.find('.numero');
        var corazon = valijaWrapper.find('.corazon');
@@ -910,7 +896,47 @@ function initParallax () {
             }    
         }
 
+        /*
+        CONFETI BOX
+        */
+        var confetiBox = $('.span-confeti');
+        if (window.innerWidth > 992) {
+            var mover = (barra * 1.9 / 100 )*1.9-100;
+            $(confetiBox).css('background-position-y', '-'+ mover + '%'); 
+        }
 
+        /*
+        IMAGE BOXES
+        */
+        var imageBoxes = $('.image-boxes');
+        var imageCamara = $('#camara');
+        var imageMellis = $('#mellis');
+        var imageHeadphones = $('#headphones');
+        var imageFifteen = $('#fifteen');
+        if (window.innerWidth > 992) {
+           //var mover = (barra * 1.9 / 100 )*1.9-20;
+           var mover = (barra * 1.3 / 100 )*1.1+20;
+           $(imageCamara).css('top', mover + '%'); 
+
+           var mover2 = (barra * 1.9 / 100 )-20;
+           $(imageMellis).css('bottom', '-' +mover2 + '%'); 
+
+           var mover3 = (barra * 1.9 / 100 )*1.9*1.9 - 100;
+           $(imageHeadphones).css('bottom', '-' +mover3 + 'px');
+
+           var mover4 = (barra * 1.3 / 100 )*1.1+20;
+           $(imageFifteen).css('top', mover + '%'); 
+        }
+
+        /*
+        USA CONTACTO
+        */
+        var imageFormulario = $('#contact-usa');
+        if (window.innerWidth > 992) {
+          var moverFormulario = (barra * 1.3 / 100 )-30;
+          $(imageFormulario).css('top', moverFormulario + '%'); 
+
+        }
 
     });//on scroll
 
