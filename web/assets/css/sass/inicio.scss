@@ -50,7 +50,7 @@
                 width: 21%;
             }
             @media (min-width: $xlg) {
-                width: 480px;
+                width: 21%;
             }
         }
 
@@ -861,7 +861,7 @@
     background-position: center;
     background-image: url(../images/corazon-blanco.png);
     background-size: 50px 43px;
-    display: none;
+    display: block;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
         background-image: url(../images/corazon-blanco@2x.png);

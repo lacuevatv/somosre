@@ -5,10 +5,10 @@
         Completa tus datos para concretar tu entrevista.
     </legend>
 
-    <div class="inner-wrapper-form">
-        <button class="btn btn-facebook animate-element slide-left" style="animation-delay:0.5s">Completar con</button>
-        <button class="btn btn-google animate-element slide-left" style="animation-delay:0.7s">Completar con</button>
-    </div>
+    <!--<div class="inner-wrapper-form">
+        <button type="button" class="btn btn-facebook animate-element slide-left" style="animation-delay:0.5s">Completar con</button>
+        <button type="button" class="btn btn-google animate-element slide-left" style="animation-delay:0.7s">Completar con</button>
+    </div>-->
 
     <div class="inner-wrapper-form">
 

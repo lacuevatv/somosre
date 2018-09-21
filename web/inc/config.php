@@ -80,7 +80,7 @@ $menus = array(
     'menuHeader' => array(
         array(
             'slug' => 'somosre',
-            'nombre' => 'Sobre Re',
+            'nombre' => 'Sobre Nosotros',
             'link_externo' => false,
         ),
         array(
@@ -89,18 +89,18 @@ $menus = array(
             'link_externo' => false,
         ),
         array(
-            'slug' => 'bonustrack',
-            'nombre' => 'Bonus Track',
+            'slug' => 'boxes',
+            'nombre' => 'Exclusivo by Re',
             'link_externo' => false,
         ),
         array(
             'slug' => 'entrevista',
-            'nombre' => 'Entrevista',
+            'nombre' => 'Contacto',
             'link_externo' => false,
         ),
         array(
             'slug' => 'agencias',
-            'nombre' => 'Agencias',
+            'nombre' => 'Puntos de ventas',
             'link_externo' => false,
         ),
     ),

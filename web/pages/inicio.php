@@ -68,9 +68,11 @@ getTemplate('head'); ?>
                     </h2>
 
                     <p class="super-parrafo animate-element slide-left">
-                        Es el nombre de una comunidad cancherísima de Girls Teens donde podés encontrar un mundo pensado para vos. En RE te proponemos un viaje diferente para festejar tus quince. Con nosotros vas a conocer mucho más que solo Disney.
+                        Es el nombre de una comunidad cancherísima de Girls Teens donde podés encontrar un mundo pensado para vos.
                     </p>
-
+                    <p class="animate-element slide-left">
+                        En RE te proponemos un viaje diferente para festejar tus quince. Con nosotros vas a conocer mucho más que solo Disney.
+                    </p>
                     <p class="animate-element slide-left">
                         Te ofrecemos un itinerario único en su tipo con servicios de primer nivel y contenidos exclusivos que te garantizan la experiencias más segura y divertida.
                     </p>
@@ -81,11 +83,11 @@ getTemplate('head'); ?>
                         Además, nuestro equipo de profesionales especificamente preparado para desarrollarse en el mundo RE, te va a cuidar siempre para que tu única preocupación sea pasarla bien.
                     </p>--> 
 
-                    <p class="animate-element slide-left">
+                    <!--<p class="animate-element slide-left">
                         <a href="<?php getFile( 'asistencia' ); ?>" target="_blank" class="btn btn-borde-fucsia">
                             Ver asistencia
                         </a>
-                    </p>
+                    </p>-->
                 </div>
             </div>
         </div>
@@ -156,7 +158,7 @@ getTemplate('head'); ?>
     
 
 <!-- ------- GALERIAS ------- -->
-    <section >
+    <section id="boxes">
         <div class="row">
 
             <div id="experiencia" class="wrapper-box galeria-box animate-element slide-left">

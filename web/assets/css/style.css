@@ -1889,7 +1889,7 @@ html, body {
 }
 @media (min-width: 1600px) {
   .header-inicio .main-title-inicio #imagen-superior-texto {
-    width: 480px;
+    width: 21%;
   }
 }
 .header-inicio .main-title-inicio .sello-top {
@@ -2776,7 +2776,7 @@ html, body {
   background-position: center;
   background-image: url(../images/corazon-blanco.png);
   background-size: 50px 43px;
-  display: none;
+  display: block;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .corazon-header {

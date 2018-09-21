@@ -144,10 +144,7 @@ $(window).on('load', function(){
     //5. iniciarparallax
     startAnimations('.parallax', true);
     initParallax();
-    //iniciar animacion header
-    if ( innerWidth > 992 ) {
-        initHeaderTextAnimate();
-    }
+  
 
     /*
     *acomoda el sello en la parte superior del header para ubicarlo junto a la imagen
@@ -937,7 +934,7 @@ function initParallax () {
         /*
         IMAGE BOXES
         */
-        var imageBoxes = $('.image-boxes');
+        /*var imageBoxes = $('.image-boxes');
         var imageCamara = $('#camara');
         var imageMellis = $('#mellis');
         var imageHeadphones = $('#headphones');
@@ -955,15 +952,21 @@ function initParallax () {
 
            var mover4 = (barra * 1.3 / 100 )*1.1+20;
            $(imageFifteen).css('top', mover + '%'); 
-        }
+        }*/
 
         /*
         USA CONTACTO
         */
         var imageFormulario = $('#contact-usa');
-        if (window.innerWidth > 992) {
-          var moverFormulario = (barra * 1.3 / 100 )-30;
-          $(imageFormulario).css('top', moverFormulario + '%'); 
+        if (window.innerWidth > 1200 ) {
+            if (window.innerWidth > 1600 ) {
+                var moverFormulario = (barra * 1.3 / 100 )-50;
+            } else {
+                var moverFormulario = (barra * 1.3 / 100 )-40;
+            }
+            
+            $(imageFormulario).css('top', moverFormulario + '%'); 
+        } else {
 
         }
 
@@ -1050,7 +1053,7 @@ function initHeader(){
 }//initHeader()
 
 
-function initHeaderTextAnimate() {
+/*function initHeaderTextAnimate() {
 
     //$( '.header-inicio' ).mousemove(function(e){
     $( '.header-inicio' ).mousemove(function(e){
@@ -1064,8 +1067,6 @@ function initHeaderTextAnimate() {
         document.getElementById('imagen-superior-texto').contentDocument.getElementById('path830-3-6').style.transform = 'translate3d('+moveX+'px, '+moveY+'px, 0)';
     
     });    
-    
-    
-    
-}
+
+}*/
 
