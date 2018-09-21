@@ -1375,6 +1375,14 @@ html, body {
   animation-fill-mode: forwards;
 }
 
+.animate-element.slide-left-delay.in-view {
+  opacity: 0;
+  animation-name: slide-left;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes slide-left {
   from {
     opacity: 0;
@@ -1427,6 +1435,98 @@ html, body {
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+.animate-element.slide-up.in-view {
+  opacity: 0;
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.animate-element.bounce-loop.in-view {
+  opacity: 1;
+  animation-name: bounce;
+  animation-duration: 5s;
+  animation-delay: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 5%, 10%, 15%, 20% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  7% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  12% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/*@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+        @include transform(translateY(0));
+    }
+    40% {
+        @include transform(translateY(-30px));
+    }
+    60% {
+        @include transform(translateY(-15px));
+    }
+}*/
+.giro-sello {
+  animation-name: giro-sello;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes giro-sello {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(365deg);
+    -moz-transform: rotate(365deg);
+    -ms-transform: rotate(365deg);
+    transform: rotate(365deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 /*--------------------------------------------------------------
@@ -1756,6 +1856,7 @@ html, body {
 }
 .header-inicio .main-title-inicio img {
   width: 80%;
+  display: block;
 }
 @media (min-width: 480px) {
   .header-inicio .main-title-inicio img {
@@ -1770,6 +1871,49 @@ html, body {
 @media (min-width: 1600px) {
   .header-inicio .main-title-inicio img {
     width: 480px;
+  }
+}
+.header-inicio .main-title-inicio #imagen-superior-texto {
+  position: relative;
+  width: 52%;
+}
+@media (min-width: 480px) {
+  .header-inicio .main-title-inicio #imagen-superior-texto {
+    width: 26%;
+  }
+}
+@media (min-width: 992px) {
+  .header-inicio .main-title-inicio #imagen-superior-texto {
+    width: 21%;
+  }
+}
+@media (min-width: 1600px) {
+  .header-inicio .main-title-inicio #imagen-superior-texto {
+    width: 480px;
+  }
+}
+.header-inicio .main-title-inicio .sello-top {
+  display: none;
+  position: absolute;
+  bottom: 25px;
+  left: 40%;
+  width: 45px;
+  height: 45px;
+  background-image: url(../images/sello-rojo.png);
+  background-size: cover;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .header-inicio .main-title-inicio .sello-top {
+    background-image: url(../images/sello-rojo@2x.png);
+    background-size: cover;
+  }
+}
+@media (min-width: 768px) {
+  .header-inicio .main-title-inicio .sello-top {
+    left: 30%;
+    bottom: 45px;
+    width: 65px;
+    height: 65px;
   }
 }
 .header-inicio:after {
@@ -2632,6 +2776,7 @@ html, body {
   background-position: center;
   background-image: url(../images/corazon-blanco.png);
   background-size: 50px 43px;
+  display: none;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .corazon-header {
@@ -2831,7 +2976,7 @@ html, body {
   height: 1px;
   background-color: #333;
   position: relative;
-  top: 8px;
+  top: 11px;
 }
 
 .imagen-formulario {

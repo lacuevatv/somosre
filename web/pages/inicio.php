@@ -18,14 +18,31 @@ getTemplate('head'); ?>
         <span class="corazon-header animate-element fade-in"></span>
 
         <div class="contenedor">
-            <h1 class="main-title-inicio animate-element fade-in">
+            <h1 class="main-title-inicio">
                 <span class="sr-only">Usa 15: New York, Miami, Orlando</span>
+
+                <?php if ( dispositivo() == 'pc' ) : ?>
+
                 <picture>
-                    <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio@2x.png 2x" media="(min-width: 768px)">
-                    <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png" alt="Usa 15: New York, Miami, Orlando">
+                    <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio-15.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio-15@2x.png 2x" media="(min-width: 768px)">
+                    <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio-15.png" alt="Usa 15: New York, Miami, Orlando" class="animate-element slide-down">
                 </picture>
+                <object id="imagen-superior-texto" class="animate-element slide-up" data="<?php echo MAINSURL; ?>/assets/images/texto-sup-text.svg" type="image/svg+xml">
+                    <picture>
+                        <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio-text.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio-text@2x.png 2x" media="(min-width: 768px)">
+                        <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio-text.png" alt="Usa 15: New York, Miami, Orlando">
+                    </picture>
+                </object>
+
+                <?php else : ?>
+                    <picture>
+                        <source srcset="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png, <?php echo MAINSURL; ?>/assets/images/texto-inicio@2x.png 2x" media="(min-width: 768px)">
+                        <img src="<?php echo MAINSURL; ?>/assets/images/texto-inicio.png" alt="Usa 15: New York, Miami, Orlando">
+                    </picture>
+                <?php endif; ?>
+                <span class="sello-top giro-sello"></span>
             </h1>
-            <button href="entrevista" class="btn btn-fucsia scroll-to animate-element fade-in">
+            <button href="entrevista" class="btn btn-fucsia scroll-to animate-element slide-left-delay">
                 Pedí tu entrevista
             </button>
             

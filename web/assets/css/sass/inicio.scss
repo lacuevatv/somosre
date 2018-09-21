@@ -28,6 +28,7 @@
 
         img {
             width: 80%;
+            display: block;
             @media (min-width: $xs) {
                 width: 40%;
             }
@@ -37,6 +38,44 @@
             @media (min-width: $xlg) {
                 width: 480px;
             }
+        }
+
+        #imagen-superior-texto {
+            position: relative;
+            width: 52%;
+            @media (min-width: $xs) {
+                width: 26%;
+            }
+            @media (min-width: $md) {
+                width: 21%;
+            }
+            @media (min-width: $xlg) {
+                width: 480px;
+            }
+        }
+
+        .sello-top {
+            display: none;
+            position: absolute;
+            bottom: 25px;
+            left: 40%;
+            width: 45px;
+            height: 45px;
+            background-image: url(../images/sello-rojo.png);
+            background-size: cover;
+            
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/sello-rojo@2x.png);
+                background-size: cover;
+            }
+
+            @media (min-width: $sm) {
+                left: 30%;
+                bottom: 45px;
+                width: 65px;
+                height: 65px;
+            }
+
         }
     }//.main-title-inicio
 
@@ -822,6 +861,7 @@
     background-position: center;
     background-image: url(../images/corazon-blanco.png);
     background-size: 50px 43px;
+    display: none;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
         background-image: url(../images/corazon-blanco@2x.png);
@@ -989,7 +1029,7 @@
         height: 1px;
         background-color: $color-negro;
         position: relative;
-        top: 8px;
+        top: 11px;
     }
 }
 

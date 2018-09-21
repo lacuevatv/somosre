@@ -424,6 +424,9 @@
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
 }
+
+
+
 .animate-element.slide-left.in-view {
 	opacity: 0;
 	animation-name: slide-left;
@@ -438,6 +441,14 @@
 	animation-delay: 0.5s;
 	animation-fill-mode: forwards;
 }
+.animate-element.slide-left-delay.in-view {
+    opacity: 0;
+	animation-name: slide-left;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
 @keyframes slide-left {
 	from {opacity: 0;transform:translateX(-50%);}
         to {opacity: 1;transform:translateX(0);}
@@ -475,4 +486,72 @@
 @keyframes slide-down {
 	from {opacity: 0;transform:translateY(-50%);}
     to {opacity: 1;transform:translateX(0);}
+}
+
+.animate-element.slide-up.in-view {
+	opacity: 0;
+	animation-name: slide-up;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes slide-up {
+	from {opacity: 0;transform:translateY(50%);}
+    to {opacity: 1;transform:translateY(0%);}
+}
+
+
+.animate-element.bounce-loop.in-view {
+    opacity: 1;
+    animation-name: bounce;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes bounce {
+    0%,5%,10%,15%,20% {
+        @include transform(translateY(0));
+    }
+    7% {
+        @include transform(translateY(-30px));
+    }
+    12% {
+        @include transform(translateY(-15px));
+    }
+
+    100%{
+        @include transform(translateY(0));
+    }
+}
+/*@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+        @include transform(translateY(0));
+    }
+    40% {
+        @include transform(translateY(-30px));
+    }
+    60% {
+        @include transform(translateY(-15px));
+    }
+}*/
+
+.giro-sello {
+    animation-name: giro-sello;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes giro-sello {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    20% {
+        @include transform(rotate(365deg));
+    }
+
+    100%{
+        @include transform(rotate(0deg));
+    }
 }
