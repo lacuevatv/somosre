@@ -501,7 +501,7 @@ function iniciarSliders(){
         margin:50,
         nav:true,
         lazyLoad: true,
-        autoHeight:true,
+        //autoHeight:true,
         animateOut: 'fadeOut',
         navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
         dots:false,
@@ -552,36 +552,34 @@ function openCloseMenu(){
 */
 function getInstagram() {
     var html = '<script src="'+baseUrl+'/assets/js/lightwidget.js"></script>';
-    var altura = 330;
+    var altura = 230;
 
     if (window.innerWidth > '400')  {
-        altura = 370;
+        altura = 340;
     }
 
-    if (window.innerWidth > '480')  {
-        altura = 560;
-    }
+    /*if (window.innerWidth > '480')  {
+        altura = 1120;
+    }*/
 
     if (window.innerWidth > '767')  {
-        altura = 200;
+        altura = 420;
     }
 
     if (window.innerWidth > '992')  {
-        altura = 250;
+        altura = 650;
     }
 
     if (window.innerWidth > '1279')  {
-        altura = 310;
+        altura = 750;
     }
     if (window.innerWidth > '1600')  {
-        altura = 380;
+        altura = 1050;
     }
 
-    if (window.innerWidth > '767')  {
-        html += '<iframe src="http://lightwidget.com/widgets/418e78cfd98750138b9391947cb2bf35.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
-    } else {
-        html += '<iframe src="http://lightwidget.com/widgets/1eabd1b7b4eb5682b8475170930a89c2.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';
-    }
+    html += '<iframe src="http://lightwidget.com/widgets/6daee1800035562b8694c3146e611e0a.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;height:100%"></iframe>';    
+
+
 
     contenedor = $('#instagram-wrapper').empty().append($(html));
     contenedor.height(altura);
@@ -959,16 +957,27 @@ function initParallax () {
         */
         var imageFormulario = $('#contact-usa');
         if (window.innerWidth > 1200 ) {
-            if (window.innerWidth > 1600 ) {
+            if ( window.innerWidth > 1600 ) {
                 var moverFormulario = (barra * 1.3 / 100 )-50;
             } else {
                 var moverFormulario = (barra * 1.3 / 100 )-40;
             }
             
             $(imageFormulario).css('top', moverFormulario + '%'); 
-        } else {
-
+        } 
+        if (  window.innerWidth > 1200 && window.innerWidth < 1250 ) {
+            $(imageFormulario).css('top', '52%'); 
         }
+
+        /*
+        PARALLAS SLIDERS: testimonios y seguridad
+        */
+        var imageBackgroundSlider = $('.slider-item figure img');
+        if (window.innerWidth > 992) {
+            var moverImagen = (barra * 1.1 / 100 );
+            $(imageBackgroundSlider).css('transform',  'translateY(' + moverImagen + '%)'); 
+        }
+
 
     });//on scroll
 

@@ -265,7 +265,12 @@
     }
     @media (min-width: $xlg) {
         height: 500px;
-        //padding: 200px 0;
+    }
+
+    &:hover{
+        .image-boxes {
+            @include transform(scale(0.9));
+        }
     }
 }
 
@@ -288,6 +293,7 @@
 
 .image-boxes {
     position: absolute;
+    @include transition(all $transitionSpeed);
 }
 
 #experiencia {
@@ -297,8 +303,7 @@
         max-width: 300px;
         width: 45%;
         left: 2%;
-        top: 45%;
-        @include transform (translateY(-50%));
+        top: 5%;
         
         @media (min-width: $xlg) {
             left: 5%;
@@ -372,9 +377,8 @@
     .image-boxes{
         max-width: 222px;
         width: 45%;
-        top: 50%;
+        top: 25%;
         left: 2%;
-        @include transform (translateY(-50%));
 
         @media (min-width: $lg) {
             left: 10%;
@@ -556,6 +560,21 @@
         figure {
             position: relative;
             z-index: 1;
+            overflow: hidden;
+
+            @media (min-width: $sm) {
+                height: 250px;
+            }
+            @media (min-width: $md) {
+                height: 350px;
+            }
+            @media (min-width: $lg) {
+                height: 400px;
+            }
+
+            @media (min-width: $xlg) {
+                height: 500px;
+            }  
 
             .background {
                 display: block;
@@ -579,9 +598,20 @@
             img {
                 width: auto;
                 height: 100%;
+                position: relative;
                 @media (min-width: $sm) {
                     width: 100%;
                     height: initial;
+                }
+                @media (min-width: $md) {
+                    top:-90%;
+                }
+                @media (min-width: '1300px') {
+                    //top:-110%;
+                }
+
+                @media (min-width: $xlg) {
+                    top:-130%;
                 }
             }
         }
@@ -729,6 +759,20 @@
 
 }//.slider-wrapper
 
+.re-testimonios {
+    position: absolute;
+    top:  10%;
+}
+
+.titulo-testimonios {
+    position: absolute;
+    top:  20%;
+}
+
+.parrafo-testimonios {
+    position: absolute!important;
+    bottom: 12%;
+}
 
 /*
  * ENTREVISTA
@@ -1037,7 +1081,7 @@
     position: absolute;
     width: 20%;
     max-width: 393px;
-    top: 55%;
+    top: 50%;
     right: 9%;
     @include transform(translateY(-50%));
     display: none;
@@ -1046,7 +1090,7 @@
         width: 25%;
     }
     @media (min-width: $lg) {
-        top: 20%;
+        //top: 20%;
         width: 30%;
         right: 4%;
     }

@@ -110,6 +110,7 @@ input[type=submit] {
 }
 
 select {
+  -webkit-appearance: none;
   -webkit-border-radius: 0;
   border: none;
   background: transparent;
@@ -388,7 +389,7 @@ html, body {
   font-weight: 300;
   letter-spacing: 0.5px;
   width: 100%;
-  max-width: 767px;
+  max-width: 600px;
   margin: 0px auto 40px;
 }
 
@@ -2127,6 +2128,12 @@ html, body {
     height: 500px;
   }
 }
+.galeria-box:hover .image-boxes {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
 
 .contenido-boxes {
   position: relative;
@@ -2150,6 +2157,10 @@ html, body {
 
 .image-boxes {
   position: absolute;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #experiencia {
@@ -2159,11 +2170,7 @@ html, body {
   max-width: 300px;
   width: 45%;
   left: 2%;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 5%;
 }
 @media (min-width: 1600px) {
   #experiencia .image-boxes {
@@ -2247,12 +2254,8 @@ html, body {
 #fiesta15 .image-boxes {
   max-width: 222px;
   width: 45%;
-  top: 50%;
+  top: 25%;
   left: 2%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 @media (min-width: 1250px) {
   #fiesta15 .image-boxes {
@@ -2451,6 +2454,27 @@ html, body {
 .slider-wrapper .slider-item figure {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .slider-wrapper .slider-item figure {
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .slider-wrapper .slider-item figure {
+    height: 350px;
+  }
+}
+@media (min-width: 1250px) {
+  .slider-wrapper .slider-item figure {
+    height: 400px;
+  }
+}
+@media (min-width: 1600px) {
+  .slider-wrapper .slider-item figure {
+    height: 500px;
+  }
 }
 .slider-wrapper .slider-item figure .background {
   display: block;
@@ -2482,11 +2506,22 @@ html, body {
 .slider-wrapper .slider-item figure img {
   width: auto;
   height: 100%;
+  position: relative;
 }
 @media (min-width: 768px) {
   .slider-wrapper .slider-item figure img {
     width: 100%;
     height: initial;
+  }
+}
+@media (min-width: 992px) {
+  .slider-wrapper .slider-item figure img {
+    top: -90%;
+  }
+}
+@media (min-width: 1600px) {
+  .slider-wrapper .slider-item figure img {
+    top: -130%;
   }
 }
 .slider-wrapper .slider-item .slider-contenido {
@@ -2631,6 +2666,21 @@ html, body {
     background-image: url(../images/next-gris-derecha@2x.png);
     background-size: 22px 21px;
   }
+}
+
+.re-testimonios {
+  position: absolute;
+  top: 10%;
+}
+
+.titulo-testimonios {
+  position: absolute;
+  top: 20%;
+}
+
+.parrafo-testimonios {
+  position: absolute !important;
+  bottom: 12%;
 }
 
 /*
@@ -2983,7 +3033,7 @@ html, body {
   position: absolute;
   width: 20%;
   max-width: 393px;
-  top: 55%;
+  top: 50%;
   right: 9%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -2999,7 +3049,6 @@ html, body {
 }
 @media (min-width: 1250px) {
   .imagen-formulario {
-    top: 20%;
     width: 30%;
     right: 4%;
   }

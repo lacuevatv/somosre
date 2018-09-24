@@ -76,12 +76,6 @@ getTemplate('head'); ?>
                     <p class="animate-element slide-left">
                         Te ofrecemos un itinerario único en su tipo con servicios de primer nivel y contenidos exclusivos que te garantizan la experiencias más segura y divertida.
                     </p>
-                    <!--<p class="animate-element slide-left">
-                        Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.
-                    </p>
-                    <p class="animate-element slide-left">
-                        Además, nuestro equipo de profesionales especificamente preparado para desarrollarse en el mundo RE, te va a cuidar siempre para que tu única preocupación sea pasarla bien.
-                    </p>--> 
 
                     <!--<p class="animate-element slide-left">
                         <a href="<?php getFile( 'asistencia' ); ?>" target="_blank" class="btn btn-borde-fucsia">
@@ -374,13 +368,13 @@ getTemplate('head'); ?>
                             
                             <picture>
                                 <source srcset="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png, <?php echo MAINSURL; ?>/assets/images/re-logo-testimonio@2x.png 2x">
-                                <img class="reset-image" src="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png">
+                                <img class="reset-image re-testimonios" src="<?php echo MAINSURL; ?>/assets/images/re-logo-testimonio.png">
                             </picture>
 
-                            <h2 class="titulo-base">
+                            <h2 class="titulo-base titulo-testimonios">
                                 Lo que ellas dicen.
                             </h2>
-                            <p class="parrafo-separador-blanco comentario">
+                            <p class="parrafo-separador-blanco comentario parrafo-testimonios">
                                 <q><?php echo $item['slider_texto']; ?></q><br>
                                 <span><?php echo $item['slider_titulo']; ?></span>
                             </p>
