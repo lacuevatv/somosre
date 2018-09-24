@@ -1,6 +1,5 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&callback=initmap" async defer></script>
-
 <script>
+    
 var marcadores = [
 
 <?php foreach ($data as $marcador ) { ?>
@@ -12,7 +11,9 @@ var marcadores = [
     ];
     function initmap() {
         window.addEventListener('load', function(){
+            
             cargarMapa();
         });
     }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_API_KEY; ?>&callback=initmap" async defer></script>

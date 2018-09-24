@@ -146,32 +146,6 @@ $(window).on('load', function(){
     initParallax();
   
 
-    /*
-    *acomoda el sello en la parte superior del header para ubicarlo junto a la imagen
-    * agrega la clase de rebote al boton del header
-    */
-    (function (){
-        setTimeout(function(){
-            /*if ( $('#imagen-superior-texto').length > 0 ) {
-                var w = $('#imagen-superior-texto').width();
-            } else {
-                var w = $('.main-title-inicio img').width()-70;
-            }
-    
-            var selfW = $('.sello-top').width();
-            $('.sello-top').css('left', (w-selfW+10) + 'px');
-            $('.sello-top').fadeIn();*/
-
-            $('.header-inicio .btn-fucsia').addClass('bounce-loop');
-
-        },2000)
-
-        
-
-    })();
-    
-    
-
     //3.on rezise: 
     $(window).on('resize', function(){
         getInstagram();

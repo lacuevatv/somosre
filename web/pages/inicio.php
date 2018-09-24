@@ -46,7 +46,7 @@ getTemplate('head'); ?>
 
                 <span class="sello-top giro-sello" style="animation-delay: 1s;"></span>
             </h1>
-            <button href="entrevista" class="btn btn-fucsia scroll-to animate-element slide-left-delay">
+            <button href="entrevista" class="btn btn-fucsia scroll-to animate-element slide-left-delay bounce-loop">
                 Pedí tu entrevista
             </button>
             
