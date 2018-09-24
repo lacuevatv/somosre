@@ -27,8 +27,10 @@
         }
 
         img {
-            width: 80%;
             display: block;
+            /*
+            esto era cuando era una sola imagen
+            width: 80%;
             @media (min-width: $xs) {
                 width: 40%;
             }
@@ -37,9 +39,11 @@
             }
             @media (min-width: $xlg) {
                 width: 480px;
-            }
+            }*/
         }
 
+        /*
+        esto era para cuando estaba el svg
         #imagen-superior-texto {
             position: relative;
             width: 52%;
@@ -52,10 +56,69 @@
             @media (min-width: $xlg) {
                 width: 21%;
             }
+        }*/
+
+        .texto-header-inicio-0 {
+            width: 80%;
+            max-width: 489px;
+            @media (min-width: $xs) {
+                width: 40%;
+            }
+            @media (min-width: $md) {
+                width: 31%;
+            }
+            @media (min-width: $xlg) {
+                width: 480px;
+            }
+        }
+
+        .texto-header-inicio-1 {
+            position: relative;
+            opacity: 0;
+            width: 52%;
+            max-width: 317px;
+            margin: 5px 0 3px;
+            @media (min-width: $xs) {
+                width: 26%;
+            }
+            @media (min-width: $md) {
+                width: 21%;
+            }
+            @media (min-width: $xlg) {
+                width: 21%;
+            }
+        }
+
+        .texto-header-inicio-2 {
+            position: relative;
+            opacity: 0;
+            width: 30%;
+            max-width: 185px;
+            @media (min-width: $xs) {
+                width: 15%;
+            }
+            @media (min-width: $md) {
+                width: 12%;
+            }
+        }
+
+        .texto-header-inicio-3 {
+            position: relative;
+            opacity: 0;
+            width: 45%;
+            max-width: 276px;
+            margin: 3px 0;
+            @media (min-width: $xs) {
+                width: 23%;
+            }
+            @media (min-width: $md) {
+                width: 17%;
+            }
         }
 
         .sello-top {
-            display: none;
+            display: block;
+            opacity: 0;
             position: absolute;
             bottom: 25px;
             left: 40%;
@@ -69,13 +132,24 @@
                 background-size: cover;
             }
 
+            @media (min-width: $xs) {
+                left: 20%;
+            }
             @media (min-width: $sm) {
-                left: 30%;
-                bottom: 45px;
+                left: 20%;
+            }
+            @media (min-width: $md) {
+                left: 15%;
+                bottom: 25px;
                 width: 65px;
                 height: 65px;
             }
-
+            @media (min-width: $lg) {
+                bottom: 40px;
+            }
+            @media (min-width: $xlg) {
+                bottom: 60px;
+            }
         }
     }//.main-title-inicio
 
@@ -90,7 +164,7 @@
         height: 15px;
         background-repeat: repeat-x;
         background-size: contain;
-        background-position: top;
+        background-position: left top;
         @media (min-width: $lg) {
             bottom: -13px;
         }

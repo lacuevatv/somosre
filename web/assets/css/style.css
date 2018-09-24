@@ -1502,32 +1502,64 @@ html, body {
         @include transform(translateY(-15px));
     }
 }*/
+.animate-text-header {
+  animation-name: animate-text-header;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate-text-header {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  31% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .giro-sello {
   animation-name: giro-sello;
-  animation-duration: 5s;
-  animation-delay: 2s;
+  animation-duration: 7s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes giro-sello {
   0% {
+    opacity: 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  20% {
+  30% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
     -webkit-transform: rotate(365deg);
     -moz-transform: rotate(365deg);
     -ms-transform: rotate(365deg);
     transform: rotate(365deg);
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -1849,6 +1881,21 @@ html, body {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+  /*
+  esto era para cuando estaba el svg
+  #imagen-superior-texto {
+      position: relative;
+      width: 52%;
+      @media (min-width: $xs) {
+          width: 26%;
+      }
+      @media (min-width: $md) {
+          width: 21%;
+      }
+      @media (min-width: $xlg) {
+          width: 21%;
+      }
+  }*/
 }
 @media (min-width: 768px) {
   .header-inicio .main-title-inicio {
@@ -1856,45 +1903,97 @@ html, body {
   }
 }
 .header-inicio .main-title-inicio img {
-  width: 80%;
   display: block;
+  /*
+  esto era cuando era una sola imagen
+  width: 80%;
+  @media (min-width: $xs) {
+      width: 40%;
+  }
+  @media (min-width: $md) {
+      width: 31%;
+  }
+  @media (min-width: $xlg) {
+      width: 480px;
+  }*/
+}
+.header-inicio .main-title-inicio .texto-header-inicio-0 {
+  width: 80%;
+  max-width: 489px;
 }
 @media (min-width: 480px) {
-  .header-inicio .main-title-inicio img {
+  .header-inicio .main-title-inicio .texto-header-inicio-0 {
     width: 40%;
   }
 }
 @media (min-width: 992px) {
-  .header-inicio .main-title-inicio img {
+  .header-inicio .main-title-inicio .texto-header-inicio-0 {
     width: 31%;
   }
 }
 @media (min-width: 1600px) {
-  .header-inicio .main-title-inicio img {
+  .header-inicio .main-title-inicio .texto-header-inicio-0 {
     width: 480px;
   }
 }
-.header-inicio .main-title-inicio #imagen-superior-texto {
+.header-inicio .main-title-inicio .texto-header-inicio-1 {
   position: relative;
+  opacity: 0;
   width: 52%;
+  max-width: 317px;
+  margin: 5px 0 3px;
 }
 @media (min-width: 480px) {
-  .header-inicio .main-title-inicio #imagen-superior-texto {
+  .header-inicio .main-title-inicio .texto-header-inicio-1 {
     width: 26%;
   }
 }
 @media (min-width: 992px) {
-  .header-inicio .main-title-inicio #imagen-superior-texto {
+  .header-inicio .main-title-inicio .texto-header-inicio-1 {
     width: 21%;
   }
 }
 @media (min-width: 1600px) {
-  .header-inicio .main-title-inicio #imagen-superior-texto {
+  .header-inicio .main-title-inicio .texto-header-inicio-1 {
     width: 21%;
   }
 }
+.header-inicio .main-title-inicio .texto-header-inicio-2 {
+  position: relative;
+  opacity: 0;
+  width: 30%;
+  max-width: 185px;
+}
+@media (min-width: 480px) {
+  .header-inicio .main-title-inicio .texto-header-inicio-2 {
+    width: 15%;
+  }
+}
+@media (min-width: 992px) {
+  .header-inicio .main-title-inicio .texto-header-inicio-2 {
+    width: 12%;
+  }
+}
+.header-inicio .main-title-inicio .texto-header-inicio-3 {
+  position: relative;
+  opacity: 0;
+  width: 45%;
+  max-width: 276px;
+  margin: 3px 0;
+}
+@media (min-width: 480px) {
+  .header-inicio .main-title-inicio .texto-header-inicio-3 {
+    width: 23%;
+  }
+}
+@media (min-width: 992px) {
+  .header-inicio .main-title-inicio .texto-header-inicio-3 {
+    width: 17%;
+  }
+}
 .header-inicio .main-title-inicio .sello-top {
-  display: none;
+  display: block;
+  opacity: 0;
   position: absolute;
   bottom: 25px;
   left: 40%;
@@ -1909,12 +2008,32 @@ html, body {
     background-size: cover;
   }
 }
+@media (min-width: 480px) {
+  .header-inicio .main-title-inicio .sello-top {
+    left: 20%;
+  }
+}
 @media (min-width: 768px) {
   .header-inicio .main-title-inicio .sello-top {
-    left: 30%;
-    bottom: 45px;
+    left: 20%;
+  }
+}
+@media (min-width: 992px) {
+  .header-inicio .main-title-inicio .sello-top {
+    left: 15%;
+    bottom: 25px;
     width: 65px;
     height: 65px;
+  }
+}
+@media (min-width: 1250px) {
+  .header-inicio .main-title-inicio .sello-top {
+    bottom: 40px;
+  }
+}
+@media (min-width: 1600px) {
+  .header-inicio .main-title-inicio .sello-top {
+    bottom: 60px;
   }
 }
 .header-inicio:after {
@@ -1928,7 +2047,7 @@ html, body {
   height: 15px;
   background-repeat: repeat-x;
   background-size: contain;
-  background-position: top;
+  background-position: left top;
 }
 @media (min-width: 1250px) {
   .header-inicio:after {

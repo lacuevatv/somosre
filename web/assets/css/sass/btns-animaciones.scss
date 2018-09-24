@@ -536,22 +536,55 @@
     }
 }*/
 
+.animate-text-header {
+    animation-name: animate-text-header;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate-text-header {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    31% {
+        opacity: 1;
+    }
+    99%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
 .giro-sello {
     animation-name: giro-sello;
-    animation-duration: 5s;
-    animation-delay: 2s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 @keyframes giro-sello {
-    0% {
+    0%{
+        opacity: 0;
         @include transform(rotate(0deg));
     }
-    20% {
+    30% {
+        opacity: 0;
+        @include transform(rotate(0deg));
+    }
+    50% {
         @include transform(rotate(365deg));
+        opacity: 1;
     }
-
+    95% {
+        opacity: 1;  
+    }
     100%{
-        @include transform(rotate(0deg));
+        opacity: 0;
     }
 }
+
