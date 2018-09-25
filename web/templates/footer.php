@@ -2,9 +2,6 @@
 	</div><!-- // INNER WRAPPER -->
 
 	<footer class="main-footer">
-		<p class="legales-footer animate-element slide-left">
-			<small>Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.</small>
-		</p>
 
 		<nav class="menu-footer">
 
@@ -16,6 +13,9 @@
 						<img src="<?php echo MAINSURL; ?>/assets/images/logo-footer.png" alt="Somos Re">
 					</picture>
 				</a>
+				<p class="legales-footer">
+					<small>Los productos RE son operados y respaldados por el Grupo Expreso Sur. Una organización turísticas con 18 años de impecable trayectoria.</small>
+				</p>
 				<p><small>Todos los derechos reservados.</small></p>
 			</div>
 
