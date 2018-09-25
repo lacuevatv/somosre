@@ -17,7 +17,7 @@
 var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var paginaActual = 1;
-
+var dataPage = $('body').attr('data-page');
 
 /*--------------------------------------------------------------
 1.0 ON READY
@@ -26,7 +26,9 @@ var paginaActual = 1;
 $(document).ready(function(){
 
     //iniciar formularios
-    formularios();
+    if ( dataPage == 'inicio' ) {
+        formularios();
+    }
 
     /*
      * SCROLL TOP
@@ -132,24 +134,27 @@ $(document).ready(function(){
 --------------------------------------------------------------*/
 
 $(window).on('load', function(){
-    //1. iniciar instagram:
-    getInstagram();
-    //2. iniciar sliders
-    iniciarSliders();
-    //3. Iniciar animaciones
+
+    if ( dataPage == 'inicio' ) {
+        //1. iniciar instagram:
+        getInstagram();
+        //2. iniciar sliders
+        iniciarSliders();
+        //3.iniciar header
+        initHeader()
+        //4. iniciarparallax
+        startAnimations('.parallax', true);
+        initParallax();
+
+        //3.on rezise: 
+        $(window).on('resize', function(){
+            getInstagram();
+        });
+    }
+    
+    //Iniciar animaciones
     startAnimations('.animate-element', false);
     startAnimations('.animate-element-loop', true);
-    //4.iniciar header
-    initHeader()
-    //5. iniciarparallax
-    startAnimations('.parallax', true);
-    initParallax();
-  
-
-    //3.on rezise: 
-    $(window).on('resize', function(){
-        getInstagram();
-    });
 
     
     

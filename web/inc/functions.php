@@ -246,51 +246,6 @@ function closeDataBase( $connection ){
 }
 
 
-
-//busca datos para loop de noticias por categoria y los devuelve en una variables:
-function getPosts( $categoria = '', $number = -1, $exclude = 'none', $status = 'publicado', $offset = 0 ) {
-	$connection = connectDB();
-	$fecha_actual = date("Y-m-d");
-	$tabla = 'posts';
-
-	if ( $offset != '0' ) {
-		$number = $offset.','.$number;
-	}
-
-	$query  = "SELECT * FROM " .$tabla;
-	$query .= " WHERE post_status='";
-	$query .= $status . "'";
-	if ( $categoria != '' ) {
-		$query .= " AND post_categoria = '".$categoria."'";
-	}
-	if ( $exclude != '' ) {
-		$query .= " AND post_url!='".$exclude."'";
-	}
-	if ( $status == 'publicado' ) {
-		$query .= " AND post_fecha <= '".$fecha_actual."'";	
-	}
-	$query .= " ORDER by post_orden asc, post_fecha desc ";
-	if ( $number != -1 ) {
-		$query .= " LIMIT ".$number." ";
-	}
-	
-	$result = mysqli_query($connection, $query);
-	
-	if ( $result->num_rows == 0 ) {
-		$loop = null;
-	} else {
-
-		while ($row = $result->fetch_array()) {
-				$loop[] = $row;
-			}
-
-	}
-
-	closeDataBase( $connection );
-	return $loop;
-}
-
-
 //busca la noticia en particular y recoge los datos para pasar al template
 function singlePostData ( $postSlug ) {
 	$connection = connectDB();
@@ -522,4 +477,64 @@ function getFile ( $optionName ) {
     }
     
     closeDataBase($connection);
+}
+
+
+function getPosts( $postType, $limit = '', $categoria = '', $orden = 'fecha', $status = 'publicado' ) {
+	$connection = connectDB();
+	$tabla = 'posts';
+
+	//queries según parámetros
+    $query = "SELECT * FROM " .$tabla . " WHERE post_type='".$postType."'";
+    
+	//si tiene categoria:
+	if ( $categoria != '' ) {
+		$query  .= " AND post_categoria='".$categoria."'";
+	}
+	//status
+	if ( $status != 'all'  ) {
+		$query  .= " AND post_status='".$status."'";
+	}
+    
+    //order
+    if ( $orden == 'fecha' ) {
+        $query  .= " ORDER by post_timestamp DESC";
+    }
+    if ( $orden == 'post_orden' ) {
+        $query  .= " ORDER by orden ASC";
+    }
+
+    //limite
+    if ($limit != '') {
+        $query  .= " LIMIT ".$limit;
+    }
+	
+	$result = mysqli_query($connection, $query);
+	
+	if ( $result->num_rows == 0 ) {
+		return null;
+	} else {
+
+		while ( $row = $result->fetch_array() ) {
+			$posts[] = $row;
+        }
+
+        return $posts;
+    }
+}
+
+function getCategoryFromLoop($data) {
+	$categorias = array();
+
+	for ($i=0; $i < count($data); $i++) { 
+
+		$categoria = $data[$i]['post_categoria'];
+
+		if ( ! in_array($categoria, $categorias) ) {
+			array_push($categorias, $categoria);
+		}
+
+	}
+	
+	return $categorias;
 }

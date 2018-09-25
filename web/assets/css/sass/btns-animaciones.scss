@@ -1,3 +1,13 @@
+.link {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 .btn {
     position: relative;
     cursor: pointer;

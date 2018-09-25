@@ -177,7 +177,7 @@ getTemplate('head'); ?>
                     <p class="parrafo-separador">
                         Mirá la experiencia Re.
                     </p>
-                    <a class="btn btn-fucsia" href="#">
+                    <a class="btn btn-fucsia" href="<?php echo MAINSURL; ?>/galeria">
                         Ver galería
                     </a>
                 </div>
@@ -204,7 +204,7 @@ getTemplate('head'); ?>
                     <p class="parrafo-separador">
                         Compartí con los Mellis Nayar.
                     </p>
-                    <a class="btn btn-fucsia" href="#">
+                    <a class="btn btn-fucsia" href="<?php echo MAINSURL; ?>/celebrities">
                         Ver experiencia
                     </a>
                 </div>
