@@ -6,9 +6,8 @@
         $imagen = UPLOADSURL . '/' . $data['post_imagen'];
     }
 ?>
-<li class="<?php echo $data['post_categoria']; ?>">
-    <article data-id="<?php echo $data['post_ID']; ?>" class="galeria-article">
-        <img class="imagen-galeria" src="<?php echo $imagen; ?>" alt="<?php echo $data['post_titulo']; ?>">
-        <div class="contenido-galeria"></div>
-    </article>
-</li>
+
+<article data-id="<?php echo $data['post_ID']; ?>" class="galeria-article">
+    <img class="imagen-galeria" src="<?php echo $imagen; ?>" alt="<?php echo $data['post_titulo']; ?>">
+    <div class="contenido-galeria"></div>
+</article>

@@ -150,8 +150,34 @@ $(window).on('load', function(){
         $(window).on('resize', function(){
             getInstagram();
         });
+
+    } else {
+        initHeaderPages();
+        setGallerySizes();
+        $(window).on('resize', function(){
+            setGallerySizes();
+        });
+        //filtro de categorias
+        $(document).on('click', '.category-filter', function() {
+            filtrarCategoria(this);
+        });
+
+        //abre galeria
+        $(document).on('click', '.galeria-article', function() {
+            openPopUpGalery(this);
+        });
+
+        //cierra galeria
+        $(document).on('click', '#close-gallery', function() {
+            $('.popup-gallery-wrapper').fadeOut();
+        });
+        
+
+
     }
     
+    
+
     //Iniciar animaciones
     startAnimations('.animate-element', false);
     startAnimations('.animate-element-loop', true);
@@ -907,29 +933,6 @@ function initParallax () {
         }
 
         /*
-        IMAGE BOXES
-        */
-        /*var imageBoxes = $('.image-boxes');
-        var imageCamara = $('#camara');
-        var imageMellis = $('#mellis');
-        var imageHeadphones = $('#headphones');
-        var imageFifteen = $('#fifteen');
-        if (window.innerWidth > 992) {
-           //var mover = (barra * 1.9 / 100 )*1.9-20;
-           var mover = (barra * 1.3 / 100 )*1.1+20;
-           $(imageCamara).css('top', mover + '%'); 
-
-           var mover2 = (barra * 1.9 / 100 )-20;
-           $(imageMellis).css('bottom', '-' +mover2 + '%'); 
-
-           var mover3 = (barra * 1.9 / 100 )*1.9*1.9 - 100;
-           $(imageHeadphones).css('bottom', '-' +mover3 + 'px');
-
-           var mover4 = (barra * 1.3 / 100 )*1.1+20;
-           $(imageFifteen).css('top', mover + '%'); 
-        }*/
-
-        /*
         USA CONTACTO
         */
         var imageFormulario = $('#contact-usa');
@@ -962,7 +965,6 @@ function initParallax () {
 
 function initHeader(){
     var contenedor = $('.header-inicio');
-    var button = $(contenedor).find('.btn-fucsia')
     var contenedorImagen = $(contenedor).find('.header-image-wrapper');
     var retina = window.devicePixelRatio>1;
     var windowWidth = window.innerWidth;
@@ -1032,21 +1034,121 @@ function initHeader(){
 
 }//initHeader()
 
-
-/*function initHeaderTextAnimate() {
-
-    //$( '.header-inicio' ).mousemove(function(e){
-    $( '.header-inicio' ).mousemove(function(e){
+function initHeaderPages() {
+    var contenedor = $('.header-pages');
+    var contenedorImagen = $(contenedor).find('.header-image-wrapper');
+    var retina = window.devicePixelRatio>1;
+    var windowWidth = window.innerWidth;
+    var movil = windowWidth < 768;
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     
-        var x = e.pageX;
-        var y = e.pageY;
-        var moveX = x / -200;
-        var moveY = y / -100;
-        //console.log(moveX, moveY);
-           
-        document.getElementById('imagen-superior-texto').contentDocument.getElementById('path830-3-6').style.transform = 'translate3d('+moveX+'px, '+moveY+'px, 0)';
-    
-    });    
+    var imagen = '';
+    var corazon = 'corazones-inicio.png';
 
-}*/
+    if (retina) {
+        corazon = 'corazones-inicio@2x.png';
+    }
+
+    if (movil) {
+        if (retina) {
+            //movil retina
+            imagen = $(contenedorImagen).attr('data-src-movil-retina');
+        } else {
+            //movil no retina   
+            imagen = $(contenedorImagen).attr('data-src-movil');
+        }
+    } else {
+      //no es movil  
+      if (retina) {
+            //no movil retina
+            imagen = $(contenedorImagen).attr('data-src-retina');
+        } else {
+            //no movil no retina   
+            imagen = $(contenedorImagen).attr('data-src');
+        }
+    }
+
+    var htmlbackground = '<img src="'+baseUrl+'/assets/images/'+imagen+'" alt="Somos Re" class="header-image">';
+    var htmlheart = '<img src="'+baseUrl+'/assets/images/'+corazon+'" alt="Somos Re Heart" class="corazon-header-usa">';
+
+    $(contenedorImagen).append( $(htmlbackground) );
+    $(contenedorImagen).fadeIn();
+
+    contenedor.append( $(htmlheart) );
+    var imagenCorazon = $('.corazon-header-usa');
+    $(imagenCorazon).fadeIn();
+
+    var imagenHeaderParallax = $('.header-image');
+
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+    }
+
+    if ( imagenHeaderParallax.length > 0 ) {
+        
+        //movimiento header on scroll
+        $(window).scroll(function(){
+            
+            //valor de barra que necesitan todos
+            var barra = ($(window).scrollTop());
+
+            //imagen header chica
+            if (movil) {
+                imagenHeaderParallax.css('top', ( barra/1.9 )-30+'px');
+            } else {
+                imagenHeaderParallax.css('top', ( barra/1.9 )-80+'px');
+            }
+
+        });//onscrll
+    }
+}//initHeaderPages()
+
+
+/*
+* AJUSTA EL TAMAÑO DE LOS ITEMS DE LA GALERÍA AL REZISE WINDOWS
+*/
+function setGallerySizes() {
+    var items = $('.galerias li');
+    if (items.length > 1){
+        var item = items[0];
+    } else {
+        var item =items;
+    }
+    var w = $(item).width();
+
+    items.each(function(){
+        $(this).height(w);
+    });
+}//setGallerySizes()
+
+/*
+* EJECUTA EL FILTRO DE CATEGORIAS
+*/
+function filtrarCategoria(btn) {
+    var categoria = $(btn).attr('data-categoria');
+
+    var items = $('.galerias li');
+    items.each(function(){
+        if (categoria == 'todas' ) {
+            $(this).css('display', 'block');
+        } else {
+            
+            if ( ! $(this).hasClass(categoria) ) {
+                $(this).css('display', 'none');
+            } else {
+                $(this).css('display', 'block');
+            }
+        }
+    });
+}//filtrarCategoria()
+
+/*
+* ABRE EL POPUP DE LAS GALERIAS
+*/
+function openPopUpGalery(articulo) {
+    //abrir popup
+    $('.popup-gallery-wrapper').fadeIn();
+    console.log(articulo);
+}
+
 

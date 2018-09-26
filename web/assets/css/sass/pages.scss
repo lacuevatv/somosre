@@ -41,6 +41,54 @@
         }
     }
 
+    .header-image-wrapper {
+        position: absolute;
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+
+    .header-image {
+        position: absolute;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+    }//.header-image
+    
+    .corazon-header-usa {
+        position: absolute;
+        z-index: 11;
+        display: block;
+        width: 150px;
+        bottom: -50px;
+        right: 0;
+        display: none;
+
+        @media (min-width: $sm) {
+            width: 35%;
+            max-width: 645px;
+            bottom: -100px;
+        }
+        @media (min-width: $md) {
+            bottom: -140px;
+        }
+        @media (min-width: $lg) {
+            bottom: -170px;
+        }
+        @media (min-width: $xlg) {
+            bottom: -230px;
+        }
+
+    }//.corazon-inicio
+
 }//.header-pages
 
 
@@ -64,7 +112,7 @@
 }
 
 
-.main-wrapper {
+.main-wrapper-galerie {
     clear: both;
     position: relative;
     padding: 50px 0;
@@ -92,12 +140,17 @@
             -ms-flex-wrap: wrap;
             -o-flex-wrap: wrap;
             flex-wrap: wrap;
-            li {}
+            li {
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
         }
     }//.categorias-wrapper
 
     .galerias-wrapper {
-        padding: 20px 0;
+        margin: 20px 0;
+        position: relative;
+        @include transition(all $transitionSpeed);
 
         .galerias {
             width: 100%;
@@ -126,6 +179,8 @@
                 overflow: hidden;
                 width: 100%;
                 height: 250px;
+                @include transition(all $transitionSpeed);
+
                 @media (min-width: $xs) {
                     width: 100%;
                     height: 508px;
@@ -148,16 +203,116 @@
                 }
 
             }//li
+
+            
+
         }//.galerias
+
+        .sello-rojo {
+            display: block;
+            position: absolute;
+            z-index: 11;
+            bottom: -25px;
+            right: -25px;
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../images/sello-rojo.png);
+            background-size: cover;
+            animation-name: giro-sello;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/sello-rojo@2x.png);
+                background-size: cover;
+            } 
+        }//.sello-rojo
 
     }//.galerias-wrapper
 
 }//.wrapper-galeria
 
 .galeria-article {
-    width: 100%;
-    height: 100%;
+    width: 101%;
+    height: 101%;
+    cursor: pointer;
+    @include transition(all $transitionSpeed);
+
+    &:hover {
+        .imagen-galeria {
+            @include transform(scale(1.2) rotate(10deg));
+        }    
+    }
+
     .imagen-galeria {
+        @include transition(all $transitionSpeed);
         width: 100%;
     }
-}
+}//.galeria-article
+
+.popup-gallery-wrapper {
+    position: absolute;
+    z-index: 11;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    @include transition(all $transitionSpeed);
+
+    .contenedor {
+        height: 100%;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+    }
+
+    #contenedor-popup-gallery {
+        position: relative;
+        @include transition(all $transitionSpeed);
+        background-color: $color-verde;
+        width: 100%;
+        min-height: 350px;
+        display: flex;
+        display: -o-flex;
+        display: -ms-flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        -o-justify-content: center;
+        justify-content: center;
+    }
+
+    #close-gallery {
+        cursor: pointer;
+        padding: 10px 20px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: $color-blanco;
+
+    }
+}//.popup-gallery-wrapper
