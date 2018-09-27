@@ -1907,6 +1907,8 @@ html, body {
   position: relative;
 }
 .newsletter-form legend {
+  display: block;
+  width: 100%;
   text-transform: uppercase;
   text-align: center;
 }
@@ -3685,7 +3687,13 @@ html, body {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  width: 100%;
+  height: 100%;
+}
+.galeria-article .contenido-galeria {
+  display: none;
+}
+.galeria-article .contenido-galeria-oculto {
+  display: none;
 }
 
 .popup-gallery-wrapper {
@@ -3744,6 +3752,89 @@ html, body {
   -ms-justify-content: center;
   -o-justify-content: center;
   justify-content: center;
+  padding: 30px;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .loader {
+  position: absolute;
+  z-index: 22;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery {
+  width: 100%;
+  height: 100%;
+  /*.fixed-video-aspect {
+          position: relative;
+    }
+
+  .fixed-video-aspect:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 56.25%;
+  }
+  .fixed-video-aspect > .item-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }*/
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .item-video {
+  height: 350px;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav .owl-prev {
+  margin-right: 10px;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav .owl-next {
+  margin-left: 10px;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav .icon-arrow {
+  width: 19px;
+  height: 15px;
+  display: block;
+  background-position: center;
+  background-size: cover;
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav .icon-arrow-left {
+  background-image: url(../images/arrow-left.png);
+}
+.popup-gallery-wrapper #contenedor-popup-gallery .inner-wrapper-gallery .owl-carousel .owl-nav .icon-arrow-right {
+  background-image: url(../images/arrow-right.png);
 }
 .popup-gallery-wrapper #close-gallery {
   cursor: pointer;

@@ -251,6 +251,8 @@
     position: relative;
 
     legend {
+        display: block;
+        width: 100%;
         text-transform: uppercase;
         text-align: center;
         @media (min-width: $sm) {

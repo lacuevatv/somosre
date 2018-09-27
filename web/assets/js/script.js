@@ -1109,7 +1109,7 @@ function initHeaderPages() {
 * AJUSTA EL TAMAÑO DE LOS ITEMS DE LA GALERÍA AL REZISE WINDOWS
 */
 function setGallerySizes() {
-    var items = $('.galerias li');
+    var items = $('.galerias > li');
     if (items.length > 1){
         var item = items[0];
     } else {
@@ -1147,9 +1147,44 @@ function filtrarCategoria(btn) {
 * ABRE EL POPUP DE LAS GALERIAS
 */
 function openPopUpGalery(articulo) {
-    //abrir popup
-    $('.popup-gallery-wrapper').fadeIn();
-    console.log(articulo);
+    var wrapper = $('.popup-gallery-wrapper')
+    var loader = $(wrapper).find('.loader')
+    var contenedor = $(wrapper).find('.inner-wrapper-gallery')
+    var data = $(articulo).find('.contenido-galeria-oculto');
+    $(wrapper).fadeIn();
+    loader.fadeIn();
+
+    $('.buho').owlCarousel();
+    $('.buho').owlCarousel('destroy');
+
+    contenedor.empty();
+
+    if ( data.find('li').length < 1 ) {
+        //no tiene datos, se anula la carga la galeria
+
+        contenedor.append($('<div>No hay nada cargado</div>'));
+
+    } else {
+        contenedor.append(data.clone());
+
+        contenedor.find('ul').addClass('buho owl-carousel owl-theme');
+
+        $('.buho').owlCarousel({
+            loop:true,
+            margin:1,
+            items:1,
+            autoHeight: true,
+            nav:true,
+            navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
+            video:true,
+            videoHeight: 300,
+            videoWidth: 600,
+            center:true,
+        });
+    }
+
+    loader.fadeOut();
+    
 }
 
 
