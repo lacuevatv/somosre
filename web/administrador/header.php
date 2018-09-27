@@ -50,13 +50,13 @@ if(!defined("SECUREACCESS"))
               <a href="index.php?admin=contacts" role="button">Contactos</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Posts<span class="caret"></span></a>
+              <a href="index.php?admin=galerias" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galería<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=editar-post" role="button">Agregar nuevo</a>
+                  <a href="index.php?admin=editar-galeria" role="button">Agregar nuevo</a>
                   </li>
                 <li>
-                  <a href="index.php?admin=posts" role="button">Ver lista</a>
+                  <a href="index.php?admin=galerias" role="button">Ver lista</a>
                 </li>
               </ul>
             </li>
@@ -70,16 +70,16 @@ if(!defined("SECUREACCESS"))
                   <a href="index.php?admin=archivos-descargas" role="button">Archivos para descargar</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=info-adicional" role="button">Info Adicional</a>
-                </li>
-                <li>
-                  <a href="index.php?admin=galeria-imagenes" role="button">Galerías de imágenes</a>
+                  <a href="index.php?admin=sucursales" role="button">Sucursales</a>
                 </li>
                 <li>
                   <a href="index.php?admin=promociones" role="button">Popups</a>
                 </li>
                 <li>
-                  <a href="index.php?admin=editar-slider&slug=home" role="button">Slider Inicio</a>
+                  <a href="index.php?admin=editar-slider&slug=seguridad" role="button">Slider seguridad</a>
+                </li>
+                <li>
+                  <a href="index.php?admin=editar-slider&slug=comentarios" role="button">Slider testimonios</a>
                 </li>
                 <li>
                   <a href="index.php?admin=biblioteca-medios" role="button">Medios</a>

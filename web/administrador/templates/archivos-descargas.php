@@ -24,7 +24,6 @@ global $archivos;
                             $fileLoaded = getFile( $archivo['optionName'] );
                             
                             if ( $fileLoaded != null ) { ?>
-                            
                             <input type="hidden" name="file" value="<?php echo $fileLoaded['options_value']; ?>">
                             <a href="<?php echo UPLOADSURLFILES .'/'. $fileLoaded['options_value']; ?>" target="_blank">
                                 <?php echo $fileLoaded['options_value']; ?>

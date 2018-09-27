@@ -26,7 +26,7 @@ define ( 'DATEPUBLISHED', '2018');
 define ('LOGOSITE' , URLADMINISTRADOR . '/assets/images/logosite.png');
 define ( 'SITETITLE', 'Nombre - Panel de control' );
 define ( 'FAVICONICO', URLADMINISTRADOR . '/favicon.ico' );
-define ('POSTPERPAG', 2);
+define ('POSTPERPAG', 50);
 
 //variables tipo de usuario
 global $usertype;
@@ -78,13 +78,13 @@ $menuModulos = array(
 		'slug' => '',
 		'user' => 'a',
 	),
-	array(
+	/*array(
 		'titulo' => 'Bonus Track',
 		'texto' => 'Administrar: Borrar, cargar y editar.',
 		'template' => 'bonus-track',
 		'slug' => '',
 		'user' => 'a',
-	),
+	),*/
 	array(
 		'titulo' => 'Categorias',
 		'texto' => 'Manipular las distintas categorias de las galerias.',
@@ -121,8 +121,8 @@ $menuModulos = array(
 		'user' => 'a',
 	),
 	array(
-		'titulo' => 'Comentarios',
-		'texto' => 'Modificar los comentarios.',
+		'titulo' => 'Testimonios',
+		'texto' => 'Modificar los testimonios.',
 		'template' => 'editar-slider',
 		'slug' => 'comentarios',
 		'user' => 'a',

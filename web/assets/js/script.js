@@ -165,6 +165,7 @@ $(window).on('load', function(){
         //abre galeria
         $(document).on('click', '.galeria-article', function() {
             openPopUpGalery(this);
+            scrollToID('#contenedor-popup-gallery');
         });
 
         //cierra galeria

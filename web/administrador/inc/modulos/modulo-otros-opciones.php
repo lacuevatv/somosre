@@ -13,7 +13,7 @@ function getFile ( $optionName ) {
         
         $data = mysqli_fetch_array($result);
         
-        return $data['options_value'];    
+        return $data;    
     }
     
     closeDataBase($connection);

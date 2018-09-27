@@ -14,7 +14,17 @@ getTemplate('head'); ?>
             <span class="close2"></span>
             </div>
         </button>
-        <div id="contenedor-popup-gallery"></div>
+        <div id="contenedor-popup-gallery">
+            <button id="close-gallery">
+                Cerrar
+                <div class="close-item">
+                <span class="close1"></span>
+                <span class="close2"></span>
+                </div>
+            </button>
+            <img class="loader" src="<?php echo MAINSURL; ?>/assets/images/loader-espiral.gif">
+            <div class="inner-wrapper-gallery"></div>
+        </div>
     </div>
 </div>
 <header class="header-pages">

@@ -37,7 +37,7 @@ define('LINK_FLICKR', '#');
 define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
 
 //indica al paginador cuantos se muestran por pagina para calcular el offset además de que el loop muestra solo esos
-define('POSTPERPAG', '1');
+define('POSTPERPAG', '50');
 
 //EMAILS Y MENSAJES
 define ( 'EMAILDEFAULT', 'info@lacueva.tv' );

@@ -255,7 +255,7 @@
 
 .popup-gallery-wrapper {
     position: absolute;
-    z-index: 11;
+    z-index: 1111;
     background: rgba(0,0,0,0.8);
     width: 100%;
     height: 100%;
@@ -309,10 +309,42 @@
     #close-gallery {
         cursor: pointer;
         padding: 10px 20px;
+        padding-right: 40px;
         position: absolute;
         top: -40px;
         right: 0;
         color: $color-blanco;
 
+        .close-item {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 2px;
+            right: 0;
+            .close1 {
+                width: 20px;
+                height: 1px;
+                top: 15px;
+                right: 5px;
+                background-color: $color-blanco;
+                position: absolute;
+                @include transform(rotate(-45deg));
+            }
+            .close2 {
+                width: 20px;
+                height: 1px;
+                top: 15px;
+                right: 5px;
+                background-color: $color-blanco;
+                position: absolute;
+                @include transform(rotate(45deg));
+            }
+        }
+
+        &:hover {
+            zoom: 1;
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+          }
     }
 }//.popup-gallery-wrapper
