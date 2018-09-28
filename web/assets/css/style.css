@@ -2765,6 +2765,9 @@ html, body {
 .slider-wrapper .slider-item .slider-contenido h2 {
   margin-bottom: 5px;
 }
+.slider-wrapper .slider-item .slider-contenido p strong {
+  font-size: 120%;
+}
 .slider-wrapper .slider-item .comentario q {
   color: #fff;
   font-weight: 400;

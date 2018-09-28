@@ -108,27 +108,27 @@ $menus = array(
     //menu footer 1
     'menuFooter1' => array(
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'somosre',
             'nombre' => 'Sobre Re',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'programas',
             'nombre' => 'Programas Exclusivos',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
-            'nombre' => 'Experiencia Re.',
+            'slug' => 'experiencia',
+            'nombre' => 'Re en pics.',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'celebrities',
             'nombre' => 'Re by Celebrities',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'bonustrack',
             'nombre' => 'Bonus Track',
             'link_externo' => false,
         ),
@@ -137,27 +137,27 @@ $menus = array(
     //menu footer 2
     'menuFooter2' => array(
         array(
-            'slug' => MAINSURL . '/' . '#',
-            'nombre' => 'Fiesta de 15',
+            'slug' => 'fiesta15',
+            'nombre' => 'Uppers by Re',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'seguridad',
             'nombre' => 'Seguridad',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'testimonios',
             'nombre' => 'Testimonios',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'agencias',
             'nombre' => 'Agencias Autorizadas',
             'link_externo' => false,
         ),
         array(
-            'slug' => MAINSURL . '/' . '#',
+            'slug' => 'entrevista',
             'nombre' => 'Tu Entrevista',
             'link_externo' => false,
         ),

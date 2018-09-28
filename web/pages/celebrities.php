@@ -40,7 +40,7 @@ getTemplate('head'); ?>
         </h1>
         
         <p class="parrafo-separador-blanco animate-element slide-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
+            Este año nuestros invitados fueron Ramiro y Nacho Nayar. Compartieron días increíbles en Orlando junto a nuestras chicas Re y les brindaron un show exclusivo. 
         </p>
 
         <p>

@@ -8,13 +8,13 @@ require_once('../functions.php');
 if ( isAjax() ) {
 
 $connection     = connectDB();
-$tablaNoticias  = 'posts';
+$tablaNoticias  = 'sucursales';
 $postid         = isset( $_POST['post_id'] ) ? $_POST['post_id'] : 'none';
 
 
 
 //borramos el post
-$query      = "DELETE FROM ".$tablaNoticias." WHERE post_ID= '".$postid."'";
+$query      = "DELETE FROM ".$tablaNoticias." WHERE sucursal_id= '".$postid."'";
 $result     = mysqli_query($connection, $query);
    
    if ($result) {

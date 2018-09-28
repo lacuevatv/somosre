@@ -100,7 +100,7 @@ getTemplate('head'); ?>
                     </h2>
 
                     <p class="parrafo-separador animate-element slide-left">
-                        Descubrí la información sobre nuestros productos.
+                        Descubrí 5 opciones diferentes para disfrutar de tu viaje Re.
                     </p>
 
                     
@@ -108,20 +108,20 @@ getTemplate('head'); ?>
 
                 <ul class="btns-wrapper">
                     <li>
-                        <a href="<?php getFile( 'itinerarios' ); ?>" target="_blank" class="btn btn-amarillo animate-element slide-left">
-                            Itinerarios
+                        <a href="<?php getFile( 'programas-itinerarios' ); ?>" target="_blank" class="btn btn-amarillo animate-element slide-left">
+                            Ver los Programas
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php getFile( 'salidas-precios' ); ?>" target="_blank" class="btn btn-verde animate-element slide-left">
-                            Salidas y Precios
+                        <a href="<?php getFile( 'programas-comparar' ); ?>" target="_blank" class="btn btn-verde animate-element slide-left">
+                            Compararlos
                         </a>
                     </li>
 
                     <li>
-                        <a href="<?php getFile( 'comparar-programas' ); ?>" target="_blank" class="btn btn-fucsia animate-element slide-left">
-                            Comparar programas
+                        <a href="<?php getFile( 'programas-precios' ); ?>" target="_blank" class="btn btn-fucsia animate-element slide-left">
+                            Conocer los precios
                         </a>
                     </li>
                 </ul>
@@ -172,13 +172,13 @@ getTemplate('head'); ?>
 
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">   
-                        La experiencia Re.
+                        Re en Pics
                     </h2>
                     <p class="parrafo-separador">
-                        Mirá la experiencia Re.
+                        Mirá un sneak peek del mundo Re.
                     </p>
                     <a class="btn btn-fucsia" href="<?php echo MAINSURL; ?>/galeria">
-                        Ver galería
+                        Ver imágenes
                     </a>
                 </div>
 
@@ -202,10 +202,10 @@ getTemplate('head'); ?>
                         Re by Celebrities.
                     </h2>
                     <p class="parrafo-separador">
-                        Compartí con los Mellis Nayar.
+                        ¡En cada viaje tenemos estrellas invitadas! 
                     </p>
                     <a class="btn btn-fucsia" href="<?php echo MAINSURL; ?>/celebrities">
-                        Ver experiencia
+                        Ver imágenes
                     </a>
                 </div>
 
@@ -229,7 +229,7 @@ getTemplate('head'); ?>
                         Bonus Track.
                     </h2>
                     <p class="parrafo-separador-blanco">
-                        Siempre te damos más de lo que esperás.
+                        Te damos más de lo que esperás.
                     </p>
                     <a class="btn btn-blanco" href="#">
                         Ver extras
@@ -254,13 +254,13 @@ getTemplate('head'); ?>
 
                 <div class="contenido-boxes">
                     <h2 class="titulo-base">
-                        Tu fiesta de 15.
+                        Uppers by Re
                     </h2>
                     <p class="parrafo-separador">
-                        Ya no tenés que decidir entre Fiesta o Viaje.
+                        Con Re podés vivir mucho más que el viaje..
                     </p>
                     <a class="btn btn-fucsia" href="#">
-                        Ver fiesta
+                        Ver Info
                     </a>
                 </div>
 
@@ -302,10 +302,11 @@ getTemplate('head'); ?>
 
                         <div class="slider-contenido contenedor">
                             <h2 class="titulo-base">
-                                <?php echo $item['slider_titulo']; ?>
+                                Seguridad by Re.
                             </h2>
 
                             <p class="parrafo-separador-blanco">
+                                <strong><?php echo $item['slider_titulo']; ?></strong><br>
                                 <?php echo $item['slider_texto']; ?>
                             </p>
                             
@@ -407,10 +408,10 @@ getTemplate('head'); ?>
                     </picture>
 
                     <h2 class="titulo-base animate-element slide-left">
-                        Dónde comprar tu viaje Re.
+                        Reserva tu viaje Re.
                     </h2>
                     <p class="parrafo-separador animate-element slide-left">
-                        Encontrá la Agencia Autorizada de tu provincia.
+                        Busca el representante Re más cercano a tu casa.
                     </p>
 
                     <p>

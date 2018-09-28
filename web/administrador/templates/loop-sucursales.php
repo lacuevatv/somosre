@@ -23,6 +23,9 @@
                 <a href="index.php?admin=editar-sucursales&id=<?php echo $data['sucursal_id']; ?>" title="Editar" class="btn btn-edit-news">
                     Editar
                 </a>
+                <a href="<?php echo $data['sucursal_id']; ?>" title="Borrar" class="btn btn-delete-sucursales">
+                    Borrar
+                </a>
             </p>
             
             

@@ -28,7 +28,7 @@ getTemplate('head'); ?>
     </div>
 </div>
 <header class="header-pages">
-    <div class="header-image-wrapper" data-src="banner-inicio.jpg" data-src-retina="banner-inicio@2x.jpg" data-src-movil="banner-inicio-movil.jpg" data-src-movil-retina="banner-inicio-movil@2x.jpg"></div>
+    <div class="header-image-wrapper" data-src="" data-src-retina="" data-src-movil="" data-src-movil-retina=""></div>
     <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
     
     <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Galería</span>
@@ -41,11 +41,11 @@ getTemplate('head'); ?>
         </picture>
 
         <h1 class="titulo-base animate-element slide-left">
-            Galerías
+            Re en Pics
         </h1>
         
         <p class="parrafo-separador-blanco animate-element slide-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut minim veniam.
+            Descubrí en imágenes parte de nuestro mundo. Mirá acá algunas de las experiencias que vas a vivir con Re.
         </p>
 
         <p>

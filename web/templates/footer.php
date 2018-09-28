@@ -24,11 +24,24 @@
 				<?php 
 				global $menus;
 				
-				foreach ( $menus['menuFooter1'] as $menu ) { ?>
+				foreach ( $menus['menuFooter1'] as $menu ) {
+					//el menu es distinto en lapagina de inicio porque tiene scroll, en las otras paginas no.
+					if ( PAGEACTUAL == 'inicio' ) : 
+					?>
 					<li>
-						<a href="<?php echo $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?>><?php echo $menu['nombre']; ?></a>
+						<a href="<?php echo $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?> <?php if ( !($menu['link_externo']) ) {echo 'class="scroll-to"'; } ?>>
+							<?php echo $menu['nombre']; ?>
+						</a>
 					</li>
-				<?php } ?>
+					<?php else : ?>
+					<li>
+						<a href="<?php echo MAINSURL . '/#' . $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?>>
+							<?php echo $menu['nombre']; ?>
+						</a>
+					</li>
+					<?php 
+					endif;
+				} ?>
 			
 			</ul>
 
@@ -37,12 +50,24 @@
 				<?php 
 				global $menus;
 				
-				foreach ( $menus['menuFooter2'] as $menu ) { ?>
-					<li>
-						<a href="<?php echo $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?>><?php echo $menu['nombre']; ?></a>
-					</li>
-				<?php } ?>
-			
+				foreach ( $menus['menuFooter2'] as $menu ) { 
+					if ( PAGEACTUAL == 'inicio' ) : 
+						?>
+						<li>
+							<a href="<?php echo $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?> <?php if ( !($menu['link_externo']) ) {echo 'class="scroll-to"'; } ?>>
+								<?php echo $menu['nombre']; ?>
+							</a>
+						</li>
+						<?php else : ?>
+						<li>
+							<a href="<?php echo MAINSURL . '/#' . $menu['slug']; ?>"<?php if ( $menu['link_externo'] ) {echo ' target="_blank"'; } ?>>
+								<?php echo $menu['nombre']; ?>
+							</a>
+						</li>
+					<?php 
+					endif;
+				} ?>
+			 
 			</ul>
 
 			<ul class="menu-footer-wrapper">

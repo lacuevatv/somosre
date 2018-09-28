@@ -41,24 +41,24 @@ global $archivos;
 $archivos = array(
     array(
         'label' => 'Itinerarios',
-        'optionName' => 'itinerarios',
-    ),
-    array(
-        'label' => 'Salidas y Precios',
-        'optionName' => 'salidas-precios',
+        'optionName' => 'programas-itinerarios',
     ),
     array(
         'label' => 'Comparar Programas',
-        'optionName' => 'comparar-programas',
+        'optionName' => 'programas-comparar',
+    ),
+    array(
+        'label' => 'Precios Programas',
+        'optionName' => 'programas-precios',
     ),
     array(
         'label' => 'Agencias',
         'optionName' => 'agencias',
 	),
-	array(
+	/*array(
         'label' => 'Asistencia',
         'optionName' => 'asistencia',
-    ),
+    ),*/
 );
 
 

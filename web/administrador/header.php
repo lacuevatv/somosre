@@ -53,7 +53,7 @@ if(!defined("SECUREACCESS"))
               <a href="index.php?admin=galerias" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Galería<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="index.php?admin=editar-galeria" role="button">Agregar nuevo</a>
+                  <a href="index.php?admin=editar-galerias" role="button">Agregar nuevo</a>
                   </li>
                 <li>
                   <a href="index.php?admin=galerias" role="button">Ver lista</a>
@@ -66,6 +66,9 @@ if(!defined("SECUREACCESS"))
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administrar Página<span class="caret"></span></a>
               <ul class="dropdown-menu">
+                <li>
+                  <a href="index.php?admin=celebrities" role="button">Celebrities</a>
+                </li>
                 <li>
                   <a href="index.php?admin=archivos-descargas" role="button">Archivos para descargar</a>
                 </li>

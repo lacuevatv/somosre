@@ -39,7 +39,37 @@ $(document).ready(function(){
 
     });//load-more-news
 
+    $(document).on('click', '.btn-delete-sucursales', function( event ){
+        event.preventDefault();
+        var deletePost = false;
+        var postToDelete = $(this).attr('href');
+        var itemToDelete = this.closest('li');
+        if ( confirm( '¿Está seguro de querer BORRAR?' ) ) {
+            deletePost = true;
+        }
 
+        if (deletePost) {
+            $.ajax( {
+                type: 'POST',
+                url: ajaxFunctionDir + '/delete-sucursal.php',
+                data: {
+                    post_id: postToDelete,
+                },
+                success: function ( response ) {
+                    console.log(response);
+                    if (response == 'deleted') {
+                    //borra la noticia del front
+                        itemToDelete.remove()
+                        //myFunctionNoticias();
+                    }
+                },
+                error: function ( ) {
+                    console.log('error');
+                },
+            });//cierre ajax
+        }
+    });
+    
 
 });//ready
 

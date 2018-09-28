@@ -2,7 +2,7 @@
     <div class="loader"></div>
 
     <legend class="parrafo-separador animate-element slide-left">
-        Completa tus datos para concretar tu entrevista.
+        Completa el form con tus datos y nos ponemos en contacto!
     </legend>
 
     <!--<div class="inner-wrapper-form">
@@ -100,7 +100,7 @@
     <hr class="hr-separador">
     
     <legend class="parrafo-separador animate-element slide-left">
-        Completa los datos de un adulto responsable.
+        También necesitamos los de un adulto responsable.
     </legend>
 
     <div class="inner-wrapper-form inner-wrapper-form-sm">
@@ -147,7 +147,7 @@
     </div><!-- //.inner-wrapper-form -->
 
     <div class="inner-wrapper-form animate-element slide-left">
-        <button type="submit" class="btn btn-amarillo btn-submit">Enviar datos</button>
+        <button type="submit" class="btn btn-amarillo btn-submit">Enviar!</button>
         <span class="msj-form"></span>
     </div>
 
