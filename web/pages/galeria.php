@@ -28,7 +28,9 @@ getTemplate('head'); ?>
     </div>
 </div>
 <header class="header-pages">
-    <div class="header-image-wrapper" data-src="" data-src-retina="" data-src-movil="" data-src-movil-retina=""></div>
+    <div class="header-image-wrapper" data-src="portada-galeria.jpg" data-src-retina="portada-galeria.jpg" data-src-movil="portada-galeria-movil.jpg" data-src-movil-retina="portada-galeria-movil.jpg">
+    <span class="background-degradado-images">
+    </div>
     <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
     
     <span class="texto-vertical texto-vertical-blanco animate-element fade-in">Galería</span>
