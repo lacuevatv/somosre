@@ -8,10 +8,15 @@
 ?>
 
 <article data-id="<?php echo $data['post_ID']; ?>" class="galeria-article">
-    <img class="imagen-galeria" src="<?php echo $imagen; ?>" alt="<?php echo $data['post_titulo']; ?>">
-    <div class="contenido-galeria">
+    
+    <img class="imagen-galeria load-images1" data-src="<?php echo $imagen; ?>" alt="<?php echo $data['post_titulo']; ?>">
+    
+    <div class="contenido-galeria<?php if (dispositivo() != 'pc') {echo ' contenido-visible'; } ?>">
+        <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
         <h1><?php echo $data['post_titulo']; ?></h1>
         <p><?php echo $data['post_resumen']; ?></p>
+        <button>Ver ></button>
+
     </div>
     <ul class="contenido-galeria-oculto">
         <?php if ( $data['post_galeria'] == 1 && $data['post_imagenesGal'] != '' ) :
@@ -20,8 +25,7 @@
             
             foreach ( $imagenes as $img ) { ?>
                 <li>
-                    <!--<img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $img; ?>">-->
-                    <img src="<?php echo UPLOADSURL . '/'. $img; ?>">
+                    <img class="load-images2" data-src="<?php echo UPLOADSURL . '/'. $img; ?>">
                 </li>
             <?php } ?>
             

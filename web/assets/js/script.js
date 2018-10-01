@@ -152,8 +152,9 @@ $(window).on('load', function(){
         });
 
     } else {
-        initHeaderPages();
         setGallerySizes();
+        initHeaderPages();
+        
         $(window).on('resize', function(){
             setGallerySizes();
         });
@@ -173,17 +174,14 @@ $(window).on('load', function(){
             $('.popup-gallery-wrapper').fadeOut();
         });
         
-
+        //carga las imagenes una vez cargado
+        getLazyImageshided();
 
     }
-    
-    
 
     //Iniciar animaciones
     startAnimations('.animate-element', false);
     startAnimations('.animate-element-loop', true);
-
-    
     
     
 });
@@ -843,6 +841,20 @@ function getLazyImages() {
     });
 }
 
+function getLazyImageshided() {
+    $('.load-images1').each(function(){
+        var img = $(this).attr('data-src');
+    
+        $(this).attr('src', img );
+    });
+
+    $('.load-images2').each(function(){
+        var img = $(this).attr('data-src');
+    
+        $(this).attr('src', img );
+    });
+}
+
 /*
 * IN VIEW ANIMATION
 * loop se usa como true o false, si es true, la animacion se ejecuta siempre, es decir el elemento entra y sale del view y cada vez se ejecuta la animación, en cambio en false solo se ejecuta una vez y luego queda fija
@@ -1127,6 +1139,8 @@ function setGallerySizes() {
 */
 function filtrarCategoria(btn) {
     var categoria = $(btn).attr('data-categoria');
+    $('.category-active').removeClass('category-active');
+    $(btn).addClass('category-active');
 
     var items = $('.galerias li');
     items.each(function(){
@@ -1154,9 +1168,10 @@ function openPopUpGalery(articulo) {
     $(wrapper).fadeIn();
     loader.fadeIn();
 
+    //destruye primero el carrousel anterior
     $('.buho').owlCarousel();
     $('.buho').owlCarousel('destroy');
-
+    //vacia el contenedor
     contenedor.empty();
 
     if ( data.find('li').length < 1 ) {
