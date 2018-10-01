@@ -2347,6 +2347,7 @@ html, body {
   left: 50%;
   padding-right: 30px;
   font-size: 60%;
+  line-height: 1.5em;
 }
 @media (min-width: 768px) {
   .contenido-boxes {
