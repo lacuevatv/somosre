@@ -205,6 +205,21 @@
     }
 }
 
+.btn-borde-fucsia.category-active {
+    color: $color-blanco;
+        background-color: $color-rojo;
+        border-color: transparent;
+        &:after {
+            background-image: url(../images/corazon-boton-blanco.png);
+            @include transition(all $transitionSpeed ease-out);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-blanco@2x.png);
+                background-size: 13px 12px;
+            }
+        }
+}
+
 .btn-borde-amarillo {
     color:$color-amarillo;
     border: 1px solid $color-amarillo;
@@ -235,6 +250,21 @@
     }
 }
 
+.btn-borde-amarillo.category-active {
+    color: $color-blanco;
+        background-color: $color-amarillo;
+        border-color: transparent;
+        &:after {
+            background-image: url(../images/corazon-boton-blanco.png);
+            @include transition(all $transitionSpeed ease-out);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-blanco@2x.png);
+                background-size: 13px 12px;
+            }
+        }
+}
+
 .btn-borde-verde {
     color:$color-verde;
     border: 1px solid $color-verde;
@@ -263,6 +293,21 @@
             }
         }
     }
+}
+
+.btn-borde-verde.category-active {
+    color: $color-blanco;
+        background-color: $color-verde;
+        border-color: transparent;
+        &:after {
+            background-image: url(../images/corazon-boton-blanco.png);
+            @include transition(all $transitionSpeed ease-out);
+    
+            @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+                background-image: url(../images/corazon-boton-blanco@2x.png);
+                background-size: 13px 12px;
+            }
+        }
 }
 
 .btn-facebook {

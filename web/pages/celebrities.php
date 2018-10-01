@@ -74,19 +74,26 @@ getTemplate('head'); ?>
                         Filtros
                     </p>
                     <ul class="categorias">
-                        <li data-categoria="todas" class="btn category-filter" style="animation-delay:0s">
+                        <li data-categoria="todas" class="btn btn-borde-fucsia animate-element slide-up category-filter category-active" style="animation-delay:0s">
                             Todas
                         </li>
 
                     <?php
                     $delay = 0;
+                    $count = 0;
                     foreach ( $categorias as $categoria ) {
-                        if ( $dispositivo != 'movil' ) {
+                        if ( $dispositivo != 'movil' ) {    
                             $delay = $delay + 0.2;
                         }
-                        
+
+                        $count++;
+                        //if (  $count > count($estilosCategorias)  ) {
+                        if (  ! isset($estilosCategorias[$count])  ) {
+                            $count = 0;
+                        }
+
                         ?>
-                        <li data-categoria="<?php echo $categoria; ?>" class="animate-element slide-up category-filter" style="animation-delay: <?php echo $delay; ?>s">
+                        <li data-categoria="<?php echo $categoria; ?>" class="btn <?php echo $estilosCategorias[$count]; ?> animate-element slide-up category-filter" style="animation-delay: <?php echo $delay; ?>s">
                             <?php echo $categoria; ?>
                         </li>
                     <?php } ?>

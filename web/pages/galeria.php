@@ -81,7 +81,7 @@ getTemplate('head'); ?>
                         Filtros
                     </p>
                     <ul class="categorias">
-                        <li data-categoria="todas" class="btn btn-borde-fucsia animate-element slide-up category-filter" style="animation-delay:0s">
+                        <li data-categoria="todas" class="btn btn-borde-fucsia animate-element slide-up category-filter category-active" style="animation-delay:0s">
                             Todas
                         </li>
 

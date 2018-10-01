@@ -1109,6 +1109,25 @@ html, body {
   }
 }
 
+.btn-borde-fucsia.category-active {
+  color: #fff;
+  background-color: #ff006c;
+  border-color: transparent;
+}
+.btn-borde-fucsia.category-active:after {
+  background-image: url(../images/corazon-boton-blanco.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-borde-fucsia.category-active:after {
+    background-image: url(../images/corazon-boton-blanco@2x.png);
+    background-size: 13px 12px;
+  }
+}
+
 .btn-borde-amarillo {
   color: #ffe900;
   border: 1px solid #ffe900;
@@ -1145,6 +1164,25 @@ html, body {
   }
 }
 
+.btn-borde-amarillo.category-active {
+  color: #fff;
+  background-color: #ffe900;
+  border-color: transparent;
+}
+.btn-borde-amarillo.category-active:after {
+  background-image: url(../images/corazon-boton-blanco.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-borde-amarillo.category-active:after {
+    background-image: url(../images/corazon-boton-blanco@2x.png);
+    background-size: 13px 12px;
+  }
+}
+
 .btn-borde-verde {
   color: #75efd8;
   border: 1px solid #75efd8;
@@ -1176,6 +1214,25 @@ html, body {
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
   .btn-borde-verde:hover:after {
+    background-image: url(../images/corazon-boton-blanco@2x.png);
+    background-size: 13px 12px;
+  }
+}
+
+.btn-borde-verde.category-active {
+  color: #fff;
+  background-color: #75efd8;
+  border-color: transparent;
+}
+.btn-borde-verde.category-active:after {
+  background-image: url(../images/corazon-boton-blanco.png);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .btn-borde-verde.category-active:after {
     background-image: url(../images/corazon-boton-blanco@2x.png);
     background-size: 13px 12px;
   }
