@@ -529,9 +529,10 @@ function getCategoryFromLoop($data) {
 	for ($i=0; $i < count($data); $i++) { 
 
 		$categoria = $data[$i]['post_categoria'];
-
-		if ( ! in_array($categoria, $categorias) ) {
-			array_push($categorias, $categoria);
+		if ( $categoria != '') {
+			if ( ! in_array($categoria, $categorias) ) {
+				array_push($categorias, $categoria);
+			}
 		}
 
 	}

@@ -110,7 +110,7 @@ getTemplate('head'); ?>
                     $delay = 0;
                     foreach ( $posts as $post ) {
                         if ( $dispositivo != 'movil' ) {
-                            $delay = $delay + 0.2;
+                            $delay = $delay + 0.1;
                         }
                         ?>
                         <li class="animate-element slide-left <?php echo $post['post_categoria']; ?>" style="animation-delay: <?php echo $delay; ?>s">

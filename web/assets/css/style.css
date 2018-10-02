@@ -3765,6 +3765,7 @@ html, body {
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
+  position: relative;
 }
 .galeria-article:hover .imagen-galeria {
   -webkit-transform: scale(1.2) rotate(10deg);
