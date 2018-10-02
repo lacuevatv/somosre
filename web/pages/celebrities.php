@@ -28,7 +28,7 @@ getTemplate('head'); ?>
     </div>
 </div>
 <header class="header-pages">
-    <div class="header-image-wrapper" data-src="portada-mellis.jpg" data-src-retina="portada-mellis.jpg" data-src-movil="portada-mellis-movil.jpg" data-src-movil-retina="portada-mellis-movil.jpg">
+    <div class="header-image-wrapper" data-src="portada-mellis.jpg" data-src-retina="portada-mellis.jpg" data-src-movil="portada-mellis-movil.jpg" data-src-movil-retina="portada-mellis-movil@2x.jpg">
         <span class="background-degradado-images">
     </div>
     <span class="deco-corazon-boxes deco-corazon-boxes-blanco animate-element fade-in"></span>
