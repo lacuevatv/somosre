@@ -40,7 +40,7 @@ define('LINK_YOUTUBE', 'https://www.youtube.com/channel/');
 define('POSTPERPAG', '50');
 
 //EMAILS Y MENSAJES
-define ( 'EMAILDEFAULT', 'info@lacueva.tv' );
+define ( 'EMAILDEFAULT', 'leads@somosre.com.ar' );
 define ( 'ASUNTODEFAULT', 'Nuevo formulario' );
 define('MENSAJEEXITO', 'Su email fue enviado con éxito, muchas gracias.');//este mensaje se imprime en el html
 define('MENSAJEERROR', 'Hubo un pequeño error, intente otra vez.');

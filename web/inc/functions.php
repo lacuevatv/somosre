@@ -373,10 +373,10 @@ function sendEmailPhpMailer( $emailReplyTo, $nombreReplyTo, $emailTo, $nombreTo,
 	$mail = new PHPMailer;
 	//Tell PHPMailer to use SMTP
 	$mail->isSMTP();
-	$mail->Host = 'smtp.gmail.com';
+	$mail->Host = 'c0080186.ferozo.com';
 	$mail->Port = 587;
-	$mail->Username = 'coco.kmkz@gmail.com';
-	$mail->Password = 'EmiliaIsabela';
+	$mail->Username = 'hola@somosre.com.ar';
+	$mail->Password = 'Marketing17';
 	$mail->SMTPAuth = true;
 
 	//Enable SMTP debugging
