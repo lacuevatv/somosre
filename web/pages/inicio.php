@@ -231,7 +231,7 @@ getTemplate('head'); ?>
                     <p class="parrafo-separador-blanco">
                         Te damos más de lo que esperás.
                     </p>
-                    <a class="btn btn-blanco" href="#">
+                    <a class="btn btn-blanco" href="<?php getFile( 'bonus-track' ); ?>" target="_blank">
                         Ver extras
                     </a>
                 </div>
@@ -259,7 +259,7 @@ getTemplate('head'); ?>
                     <p class="parrafo-separador">
                         Con Re podés vivir mucho más que el viaje..
                     </p>
-                    <a class="btn btn-fucsia" href="#">
+                    <a class="btn btn-fucsia" href="<?php getFile( 'uppers-re' ); ?>" target="_blank">
                         Ver Info
                     </a>
                 </div>

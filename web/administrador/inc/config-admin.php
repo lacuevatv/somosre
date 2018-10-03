@@ -55,10 +55,14 @@ $archivos = array(
         'label' => 'Agencias',
         'optionName' => 'agencias',
 	),
-	/*array(
-        'label' => 'Asistencia',
-        'optionName' => 'asistencia',
-    ),*/
+	array(
+        'label' => 'Bonus Track',
+        'optionName' => 'bonus-track',
+    ),
+    array(
+        'label' => 'Uppers by Re',
+        'optionName' => 'uppers-re',
+    ),
 );
 
 
