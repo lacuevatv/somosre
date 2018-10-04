@@ -2702,7 +2702,7 @@ html, body {
   position: relative;
 }
 .slider-wrapper .slider-item {
-  height: 350px;
+  height: 400px;
 }
 @media (min-width: 768px) {
   .slider-wrapper .slider-item {
