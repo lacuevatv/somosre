@@ -25,7 +25,7 @@
             
             foreach ( $imagenes as $img ) { ?>
                 <li>
-                    <img class="load-images2" data-src="<?php echo UPLOADSURL . '/'. $img; ?>">
+                    <img class="owl-lazy" data-src="<?php echo UPLOADSURL . '/'. $img; ?>">
                 </li>
             <?php } ?>
             

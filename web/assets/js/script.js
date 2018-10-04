@@ -848,11 +848,11 @@ function getLazyImageshided() {
         $(this).attr('src', img );
     });
 
-    $('.load-images2').each(function(){
+    /*$('.load-images2').each(function(){
         var img = $(this).attr('data-src');
     
         $(this).attr('src', img );
-    });
+    });*/
 }
 
 /*
@@ -1188,6 +1188,7 @@ function openPopUpGalery(articulo) {
             loop:true,
             margin:1,
             items:1,
+            lazyLoad:true,
             autoHeight: true,
             nav:true,
             navText : ['<span class="icon-arrow icon-arrow-left"></span>','<span class="icon-arrow icon-arrow-right"></span>'],
@@ -1201,5 +1202,3 @@ function openPopUpGalery(articulo) {
     loader.fadeOut();
     
 }
-
-
