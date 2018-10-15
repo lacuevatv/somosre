@@ -11,6 +11,7 @@
 3.0 POPUP PROMO (funciones)
 5.0 SLIDERS (funciones)
 6.0 OTRAS FUNCIONES: (scroll to, openCloseMenu, instagram, cargar mapa)
+7.0 LOADER ANIMACION
 --------------------------------------------------------------*/
 
 //VARIABLES GENERALES
@@ -18,7 +19,7 @@ var baseUrl = 'http://' + window.location.host;
 var ajaxFileUrl = baseUrl + '/inc/ajax.php';
 var paginaActual = 1;
 var dataPage = $('body').attr('data-page');
-
+var isloader;
 /*--------------------------------------------------------------
 1.0 ON READY
 --------------------------------------------------------------*/
@@ -86,9 +87,6 @@ $(document).ready(function(){
         }
     });
 
-
-    
-
      /*
       * LOAD MORE AJAX
      */
@@ -140,8 +138,14 @@ $(window).on('load', function(){
         getInstagram();
         //2. iniciar sliders
         iniciarSliders();
-        //3.iniciar header
-        initHeader()
+
+        //3.iniciar header y loader
+        if (isloader) {
+            initLoader();
+        } else {
+            initHeader(false);
+        }
+        
         //4. iniciarparallax
         startAnimations('.parallax', true);
         initParallax();
@@ -976,14 +980,28 @@ function initParallax () {
 
 }//initParallax()
 
-function initHeader(){
+function initHeader(loader){
+    
     var contenedor = $('.header-inicio');
     var contenedorImagen = $(contenedor).find('.header-image-wrapper');
     var retina = window.devicePixelRatio>1;
     var windowWidth = window.innerWidth;
     var movil = windowWidth < 768;
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    
+    var restador = 0;
+    console.log(loader)
+    //si es loader le corrige el parallax para que se vea bien
+    if (loader) {
+        restador = 450;
+        if (innerWidth > 1500) {
+            restador = 600;
+            
+        }
+    } else {
+        restador = 0;
+    }
+
+    console.log(restador)
     var imagen = '';
     var corazon = 'corazones-inicio.png';
 
@@ -1037,9 +1055,9 @@ function initHeader(){
 
             //imagen header chica
             if (movil) {
-                imagenHeaderParallax.css('top', ( barra/1.9 )-30+'px');
+                imagenHeaderParallax.css('top', ( barra/1.9 )-30  +'px');
             } else {
-                imagenHeaderParallax.css('top', ( barra/1.9 )-80+'px');
+                imagenHeaderParallax.css('top', (( barra/1.9 )-80)-restador  +'px');
             }
 
         });//onscrll
@@ -1200,5 +1218,74 @@ function openPopUpGalery(articulo) {
     }
 
     loader.fadeOut();
+    
+}
+
+
+/*
+ * LOADER ANIMACION
+*/
+function initLoader() {
+    
+    var mainWrapper = document.getElementsByClassName('main-wrapper');
+    var loader = document.getElementById('loader')
+    var img = document.getElementsByClassName('loading-sequense');
+    var contador = 1;
+    var cantidad = img.length;
+    var finScript = false;
+
+    mainWrapper[0].style.top = (img[0].offsetHeight) + 'px';
+    window.addEventListener('scroll', function(e) {
+        //mainWrapper[0].style.transition = 'all 2s';
+
+        //iniciar el header con loader
+        initHeader(true);
+
+        if (finScript ) {
+            return;
+        }
+
+        if (img.length > contador) {
+            
+            img[img.length-contador].style.display = 'none';
+            contador++;
+
+        } else {
+            
+            loader.style.display = 'none';
+            finScript = true;
+
+            scrollhaciaArriba();
+
+        }
+        
+    });
+
+}//initLoader()
+
+/*
+* detecta si va para arriba y restaura el mainwrapper a 0
+*/
+function scrollhaciaArriba() {
+
+    window.addEventListener("scroll", restoreMainWrapper, false);
+
+    var lastScrollTop = 0;
+    function restoreMainWrapper() {
+        var st = window.pageYOffset || document.documentElement.scrollTop; 
+        if (st < lastScrollTop) {
+            //scroll hacia arriba
+            console.log('hacia arriba')
+            var mainWrapper = $('.main-wrapper');
+            mainWrapper.css('top', '0');
+            
+            //una vez que va hacia arriba una vez detiene el processo
+            window.removeEventListener("scroll", restoreMainWrapper);
+
+            initHeader(false);
+
+        }
+        lastScrollTop = st;
+    }
     
 }

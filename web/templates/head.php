@@ -24,6 +24,11 @@
 </head>
 
 <body data-page="<?php echo PAGEACTUAL; ?>">	
+
+<?php if ( PAGEACTUAL == 'inicio' && dispositivo() == 'pc' ) : 
+	getTemplate('loader'); 
+endif; ?>
+
 <div class="main-wrapper">
 	
 	<?php openPopUp( PAGEACTUAL ); ?>
