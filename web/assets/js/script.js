@@ -143,6 +143,7 @@ $(window).on('load', function(){
         if (isloader) {
             initLoader();
         } else {
+            
             initHeader(false);
         }
         
@@ -989,19 +990,20 @@ function initHeader(loader){
     var movil = windowWidth < 768;
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
     var restador = 0;
-    console.log(loader)
     //si es loader le corrige el parallax para que se vea bien
     if (loader) {
         restador = 450;
+        console.log(restador)
         if (innerWidth > 1500) {
             restador = 600;
             
         }
     } else {
         restador = 0;
+        
     }
 
-    console.log(restador)
+    
     var imagen = '';
     var corazon = 'corazones-inicio.png';
 
@@ -1226,7 +1228,6 @@ function openPopUpGalery(articulo) {
  * LOADER ANIMACION
 */
 function initLoader() {
-    
     var mainWrapper = document.getElementsByClassName('main-wrapper');
     var loader = document.getElementById('loader')
     var img = document.getElementsByClassName('loading-sequense');
@@ -1234,16 +1235,18 @@ function initLoader() {
     var cantidad = img.length;
     var finScript = false;
 
+    //iniciar el header con loader
+    console.log('1 init')
+    initHeader(true);
+
+    if (finScript ) {
+        return;
+    } else {
+
+
     mainWrapper[0].style.top = (img[0].offsetHeight) + 'px';
-    window.addEventListener('scroll', function(e) {
-        //mainWrapper[0].style.transition = 'all 2s';
-
-        //iniciar el header con loader
-        initHeader(true);
-
-        if (finScript ) {
-            return;
-        }
+    window.addEventListener('scroll', animacionLoader);
+    function animacionLoader() {
 
         if (img.length > contador) {
             
@@ -1257,9 +1260,11 @@ function initLoader() {
 
             scrollhaciaArriba();
 
+            window.removeEventListener('scroll', animacionLoader);
         }
         
-    });
+    }
+}
 
 }//initLoader()
 
@@ -1267,21 +1272,20 @@ function initLoader() {
 * detecta si va para arriba y restaura el mainwrapper a 0
 */
 function scrollhaciaArriba() {
-
-    window.addEventListener("scroll", restoreMainWrapper, false);
-
+        
+    window.addEventListener("scroll", restoreMainWrapper);
+    
     var lastScrollTop = 0;
     function restoreMainWrapper() {
         var st = window.pageYOffset || document.documentElement.scrollTop; 
         if (st < lastScrollTop) {
             //scroll hacia arriba
-            console.log('hacia arriba')
+            
             var mainWrapper = $('.main-wrapper');
             mainWrapper.css('top', '0');
             
-            //una vez que va hacia arriba una vez detiene el processo
             window.removeEventListener("scroll", restoreMainWrapper);
-
+            
             initHeader(false);
 
         }
